@@ -1,0 +1,51 @@
+footer{
+    bottom: 0;
+    width: 100%;
+    background-color: #735D78;
+    color: white;
+    text-align: center;
+}
+#listageneral{
+    display: flex;
+    padding: 20px 0;
+}
+
+#listageneral li{
+    list-style: none;
+}
+#listageneral li a{
+    color: white;
+}
+#contacto{
+    width: 50%;
+    padding: 0;
+}
+.titulo{
+    font-weight: bold;
+}
+#contacto ul{
+    padding: 0;
+}
+#listacontacto {
+    font-size: 12px;
+}
+#listars{
+    font-size: 12px;
+}
+#listars li{
+    padding: 10%;
+}
+#rs{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0;
+}
+#rs li{
+    margin: 0;
+}
+#rs ul{
+    padding: 0;
+    width: 25%;
+    display: flex;
+}
