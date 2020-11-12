@@ -4,7 +4,7 @@
     <title>AERGIBIDE SL</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="html/css/header.css">
+    <link rel="stylesheet" href="html/css/header.css">
 </head>
 <body>
 <h1>Inicio de sesión</h1>
