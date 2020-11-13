@@ -1,0 +1,286 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+/*Hay que sustituir la fuente por la fuente final*/
+
+
+}
+
+body{
+    margin: 0px;
+
+    background-color: white;
+
+}
+
+#divPrincipal{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#divSuperior{
+    margin-left: 1%;
+}
+
+.divSeparador{
+    height: 5px;
+    border-bottom:  
+    black 2px solid;
+}
+
+.divSeparadorpregunta{
+    height: 5px;
+    border-bottom:  
+    black 1px solid;
+    margin-bottom: 4px;
+}
+
+#divInferior{
+    display: flex;
+}
+
+#divEnlaces{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 5px;
+    max-width: 300px;
+
+    /* DESCARTADO
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    */
+}
+
+button{
+    background-color: white;
+    color: black;
+    border: 1px solid  black;
+    font-weight: bold;
+}
+
+.btEnlace{
+    margin-bottom: 5px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.btSeleccionado{
+    background-color: black;
+    color: white;
+    border: 1px solid  black;
+}
+
+
+
+#divInformacion{
+    display: flex;
+    flex-direction: column;
+
+    flex: 3;
+
+    
+    border-left: black 1px solid;
+}
+
+#divFiltrador{
+    display: flex;
+
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom:  black 2px solid;
+}
+
+#divLupa{
+    display: flex;
+    align-items: center;
+}
+
+#divTag{
+    display: flex;
+    align-items: center;
+}
+
+#divPreguntas{
+    display: flex;
+    flex-direction: column;
+}
+
+.divPregunta{
+    display: flex;
+    align-items: center;
+
+    padding: 4px;
+
+    border-radius: 10px;
+    margin:10px;
+
+
+    background-color: white;
+    color: black;
+    border: 1px solid  black;
+}
+
+.divPregIzq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.labPregNickname{
+    margin-bottom: 20%;
+}
+
+.imgPregPerfil{
+    height: 50px;
+    width: auto;
+    border-radius: 100%;
+}
+
+.divPregDer{
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloPreg{
+    text-decoration: none;
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+a{
+    color: black;
+}
+
+h1{
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+p{
+    font-size: 20px;
+    color: black;
+    margin: 5px;
+}
+
+label{
+    color: black;
+    font-size: 20px;
+}
+
+.lbFiltrado{
+    margin-right: 5px;
+}
+
+.lbDescripcion{
+    font-size: 18px;
+}
+
+#btBuscar{
+    margin-left: 5px;
+    height: 30px;
+    width: auto;
+
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 700px){
+
+
+    #divInferior{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #divEnlaces{
+        max-width: none;
+        min-width: 80%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .btSeleccionado, .btNoSeleccionado{
+        width: 100%;
+        margin: 5px;
+    }
+
+    #divFiltrador{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #divLupa{
+        order: 2;
+    }
+
+    #divTag{
+        order: 1;
+    }
+
+    #divInformacion{
+        border: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px){
+
+    h1{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .lbDescripcion{
+        font-size: 14px;
+    }
+
+    .lbFiltrado{
+        font-size: 16px;
+    }
+
+    .divPregIzq{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #divFiltrador{
+        padding-right: 0px;
+    }
+
+    .ipBuscador{
+        width: 50%;
+    }
+
+    .labPregNickname{
+        margin-bottom: 0px;
+        margin-left: 20px;
+
+        order: 2;
+    }
+
+    .imgPregPerfil{
+        order: 1;
+    }
+
+    .divPregunta{
+        flex-direction: column;
+
+
+    }
+
+    
+
+}
