@@ -7,7 +7,6 @@
 
 body{
     margin: 0px;
-    background-image: linear-gradient(#4e9af8, #4EC4F8);
 
     background-color: white;
 
@@ -26,13 +25,13 @@ body{
 .divSeparador{
     height: 5px;
     border-bottom:  
-    white 2px solid;
+    black 2px solid;
 }
 
 .divSeparadorpregunta{
     height: 5px;
     border-bottom:  
-    white 1px solid;
+    black 1px solid;
     margin-bottom: 4px;
 }
 
@@ -48,7 +47,7 @@ body{
     padding: 5px;
     max-width: 300px;
 
-    /*
+    /* DESCARTADO
     position: sticky;
     position: -webkit-sticky;
     top: 0;
@@ -56,9 +55,9 @@ body{
 }
 
 button{
-    background-color: #4A83F0;
-    color: white;
-    border: 1px solid  white;
+    background-color: white;
+    color: black;
+    border: 1px solid  black;
     font-weight: bold;
 }
 
@@ -69,9 +68,9 @@ button{
 }
 
 .btSeleccionado{
-    background-color: white;
-    color: #4A83F0;
-    border: 1px solid  white;
+    background-color: black;
+    color: white;
+    border: 1px solid  black;
 }
 
 
@@ -83,7 +82,7 @@ button{
     flex: 3;
 
     
-    border-left: white 1px solid;
+    border-left: black 1px solid;
 }
 
 #divFiltrador{
@@ -91,7 +90,7 @@ button{
 
     justify-content: space-around;
     padding: 10px;
-    border-bottom:  white 2px solid;
+    border-bottom:  black 2px solid;
 }
 
 #divLupa{
@@ -119,9 +118,9 @@ button{
     margin:10px;
 
 
-    background-color: #4A83F0;
-    color: white;
-    border: 1px solid  white;
+    background-color: white;
+    color: black;
+    border: 1px solid  black;
 }
 
 .divPregIzq{
@@ -155,22 +154,23 @@ button{
 }
 
 a{
-    color: white;
+    color: black;
 }
 
 h1{
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 50px;
 }
 
 p{
     font-size: 20px;
-    color: white;
+    color: black;
+    margin: 5px;
 }
 
 label{
-    color: white;
+    color: black;
     font-size: 20px;
 }
 
@@ -191,7 +191,90 @@ label{
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
 
+
+    #divInferior{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #divEnlaces{
+        max-width: none;
+        min-width: 80%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .btSeleccionado, .btNoSeleccionado{
+        width: 100%;
+        margin: 5px;
+    }
+
+    #divFiltrador{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #divLupa{
+        order: 2;
+    }
+
+    #divTag{
+        order: 1;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px){
+
+    h1{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .lbDescripcion{
+        font-size: 14px;
+    }
+
+    .lbFiltrado{
+        font-size: 16px;
+    }
+
+    .divPregIzq{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #divFiltrador{
+        padding-right: 0px;
+    }
+
+    .ipBuscador{
+        width: 50%;
+    }
+
+    .labPregNickname{
+        margin-bottom: 0px;
+        margin-left: 20px;
+
+        order: 2;
+    }
+
+    .imgPregPerfil{
+        order: 1;
+    }
+
+    .divPregunta{
+        flex-direction: column;
+
+
+    }
 
 }
