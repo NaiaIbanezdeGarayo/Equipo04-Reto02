@@ -14,18 +14,13 @@
 <body>
 <header>
     <nav id="navigation">
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn open">
-            <i class="fas fa-ellipsis-v"></i>
-        </label>
-        <label for="check" class="checkbtn close">
-            <i class="fas fa-ellipsis-h"></i>
-        </label>
-        <ul class="menu">
-            <li><a href="header.view.php">Inicio</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
-        </ul>
-        <p>AERGIBIDE SL</p>
+        <div class="opthome">
+            <a href="#"><i class="fas fa-home"></i></a>
+        </div>
+        <div id="parrafo">
+            <p>AERGIBIDE SL</p>
+        </div>
+
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">
                 <i class="fas fa-user"></i>
@@ -34,7 +29,7 @@
                     <a href="#">Perfil</a>
                     <a href="#">Notificaciones</a>
                     <a href="#">Configuración</a>
-                    <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+                    <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
             </div>
         </div>
     </nav>
