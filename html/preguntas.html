@@ -4,6 +4,7 @@
     <title>AERGIBIDE SL</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/preguntas.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 
 <body>
@@ -22,9 +23,9 @@
 
         <div id="divEnlaces">
             <!--Botones que enlazarán con otras páginas.-->
-            <button class="btEnlace">Preguntas</button>
-            <button class="btEnlace">Usuarios</button>
-            <button class="btEnlace">Temas</button>
+            <button class="btEnlace btSeleccionado">Preguntas</button>
+            <button class="btEnlace btNoSeleccionado">Usuarios</button>
+            <button class="btEnlace btNoSeleccionado">Temas</button>
         </div>
 
         <div id="divInformacion">
@@ -32,13 +33,13 @@
             <div id="divFiltrador">
                 <!--Lupa y filtro por tema.-->
                 <div id="divLupa">
-                    <label>Búsqueda: </label>
+                    <label class="lbFiltrado">Búsqueda: </label>
                     <input type="text">
-                    <button>Buscar</button>
+                    <button id="btBuscar">Buscar</button>
                 </div>
     
                 <div id="divTag">
-                    <label>Tema: </label>
+                    <label class="lbFiltrado">Tema: </label>
                     <select>
                         <option>Tema 1</option>
                         <option>Tema 2</option>
@@ -60,11 +61,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -73,11 +76,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -86,11 +91,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -99,11 +106,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -112,11 +121,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -125,11 +136,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -138,11 +151,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -151,11 +166,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -164,11 +181,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -177,11 +196,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -190,11 +211,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -203,11 +226,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -216,11 +241,13 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 
@@ -229,11 +256,43 @@
                         <label class="labPregNickname">Jaimito</label>
                         <a href="https://www.w3schools.com">
                             <img class="imgPregPerfil" src="../img/default-user-image.png">
-                        </a></div>
+                        </a>
+                    </div>
                     
                     <div class="divPregDer">
                         <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                        <label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                    </div>
+                </div>
+
+                <div class="divPregunta">
+                    <div class="divPregIzq">
+                        <label class="labPregNickname">Jaimito</label>
+                        <a href="https://www.w3schools.com">
+                            <img class="imgPregPerfil" src="../img/default-user-image.png">
+                        </a>
+                    </div>
+                    
+                    <div class="divPregDer">
+                        <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                    </div>
+                </div>
+
+                <div class="divPregunta">
+                    <div class="divPregIzq">
+                        <label class="labPregNickname">Jaimito</label>
+                        <a href="https://www.w3schools.com">
+                            <img class="imgPregPerfil" src="../img/default-user-image.png">
+                        </a>
+                    </div>
+                    
+                    <div class="divPregDer">
+                        <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
+                        <div class="divSeparadorpregunta"></div>
+                        <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                     </div>
                 </div>
 

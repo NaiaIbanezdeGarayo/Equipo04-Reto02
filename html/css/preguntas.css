@@ -1,11 +1,13 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 /*Hay que sustituir la fuente por la fuente final*/
+
+
 }
 
 body{
     margin: 0px;
-    background-image: linear-gradient(#C0B9DD, #C0B9DD);
+    background-image: linear-gradient(#4e9af8, #4EC4F8);
 
     background-color: white;
 
@@ -22,8 +24,16 @@ body{
 }
 
 .divSeparador{
-    height: 20px;
-    border-bottom:  #735D78 2px solid;
+    height: 5px;
+    border-bottom:  
+    white 2px solid;
+}
+
+.divSeparadorpregunta{
+    height: 5px;
+    border-bottom:  
+    white 1px solid;
+    margin-bottom: 4px;
 }
 
 #divInferior{
@@ -35,26 +45,36 @@ body{
     flex-direction: column;
     flex: 1;
 
-    padding-top: 5px;
+    padding: 5px;
     max-width: 300px;
 
+    /*
     position: sticky;
-  position: -webkit-sticky;
-  top: 0; /* required */
+    position: -webkit-sticky;
+    top: 0;
+    */
 }
 
 button{
-    background-color: #735D78;
+    background-color: #4A83F0;
     color: white;
-    border: 1px solid  #554358;
+    border: 1px solid  white;
+    font-weight: bold;
 }
 
 .btEnlace{
     margin-bottom: 5px;
     height: 40px;
-
-    border: none;
+    border-radius: 5px;
 }
+
+.btSeleccionado{
+    background-color: white;
+    color: #4A83F0;
+    border: 1px solid  white;
+}
+
+
 
 #divInformacion{
     display: flex;
@@ -63,7 +83,7 @@ button{
     flex: 3;
 
     
-    border-left: #735D78 1px solid;
+    border-left: white 1px solid;
 }
 
 #divFiltrador{
@@ -71,7 +91,17 @@ button{
 
     justify-content: space-around;
     padding: 10px;
-    border-bottom:  #735D78 2px solid;
+    border-bottom:  white 2px solid;
+}
+
+#divLupa{
+    display: flex;
+    align-items: center;
+}
+
+#divTag{
+    display: flex;
+    align-items: center;
 }
 
 #divPreguntas{
@@ -83,17 +113,21 @@ button{
     display: flex;
     align-items: center;
 
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 4px;
 
-    background-color: #B9B2D4;
+    border-radius: 10px;
+    margin:10px;
+
+
+    background-color: #4A83F0;
+    color: white;
+    border: 1px solid  white;
 }
 
 .divPregIzq{
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     padding: 10px;
 }
@@ -118,6 +152,46 @@ button{
     font-weight: bold;
 
     font-size: 20px;
-    color: black;
-    
+}
+
+a{
+    color: white;
+}
+
+h1{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+p{
+    font-size: 20px;
+    color: white;
+}
+
+label{
+    color: white;
+    font-size: 20px;
+}
+
+.lbFiltrado{
+    margin-right: 5px;
+}
+
+.lbDescripcion{
+    font-size: 18px;
+}
+
+#btBuscar{
+    margin-left: 5px;
+    height: 30px;
+    width: auto;
+
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 600px){
+
+
 }
