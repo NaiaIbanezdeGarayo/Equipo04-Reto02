@@ -226,6 +226,10 @@ label{
         order: 1;
     }
 
+    #divInformacion{
+        border: none;
+    }
+
 }
 
 
@@ -276,5 +280,7 @@ label{
 
 
     }
+
+    
 
 }
