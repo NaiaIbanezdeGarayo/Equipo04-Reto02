@@ -19,8 +19,8 @@ header{
     width: 100%;
     position: absolute;
     box-shadow: 0 0 7px 1px #00000057;
-    color: white;
-    background-color: #735D78;
+    color: black;
+    background-color: white;
 }
 
 nav ul {
@@ -32,7 +32,7 @@ nav ul {
 
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 25px;
 }
 
@@ -40,7 +40,8 @@ nav ul li {
     padding: 10% 6%;
     margin: 0;
     font-size: 1em;
-    background-color: #735D78;
+    background-color: white;
+    box-shadow: 0px 1px 1px 0px #6a6e6f2e;
 }
 nav p{
     width: 60%;
@@ -59,7 +60,7 @@ ul.menu{
 
 }
 .menu li:hover{
-    background-color: #886D8E;
+    background-color: #F5F5F5;
 }
 
 #navigation{
@@ -75,7 +76,7 @@ ul.menu{
     position: absolute;
     width: 100%;
     list-style-type: none;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 #check{
     display: none;
@@ -103,7 +104,7 @@ ul.menu{
 }
 
 .dropbtn {
-    color: white;
+    color: black;
     cursor: pointer;
     font-size: 3em;
     text-align: center;
