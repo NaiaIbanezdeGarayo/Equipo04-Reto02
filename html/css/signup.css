@@ -81,4 +81,50 @@ label{
 .btn:active{
     background-color: #99829E;
 }
+@media only screen and (min-width: 400px) and (max-width: 670px) {
+    #divgeneral{
+        background-color: #C0B9DD;
+        margin: 0 10% auto;
+    }
+}
+@media only screen and (min-width: 671px) and (max-width: 810px){
+    body{
+        background: url("../../img/login-header.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    label{
+        font-size: 1em;
+    }
+    .textbox input{
+        font-size: 20px;
+    }
+    #divgeneral{
+        background-color: #C0B9DD;
+        height: 100%;
+        left: 0;
+    }
+}
+@media only screen and (min-width: 811px){
+    body{
+        background: url("../../img/login-header.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    label{
+        font-size: 1em;
+    }
+    .textbox input{
+        font-size: 20px;
+    }
+    #divgeneral{
+        left: 0;
+        background-color: #C0B9DD;
+        height: 100%;
+        padding: 2%;
+    }
+    a{
+        margin-bottom: 0;
+    }
+}
 

@@ -13,7 +13,7 @@
             <h2>Crear cuenta</h2>
             <div class="textbox">
                 <label for="name">Nombre:</label><br>
-                <input id="name" type="text" placeholder="Nombre"><br>
+                <input id="name" type="text" placeholder="Nombre" class="text"><br>
             </div>
             <div class="textbox">
                 <label for="surname">Apellidos:</label><br>

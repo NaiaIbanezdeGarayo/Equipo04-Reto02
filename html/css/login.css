@@ -10,6 +10,7 @@ h1,h2{
     text-align: center;
 }
 h1{
+    margin-top: 10%;
     margin-bottom: 10%;
 }
 body {
@@ -51,6 +52,7 @@ a{
     padding: 8px 0;
     margin: 8px;
     border-bottom: 1px solid white;
+    display: flex;
 }
 .textbox input{
     border: none;
@@ -80,4 +82,31 @@ a{
 }
 .btn:active{
     background-color: #99829E;
+}
+@media only screen and (min-width: 400px) and (max-width: 670px) {
+    #divgeneral{
+        background-color: #C0B9DD;
+        height: 100%;
+    }
+}
+@media only screen and (min-width: 671px) {
+    body{
+        background: url("../../img/login-header.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    label{
+        font-size: 1em;
+    }
+    #user, #pass{
+        font-size: 20px;
+        width: 70%;
+    }
+    #divgeneral{
+        background-color: #C0B9DD;
+        height: 100%;
+    }
+    #botom{
+        margin-bottom: 10%;
+    }
 }

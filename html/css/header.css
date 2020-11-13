@@ -17,10 +17,11 @@ body{
 header{
     display: flex;
     width: 100%;
-    position: absolute;
+    position: fixed;
     box-shadow: 0 0 7px 1px #00000057;
     color: black;
     background-color: white;
+
 }
 
 nav ul {
@@ -67,7 +68,7 @@ ul.menu{
     display: flex;
     transition: 0s;
     width: 100%;
-    box-shadow: -6px -5px 6px 5px #00000038;
+    box-shadow: -20px -15px 6px 5px #00000038;
     padding: 6% 0;
 }
 
@@ -151,6 +152,11 @@ i{
     right: 0;
     top: 40px;
 }
-@media only screen and (min-width: 400px){
-
+@media only screen and (min-width: 750px){
+    .checkbtn{
+        display: none;
+    }
+    ul.menu{
+        display: inline-block;
+    }
 }
