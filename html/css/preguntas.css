@@ -15,7 +15,7 @@ body{
 #divPrincipal{
     display: flex;
     flex-direction: column;
-    
+    margin-top: 7%;
 }
 
 #divSuperior{
@@ -189,10 +189,16 @@ label{
 
     border-radius: 5px;
 }
-
+@media only screen and (max-width: 1300px){
+    #divPrincipal{
+        margin-top: 12%;
+    }
+}
 
 @media only screen and (max-width: 700px){
-
+    #divPrincipal{
+        margin-top: 17%;
+    }
 
     #divInferior{
         flex-direction: column;
@@ -235,6 +241,9 @@ label{
 
 @media only screen and (max-width: 500px){
 
+    #divPrincipal{
+        margin-top: 20%;
+    }
     h1{
         font-size: 25px;
     }
@@ -277,8 +286,6 @@ label{
 
     .divPregunta{
         flex-direction: column;
-
-
     }
 
     

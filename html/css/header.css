@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 *{
     margin: 0 ;
 }
@@ -23,27 +24,7 @@ header{
     background-color: white;
 
 }
-/*
-nav ul {
-    display: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
 
-nav ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 25px;
-}
-
-nav ul li {
-    padding: 10% 6%;
-    margin: 0;
-    font-size: 1em;
-    background-color: white;
-    box-shadow: 0px 1px 1px 0px #6a6e6f2e;
-}*/
 nav #parrafo{
     width: 60%;
     padding: 1.5%;
@@ -80,31 +61,7 @@ ul.menu{
     list-style-type: none;
     margin-top: 60px;
 }
-/*
-#check{
-    display: none;
-}
 
-.checkbtn{
-    font-size: 3em;
-    width: 10%;
-    text-align: center;
-    cursor: pointer;
-}
-
-.close{
-    display: none;
-}
-#check:checked~.menu{
-    visibility: visible;
-    display: block;
-}
-#check:checked~.open{
-    display: none;
-}
-#check:checked~.close{
-    display: block;
-}*/
 .opthome a{
     color: black;
     text-decoration: none;
@@ -158,5 +115,30 @@ i{
     display: block;
     right: 0;
     top: 60px;
+}
+@media only screen and (min-width: 1000px){
+    #navigation{
+        padding: 1% 0;
+    }
+}
+
+@media only screen and (min-width: 1500px){
+    #navigation{
+        padding: 0;
+    }
+    .opthome{
+        padding-top: 10px;
+    }
+    .dropdown{
+        padding-top: 10px;
+    }
+}
+@media only screen and (min-width: 2000px) {
+    .opthome{
+        padding-top: 20px;
+    }
+    .dropdown{
+        padding-top: 20px;
+    }
 }
 
