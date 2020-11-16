@@ -23,9 +23,9 @@
 
         <div id="divEnlaces">
             <!--Botones que enlazarán con otras páginas.-->
-            <button class="btEnlace btSeleccionado">Preguntas</button>
-            <button class="btEnlace btNoSeleccionado">Usuarios</button>
-            <button class="btEnlace btNoSeleccionado">Temas</button>
+            <button class="btEnlace btSeleccionado"><a href="/html/preguntas.view.php">Preguntas</a></button>
+            <button class="btEnlace btNoSeleccionado"><a href="/html/usuarios.view.php">Usuarios</a></button>
+            <button class="btEnlace btNoSeleccionado"><a href="/html/temas.view.php">Temas</a></button>
         </div>
 
         <div id="divInformacion">
@@ -37,7 +37,7 @@
                     <input class="ipBuscador" type="text">
                     <button id="btBuscar">Buscar</button>
                 </div>
-    
+
                 <div id="divTag">
                     <label class="lbFiltrado">Tema: </label>
                     <select>
@@ -49,6 +49,18 @@
                         <option>Tema 6</option>
                     </select>
                 </div>
+
+                <div id="divTag">
+                    <label class="lbFiltrado">Ordenar: </label>
+                    <select>
+                        <option></option>
+                        <option>Fecha ↑</option>
+                        <option>Fecha ↓</option>
+                        <option>Respuestas</option>
+                        <option>Favoritos</option>
+                    </select>
+                </div>
+
             </div>
 
 
