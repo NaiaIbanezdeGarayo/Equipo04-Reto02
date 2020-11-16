@@ -29,7 +29,8 @@
                     <div id="divTag">
                         <label class="lbFiltrado">Tema: </label>
                         <select>
-                            <option></option>
+                            <option selected>--Elige un tema--</option>
+                            <option>Tema 1</option>
                             <option>Tema 2</option>
                             <option>Tema 3</option>
                             <option>Tema 4</option>

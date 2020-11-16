@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/preguntas.css">
+    <link rel="stylesheet" href="css/perfil.css">
 </head>
 <body>
 <header>
     <nav id="navigation">
         <div class="opthome">
-            <a href="#"><i class="fas fa-home"></i></a>
+            <a href="preguntas.view.php"><i class="fas fa-home"></i></a>
         </div>
         <div id="parrafo">
             <p>AERGIBIDE SL</p>
@@ -27,7 +28,8 @@
                 <i class="fas fa-user"></i>
             </button>
             <div class="optperfil-content" id="myDropdown">
-                    <a href="#">Perfil</a>
+                    <a href="#">Formular pregunta</a>
+                    <a href="perfil.view.php">Perfil</a>
                     <a href="#">Notificaciones</a>
                     <a href="#">Configuración</a>
                     <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
