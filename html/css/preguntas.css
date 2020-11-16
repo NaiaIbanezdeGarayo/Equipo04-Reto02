@@ -91,6 +91,7 @@ button{
     justify-content: space-around;
     padding: 10px;
     border-bottom:  black 2px solid;
+
 }
 
 #divLupa{
@@ -98,9 +99,14 @@ button{
     align-items: center;
 }
 
+.ipBuscador{
+
+}
+
 #divTag{
     display: flex;
     align-items: center;
+    
 }
 
 #divPreguntas{
@@ -176,6 +182,7 @@ label{
 
 .lbFiltrado{
     margin-right: 5px;
+    font-size: 18px;
 }
 
 .lbDescripcion{
@@ -262,6 +269,10 @@ label{
 
     .ipBuscador{
         width: 50%;
+    }
+
+    #divTag{
+        margin: 5px;
     }
 
     .labPregNickname{
