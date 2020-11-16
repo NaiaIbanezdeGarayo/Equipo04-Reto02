@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 *{
-    margin: 0 auto;
+    margin: 0 ;
 }
 h1{
     font-family: 'Poppins', sans-serif;
@@ -17,12 +17,13 @@ body{
 header{
     display: flex;
     width: 100%;
-    position: absolute;
+    position: fixed;
     box-shadow: 0 0 7px 1px #00000057;
-    color: white;
-    background-color: #735D78;
-}
+    color: black;
+    background-color: white;
 
+}
+/*
 nav ul {
     display: none;
     padding: 0;
@@ -32,20 +33,24 @@ nav ul {
 
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color: black;
+    font-size: 25px;
 }
 
 nav ul li {
-    padding: 2% 6%;
+    padding: 10% 6%;
     margin: 0;
     font-size: 1em;
-    background-color: #735D78;
-}
-nav p{
+    background-color: white;
+    box-shadow: 0px 1px 1px 0px #6a6e6f2e;
+}*/
+nav #parrafo{
     width: 60%;
     padding: 1.5%;
     text-align: center;
+    font-size: 25px;
     font-weight: 900;
+    align-self: center;
 }
 ul.menu{
     flex-direction: column;
@@ -56,14 +61,16 @@ ul.menu{
 
 }
 .menu li:hover{
-    background-color: #886D8E;
+    background-color: #F5F5F5;
 }
 
 #navigation{
     display: flex;
     transition: 0s;
     width: 100%;
-    box-shadow: -6px -5px 6px 5px #00000038;
+    box-shadow: -20px -15px 6px 5px #00000038;
+    padding: 2% 0;
+    justify-content: space-around;
 }
 
 .menu {
@@ -71,14 +78,15 @@ ul.menu{
     position: absolute;
     width: 100%;
     list-style-type: none;
-    margin-top: 40px;
+    margin-top: 60px;
 }
+/*
 #check{
     display: none;
 }
 
 .checkbtn{
-    font-size: 2em;
+    font-size: 3em;
     width: 10%;
     text-align: center;
     cursor: pointer;
@@ -96,18 +104,25 @@ ul.menu{
 }
 #check:checked~.close{
     display: block;
+}*/
+.opthome a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 50px;
 }
-
 .dropbtn {
-    color: white;
+    color: black;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
     background: none;
     border: none;
     height:40px;
 }
-
+i{
+    vertical-align: middle;
+}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -120,16 +135,17 @@ ul.menu{
     display: none;
     position: absolute;
     background-color: #fdfdff;
-    min-width: 180px;
+    min-width: 280px;
     box-shadow: 0px 1px 6px 0px #6a6e6f;
 }
 
 /* Links inside the dropdown */
 .optperfil-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 40px 20px;
     text-decoration: none;
     display: block;
+    font-size: 20px;
 }
 
 /* Change color of dropdown links on hover */
@@ -141,5 +157,6 @@ ul.menu{
 .show{
     display: block;
     right: 0;
-    top: 40px;
+    top: 60px;
 }
+

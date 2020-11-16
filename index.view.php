@@ -4,20 +4,27 @@
     <title>AERGIBIDE SL</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="html/css/header.css">
+    <link rel="stylesheet" href="html/css/login.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-<h1>Inicio de sesión</h1>
-<form action="login.js">
-    <h2>¡Bienvenido!</h2>
-    <label for="user">Usuario</label><br>
-    <input type="text" name="user" id="user" placeholder="Usuario"><br>
-    <label for="pass">Contraseña</label><br>
-    <input type="password" name="pass" id="pass" placeholder="Contraseña"><br>
-    <input type="submit" name="enviar">
-</form>
-<a href="">¿Has olvidado la contraseña?</a><br>
-<a href="html/signup.html">No tengo cuenta. Crear Cuenta</a>
+    <div id="divgeneral">
+        <h1>¡BIENVENIDO A AERGIBIDE SL!</h1>
+        <h2>Inicio de sesión</h2>
+        <form action="">
+            <div class="textbox">
+                <i class="fas fa-user"></i>
+                <input type="text" name="user" id="user" placeholder="Usuario"><br>
+            </div>
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="pass" id="pass" placeholder="Contraseña"><br>
+            </div>
+            <input type="submit" name="enviar" id="btn">
+        </form>
+        <a href="">¿Has olvidado la contraseña?</a><br>
+        <a href="html/signup.view.php" id="botom">No tengo cuenta. Crear Cuenta</a
+    </div>
 </body>
 </html>
 <?php
