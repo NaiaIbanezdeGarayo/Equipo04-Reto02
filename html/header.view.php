@@ -29,7 +29,7 @@
             </button>
             <div class="optperfil-content" id="myDropdown">
                     <a href="#">Formular pregunta</a>
-                    <a href="perfil.view.php">Perfil</a>
+                    <a href="perfilGeneral.view.php">Perfil</a>
                     <a href="#">Notificaciones</a>
                     <a href="#">Configuración</a>
                     <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
