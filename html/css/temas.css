@@ -1,7 +1,21 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+/*Hay que sustituir la fuente por la fuente final*/
+
+
+}
+
+body{
+    margin: 0px;
+
+    background-color: white;
+
+}
+
 #divPrincipal{
     display: flex;
     flex-direction: column;
-    margin-top: 7%;
+    
 }
 
 #divSuperior{
@@ -14,7 +28,7 @@
     black 2px solid;
 }
 
-.divSeparadorpregunta{
+.divSeparadorTema{
     height: 5px;
     border-bottom:  
     black 1px solid;
@@ -95,16 +109,20 @@ button{
     
 }
 
-#divPreguntas{
+#divTemas{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
 }
 
-.divPregunta{
+.divTema{
     display: flex;
     align-items: center;
+    flex-direction: column;
 
     padding: 4px;
+    width: 44%;
 
     border-radius: 10px;
     margin:10px;
@@ -115,30 +133,7 @@ button{
     border: 1px solid  black;
 }
 
-.divPregIzq{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 10px;
-}
-
-.labPregNickname{
-    margin-bottom: 20%;
-}
-
-.imgPregPerfil{
-    height: 50px;
-    width: auto;
-    border-radius: 100%;
-}
-
-.divPregDer{
-    display: flex;
-    flex-direction: column;
-}
-
-.tituloPreg{
+.tituloTema{
     text-decoration: none;
     font-weight: bold;
 
@@ -173,48 +168,25 @@ label{
 
 .lbFiltrado{
     margin-right: 5px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .lbDescripcion{
     font-size: 18px;
+    padding: 10px;
 }
 
 #btBuscar{
     margin-left: 5px;
     height: 30px;
     width: auto;
-    font-family: 'Montserrat', sans-serif;
+
     border-radius: 5px;
 }
-#divTag select{
-    font-family: 'Montserrat', sans-serif;
-    border: none;
-    border-bottom: 1px solid black;
-}
 
-.ipBuscador{
-    border: none;
-    border-bottom: 1px solid black;
-    font-family: 'Montserrat';
-}
-
-#divTag select option:hover,
-option:focus,
-option:checked{
-    background-color: #C0B9DD;
-}
-
-@media only screen and (max-width: 1300px){
-    #divPrincipal{
-        margin-top: 12%;
-    }
-}
 
 @media only screen and (max-width: 700px){
-    #divPrincipal{
-        margin-top: 17%;
-    }
+
 
     #divInferior{
         flex-direction: column;
@@ -252,14 +224,15 @@ option:checked{
         border: none;
     }
 
+    .divTema{
+        width: unset;
+    }
+
 }
 
 
 @media only screen and (max-width: 500px){
 
-    #divPrincipal{
-        margin-top: 20%;
-    }
     h1{
         font-size: 25px;
     }
@@ -276,11 +249,6 @@ option:checked{
         font-size: 16px;
     }
 
-    .divPregIzq{
-        flex-direction: row;
-        align-items: center;
-    }
-
     #divFiltrador{
         padding-right: 0px;
     }
@@ -293,18 +261,8 @@ option:checked{
         margin: 5px;
     }
 
-    .labPregNickname{
-        margin-bottom: 0px;
-        margin-left: 20px;
-
-        order: 2;
-    }
-
-    .imgPregPerfil{
-        order: 1;
-    }
-
-    .divPregunta{
+    #divTemas{
+        display: flex;
         flex-direction: column;
     }
 
