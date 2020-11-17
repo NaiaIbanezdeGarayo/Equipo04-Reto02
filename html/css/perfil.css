@@ -43,6 +43,9 @@ main{
 .item{
     padding: 2%;
 }
+button.item{
+    border: none;
+}
 .sectionPreg article{
     padding: 5%;
 }

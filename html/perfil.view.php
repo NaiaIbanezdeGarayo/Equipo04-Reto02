@@ -12,8 +12,8 @@
     <section class="sectionPreg">
         <article id="articleMenu">
             <div class="items">
-                <div class="item item1"><a href="">GENERAL</a></div>
-                <div class="item item2"><a href=""><i class="fas fa-star"></i></a></div>
+                <button class="item item1"><a href="">GENERAL</a></button>
+                <button class="item item2"><a href=""><i class="fas fa-star"></i></a></button>
             </div>
         </article>
         <article>
