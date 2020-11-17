@@ -1,4 +1,5 @@
-<!--<?php include 'header.view.php';?>-->
+
+<?php include 'header.view.php';?>
 
 <head>
     <title>AERGIBIDE SL</title>
@@ -41,7 +42,7 @@
                 <div id="divTag">
                     <label class="lbFiltrado">Tema: </label>
                     <select>
-                        <option></option>
+                        <option>--Elige un tema--</option>
                         <option>Tema 2</option>
                         <option>Tema 3</option>
                         <option>Tema 4</option>
@@ -53,7 +54,7 @@
                 <div id="divTag">
                     <label class="lbFiltrado">Ordenar: </label>
                     <select>
-                        <option></option>
+                        <option>--Filtrar por ...--</option>
                         <option>Fecha ↑</option>
                         <option>Fecha ↓</option>
                         <option>Respuestas</option>
@@ -97,4 +98,4 @@
 </div>
 
 </body>
-
+<?php include "footer.view.php"?>

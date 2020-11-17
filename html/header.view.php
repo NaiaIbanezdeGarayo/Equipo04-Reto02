@@ -10,31 +10,29 @@
     <script src="../js/header.js"></script>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/preguntas.css">
+    <link rel="stylesheet" href="css/perfil.css">
 </head>
 <body>
 <header>
     <nav id="navigation">
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn open">
-            <i class="fas fa-ellipsis-v"></i>
-        </label>
-        <label for="check" class="checkbtn close">
-            <i class="fas fa-ellipsis-h"></i>
-        </label>
-        <ul class="menu">
-            <li><a href="header.view.php">Inicio</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
-        </ul>
-        <p>AERGIBIDE SL</p>
+        <div class="opthome">
+            <a href="preguntas.view.php"><i class="fas fa-home"></i></a>
+        </div>
+        <div id="parrafo">
+            <p>AERGIBIDE SL</p>
+        </div>
+
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">
                 <i class="fas fa-user"></i>
             </button>
             <div class="optperfil-content" id="myDropdown">
-                    <a href="#">Perfil</a>
+                    <a href="#">Formular pregunta</a>
+                    <a href="perfilGeneral.view.php">Perfil</a>
                     <a href="#">Notificaciones</a>
                     <a href="#">Configuración</a>
-                    <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+                    <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
             </div>
         </div>
     </nav>
