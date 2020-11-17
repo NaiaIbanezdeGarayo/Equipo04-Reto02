@@ -4,6 +4,7 @@ footer{
     background-color: #735D78;
     color: white;
     text-align: center;
+    margin-top: 50px;
 }
 #listageneral{
     display: flex;
@@ -48,4 +49,5 @@ footer{
     padding: 0;
     width: 25%;
     display: flex;
+    align-self: center;
 }
