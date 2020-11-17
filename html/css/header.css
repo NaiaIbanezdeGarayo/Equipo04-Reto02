@@ -25,6 +25,9 @@ header{
     background-color: white;
 
 }
+input{
+    font-family: 'Montserrat', sans-serif;
+}
 
 nav #parrafo{
     width: 60%;
