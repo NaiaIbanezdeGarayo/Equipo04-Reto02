@@ -15,27 +15,25 @@
 </head>
 <body>
 <header>
-    <nav id="navigation">
-        <div class="opthome">
-            <a href="preguntas.view.php"><i class="fas fa-home"></i></a>
-        </div>
-        <div id="parrafo">
-            <p>AERGIBIDE SL</p>
-        </div>
+
+        <a href="preguntas.view.php"><i id="iconHome" class="fas fa-home"></i></a>
+
+
+        <label id="tituloAergibide">AERGIBIDE SL</label>
 
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user" id="iconUser"></i>
             </button>
             <div class="optperfil-content" id="myDropdown">
-                    <a href="#">Formular pregunta</a>
-                    <a href="perfilGeneral.view.php">Perfil</a>
-                    <a href="#">Notificaciones</a>
-                    <a href="#">Configuración</a>
-                    <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
+                <a href="#">Formular pregunta</a>
+                <a href="perfilGeneral.view.php">Perfil</a>
+                <a href="#">Notificaciones</a>
+                <a href="#">Configuración</a>
+                <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
             </div>
         </div>
-    </nav>
+
 
 </header>
 
