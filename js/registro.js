@@ -1,3 +1,5 @@
+import "../js/validaciones.js"
+
 $(document).ready(function(){
     $('#btn').on('click',function(){
         try{
@@ -42,7 +44,12 @@ function validarApellido(){
         return false
 }
 function validarEmail(){
-
+    let email = $('#email').value;
+    let expreg = new RegExp("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@aergibide.org");
+    if (expreg.test(email)){
+        return true
+    }else
+        return false
 }
 function validarNombreUsuario(){
 
@@ -50,8 +57,12 @@ function validarNombreUsuario(){
 function validarPass(){
     let pass1 = $('#pass1').value;
     let pass2 = $('#pass2').value;
+    let expreg = new RegExp("^([A-z0-9]{1,}[@._]{1,})*");
     /*Expresiones regulares*/
     if (pass1 === pass2){
-        if ()
+        if (expreg.test(pass1)){
+            return true
+        }else
+            return false
     }
 }
