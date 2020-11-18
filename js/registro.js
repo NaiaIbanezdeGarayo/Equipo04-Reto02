@@ -1,5 +1,4 @@
 import "../js/validaciones.js"
-
 $(document).ready(function(){
     $('#btn').on('click',function(){
         try{

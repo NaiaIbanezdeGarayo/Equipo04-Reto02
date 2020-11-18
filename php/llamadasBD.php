@@ -4,15 +4,31 @@
 /*TEMPORAL HASTA TENER UNA BASE DE DATOS*/
 
 function iniciarConexion(){
-    //Aquí abriríamos la conexión con MySQL.
+    //Aquí abrimos la conexión con MySQL.
+    $dbname = "db_reto2";
+    $host = "localhost";
+    $user = "admin";
+    $pass = "12345";
+    try{
+       $dbh = new PDO("mysql:host=$host;dbname=$dbname",$user,$pass);
+       return $dbh;
+    }catch (PDOException $e){
+        echo $e->getMessage();
+        return null;
+    }
 }
 
 function finalizarConexion(){
-    //Aquí cerraríamos la conexión con MySQL.
+    //Aquí cerramos la conexión con MySQL.
+    $dbh = null;
 }
 
 
-function leerPreguntas(){
+function leerPreguntas($dbh){
+
+    //Preparamos la sentencia
+    $stmt = $dbh->prepare("SELECT * FROM Preguntas");
+    $stmt->execute();
 
     /*Llamadas de BD*/
 

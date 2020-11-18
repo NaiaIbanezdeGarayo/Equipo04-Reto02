@@ -4,12 +4,14 @@
         <title>AERGIBIDE SL</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/signup.css">
+        <link rel="stylesheet" href="../html/css/signup.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     </head>
     <body>
     <div id="divgeneral">
         <h1>¡BIENVENIDO A AERGIBIDE SL!</h1>
+        <p><?php echo iniciarConexion()?></p>
         <form action="">
             <h2>Crear cuenta</h2>
             <div class="textbox">
@@ -56,4 +58,4 @@
     </body>
 </html>
 
-<?php
+
