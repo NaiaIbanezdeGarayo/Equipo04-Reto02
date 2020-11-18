@@ -10,8 +10,6 @@
     <script src="../js/header.js"></script>
     <link rel="stylesheet" href="../html/css/header.css">
     <link rel="stylesheet" href="../html/css/footer.css">
-    <link rel="stylesheet" href="../html/css/preguntas.css">
-    <link rel="stylesheet" href="../html/css/perfil.css">
 </head>
 <body>
 <header>
@@ -27,7 +25,7 @@
             </button>
             <div class="optperfil-content" id="myDropdown">
                 <a href="#">Formular pregunta</a>
-                <a href="perfilGeneral.view.php">Perfil</a>
+                <a href="../html/perfilGeneral.view.php">Perfil</a>
                 <a href="#">Notificaciones</a>
                 <a href="#">Configuración</a>
                 <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
