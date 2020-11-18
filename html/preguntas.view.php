@@ -98,4 +98,4 @@
 </div>
 
 </body>
-<?php //include "footer.view.php"?>
+<?php include "footer.view.php"?>

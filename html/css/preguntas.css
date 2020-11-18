@@ -31,6 +31,7 @@
 
     padding: 5px;
     max-width: 300px;
+    height: 100vh;
 
     /* DESCARTADO
     position: sticky;
@@ -198,11 +199,7 @@ label{
     font-family: 'Montserrat';
 }
 
-#divTag select option:hover,
-option:focus,
-option:checked{
-    background-color: #C0B9DD;
-}
+
 
 @media only screen and (max-width: 1300px){
     #divPrincipal{
