@@ -24,14 +24,20 @@ function finalizarConexion(){
 }
 
 
-function leerPreguntas($dbh){
-
+function leerPreguntas($dbh)
+{
     //Preparamos la sentencia
     $stmt = $dbh->prepare("SELECT * FROM Preguntas");
+    //Devuelve objetos anónimos que tendrán como propiedades las columnas obtenidas.
+    //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
+    $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($resultado as $row){
+        echo $row["titulo"]." ".$row["descripcion"]." ".$row["fecha"]." ".$row["tema"]."\n";
+    }
     $stmt->execute();
-
+}
     /*Llamadas de BD*/
-
+/*
     $preguntas = [
         "001" => [
             "titulo" => "¿No funciona el wifi?",
@@ -62,7 +68,7 @@ function leerPreguntas($dbh){
     return $preguntas;
 }
 
-
+*/
 function leerUsuarios(){
 
     /*Llamadas de BD*/

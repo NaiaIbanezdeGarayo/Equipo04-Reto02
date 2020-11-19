@@ -1,14 +1,13 @@
 <?php
 //P
-require_once 'llamadasBD.php';
+require_once '../php/llamadasBD.php';
 
 
 //Abrimos la conexión con la base de datos.
-iniciarConexion();
-
+$db = iniciarConexion();
 //Solicitamos todos los datos que necesitemos (Preguntas y usuarios)
-$usuarios = leerUsuarios();
-$preguntas = leerPreguntas();
+$usuarios = leerUsuarios($db);
+$preguntas = leerPreguntas($db);
 $preguntasConUsuarios = array();
 
 //Para aplicar un orden habría que realizar distintas consultas MySQL ordenando

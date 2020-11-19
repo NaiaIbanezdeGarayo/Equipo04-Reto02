@@ -1,5 +1,5 @@
 <?php
-require_once 'llamadasBD.php';
+require_once '../php/llamadasBD.php';
 
 $db = iniciarConexion();
 
