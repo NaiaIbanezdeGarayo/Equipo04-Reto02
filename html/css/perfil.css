@@ -1,4 +1,4 @@
-main{
+#divGeneral{
     width: 100vw;
 }
 #sectionGeneral{
@@ -53,8 +53,11 @@ button.item{
     border-bottom: 2px solid #C0B9DD;
 }
 
+a{
+}
+
 @media only screen and (min-width: 800px){
-    main{
+    #divGeneral{
         display: flex;
         flex-direction: row;
     }
@@ -64,7 +67,8 @@ button.item{
     }
     #sectionGeneral{
         flex: 1;
-        margin-top: 150px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         order: 2;
         border-left: 2px solid #c0b9dd;
     }

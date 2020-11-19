@@ -1,4 +1,6 @@
-<!--<?php include 'header.view.php';?>-->
+
+<?php include 'header.view.php';?>
+
 
 <head>
     <title>AERGIBIDE SL</title>
@@ -23,7 +25,7 @@
 
         <div id="divEnlaces">
             <!--Botones que enlazarán con otras páginas.-->
-            <button class="btEnlace btNoSeleccionado"><a href="/html/preguntas.view.php">Preguntas</a></button>
+            <button class="btEnlace btNoSeleccionado"><a href="../php/preguntas.php">Preguntas</a></button>
             <button class="btEnlace btNoSeleccionado"><a href="/html/usuarios.view.php">Usuarios</a></button>
             <button class="btEnlace btSeleccionado"><a href="/html/temas.view.php">Temas</a></button>
         </div>
@@ -103,4 +105,5 @@
 </div>
 
 </body>
+<?php include "footer.view.php"?>
 
