@@ -8,34 +8,32 @@
     <script src="../js/jquery-3.5.1.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../js/header.js"></script>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/preguntas.css">
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="../html/css/header.css">
+    <link rel="stylesheet" href="../html/css/footer.css">
 </head>
 <body>
 <header>
-    <nav id="navigation">
-        <div class="opthome">
-            <a href="preguntas.view.php"><i class="fas fa-home"></i></a>
-        </div>
-        <div id="parrafo">
-            <p>AERGIBIDE SL</p>
-        </div>
+
+        <a href="../php/preguntas.php"><i id="iconHome" class="fas fa-home"></i></a>
+
+
+        <label id="tituloAergibide">AERGIBIDE SL</label>
 
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user" id="iconUser"></i>
             </button>
             <div class="optperfil-content" id="myDropdown">
-                    <a href="#">Formular pregunta</a>
-                    <a href="perfil.view.php">Perfil</a>
-                    <a href="#">Notificaciones</a>
-                    <a href="#">Configuración</a>
-                    <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
+
+                <a href="#">Formular pregunta</a>
+                <a href="../php/perfilGeneral.php">Perfil</a>
+                <a href="#">Notificaciones</a>
+                <a href="#">Configuración</a>
+                <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
+
             </div>
         </div>
-    </nav>
+
 
 </header>
 

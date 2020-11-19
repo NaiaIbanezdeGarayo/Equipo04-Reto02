@@ -1,7 +1,6 @@
 #divPrincipal{
     display: flex;
     flex-direction: column;
-    margin-top: 7%;
 }
 
 #divSuperior{
@@ -32,6 +31,7 @@
 
     padding: 5px;
     max-width: 300px;
+    height: 100vh;
 
     /* DESCARTADO
     position: sticky;
@@ -199,22 +199,9 @@ label{
     font-family: 'Montserrat';
 }
 
-#divTag select option:hover,
-option:focus,
-option:checked{
-    background-color: #C0B9DD;
-}
-
-@media only screen and (max-width: 1300px){
-    #divPrincipal{
-        margin-top: 12%;
-    }
-}
 
 @media only screen and (max-width: 700px){
-    #divPrincipal{
-        margin-top: 17%;
-    }
+
 
     #divInferior{
         flex-direction: column;
@@ -257,9 +244,6 @@ option:checked{
 
 @media only screen and (max-width: 500px){
 
-    #divPrincipal{
-        margin-top: 20%;
-    }
     h1{
         font-size: 25px;
     }
