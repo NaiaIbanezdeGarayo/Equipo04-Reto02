@@ -30,6 +30,7 @@ body {
     font-size: 40px;
     padding-left: 20px;
     padding-right: 20px;
+    color: black;
 }
 
 
@@ -43,6 +44,7 @@ body {
 
 .dropbtn{
     border: none;
+    background-color: transparent;
 }
 
 /* Dropdown Content (Hidden by Default) */
