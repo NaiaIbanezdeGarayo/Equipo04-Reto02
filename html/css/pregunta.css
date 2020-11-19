@@ -1,0 +1,228 @@
+#divGeneralPregunta *{
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+body{
+    background-color: gainsboro;
+}
+
+#divGeneralPregunta{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+/*SUPERIOR*/
+
+#divSuperior{
+    display: flex;
+    margin: 30px;
+
+}
+
+#divDatosUsuarioPregunta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 1;
+}
+
+#nickUsuarioPregunta{
+    font-size: 25px;
+}
+
+#imgPerfilPregunta{
+    height: 90px;
+    width: auto;
+    border-radius: 100%;
+}
+
+#divDatosPregunta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    flex: 5;
+}
+
+#tituloPregunta{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#detallesPregunta{
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+/*INFERIOR*/
+
+#divInferior{
+    border-top: black 1px solid;
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+
+    align-self: center;
+    width: 90%;
+}
+
+/*ESCRIBIR RESPUESTA*/
+
+#divEscribir{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 5px 1px #00000057;
+}
+
+#lbTuRespuesta{
+font-size: 20px;
+}
+
+#textAreaTuRepuesta{
+margin-top: 10px;
+min-height: 200px;
+
+font-size: 15px;
+resize: none;
+}
+
+#btEnviarRespuesta{
+    align-self: center;
+    width: 100%;
+    margin-top: -1px;
+}
+
+/*RESPUESTAS*/
+
+#divRespuestas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divRespuesta{
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px 1px #00000057;
+}
+
+.divDatosUsuarioRespuesta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 1;
+}
+
+.nickUsuarioRespuesta{
+    font-size: 25px;
+}
+
+.imgPerfilRespuesta{
+    height: 90px;
+    width: auto;
+    border-radius: 100%;
+}
+
+.divDatosRespuesta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    flex: 5;
+}
+
+.detallesRespuesta{
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+.botonResponder{
+    align-self: flex-end;
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 700px){
+
+    #divSuperior{
+        flex-direction: column;
+    }
+
+    #divDatosUsuarioPregunta{
+        flex-direction: row;
+    }
+
+    #nickUsuarioPregunta{
+        order: 2;
+        margin-left: 20px;
+    }
+
+    .divRespuesta{
+        flex-direction: column;
+    }
+
+    .divDatosUsuarioRespuesta{
+        flex-direction: row ;
+        margin-top: 10px;
+    }
+
+    .nickUsuarioRespuesta{
+        order: 2;
+        margin-left: 20px;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px){
+
+    #nickUsuarioPregunta{
+        font-size: 20px;
+    }
+
+    #tituloPregunta{
+        font-size: 20px;
+    }
+
+    #detallesPregunta{
+        font-size: 15px;
+    }
+
+    #descripcionPregunta{
+        font-size: 16px;
+    }
+
+    .nickUsuarioRespuesta{
+        font-size: 20px;
+    }
+
+    .detallesRespuesta{
+        font-size: 13px;
+    }
+
+    .descripcionRespuestaa{
+        font-size: 14px;
+    }
+
+
+}
