@@ -4,18 +4,40 @@
 /*TEMPORAL HASTA TENER UNA BASE DE DATOS*/
 
 function iniciarConexion(){
-    //Aquí abriríamos la conexión con MySQL.
+    //Aquí abrimos la conexión con MySQL.
+    $dbname = "db_reto2";
+    $host = "localhost";
+    $user = "admin";
+    $pass = "12345";
+    try{
+       $dbh = new PDO("mysql:host=$host;dbname=$dbname",$user,$pass);
+       return $dbh;
+    }catch (PDOException $e){
+        echo $e->getMessage();
+        return null;
+    }
 }
 
 function finalizarConexion(){
-    //Aquí cerraríamos la conexión con MySQL.
+    //Aquí cerramos la conexión con MySQL.
+    $dbh = null;
 }
 
 
-function leerPreguntas(){
-
+function leerPreguntas($dbh)
+{
+    //Preparamos la sentencia
+    $stmt = $dbh->prepare("SELECT * FROM Preguntas");
+    //Devuelve objetos anónimos que tendrán como propiedades las columnas obtenidas.
+    //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
+    $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($resultado as $row){
+        echo $row["titulo"]." ".$row["descripcion"]." ".$row["fecha"]." ".$row["tema"]."\n";
+    }
+    $stmt->execute();
+}
     /*Llamadas de BD*/
-
+/*
     $preguntas = [
         "001" => [
             "titulo" => "¿No funciona el wifi?",
@@ -46,7 +68,7 @@ function leerPreguntas(){
     return $preguntas;
 }
 
-
+*/
 function leerUsuarios(){
 
     /*Llamadas de BD*/

@@ -26,14 +26,6 @@
     max-height: 200px;
     border-radius: 50%;
 }
-.item1 a{
-    padding: 5%;
-    text-decoration: none;
-}
-.item2 a{
-    padding: 23%;
- }
-
 #articleMenu a{
     border-bottom: 2px solid #C0B9DD;
 }
@@ -41,10 +33,23 @@
     display: flex;
 }
 .item{
-    padding: 2%;
+    padding: 3%;
 }
-button.item{
+input[type="button"].item{
     border: none;
+    border-bottom: 2px solid #99829E;
+    margin: 1%;
+}
+.item1{
+    background: none;
+    font-size: 20px;
+}
+.item2{
+    background: url("../../img/star-regular.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+
 }
 .sectionPreg article{
     padding: 5%;

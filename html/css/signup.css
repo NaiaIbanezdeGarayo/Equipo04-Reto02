@@ -8,10 +8,11 @@
 h1,h2{
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    font-size: 30px;
 }
 h1{
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 body {
     font-family: 'Montserrat', sans-serif;
@@ -20,7 +21,7 @@ body {
     height: 100%;
     background-color: #C0B9DD;
 }
-input{
+input,textarea{
     font-family: 'Montserrat', sans-serif;
 }
 a{
@@ -53,7 +54,7 @@ label{
     margin: 8px;
     border-bottom: 1px solid white;
 }
-.textbox input{
+.textbox input, .textbox textarea{
     border: none;
     outline: none;
     background: none;
@@ -96,12 +97,11 @@ label{
     label{
         font-size: 1em;
     }
-    .textbox input{
-        font-size: 20px;
+    .textbox input, .textbox textarea{
+        font-size: 1em;
     }
     #divgeneral{
         background-color: #C0B9DD;
-        height: 100%;
         left: 0;
     }
 }
@@ -114,14 +114,13 @@ label{
     label{
         font-size: 1em;
     }
-    .textbox input{
-        font-size: 20px;
+    .textbox input, .textbox textarea{
+        font-size: 1em;
     }
     #divgeneral{
         left: 0;
         background-color: #C0B9DD;
-        height: 100%;
-        padding: 2%;
+        padding: 37px 3%;
     }
     a{
         margin-bottom: 0;
