@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 
 /*TEMPORAL HASTA TENER UNA BASE DE DATOS*/
 
@@ -24,19 +26,34 @@ function finalizarConexion(){
 }
 
 
-function leerPreguntas($dbh)
+function leerPreguntas()
 {
+    $dbh = iniciarConexion();
     //Preparamos la sentencia
     $stmt = $dbh->prepare("SELECT * FROM Preguntas");
     //Devuelve objetos anónimos que tendrán como propiedades las columnas obtenidas.
     //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
-    $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($resultado as $row){
-        echo $row["titulo"]." ".$row["descripcion"]." ".$row["fecha"]." ".$row["tema"]."\n";
-    }
     $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $preguntas = [];
+    while ($row = $stmt->fetch()){
+       /*<?php foreach ($preguntasConUsuarios as $pregunta) { ?>*/
+                    echo '<div class="divPregunta">';
+                    echo '<div class="divPregIzq">';
+                    //echo '<label class="labPregNickname">'. $row["nickname"]. '</label>';
+                    echo '<a href="http://www.google.es">';
+                    //echo '<img class="imgPregPerfil" src='. $row["urlImg"]. '>';
+                    echo '</a>';
+                    echo '</div>';
+                    echo '<div class="divPregDer">';
+                    echo '<a class="tituloPreg" href="http://www.google.es">'.$row["titulo"].'</a>';
+                    echo '<div class="divSeparadorpregunta"></div>';
+                    echo '<label class="lbDescripcion">'. $row["descripcion"].'</label>';
+                    echo '</div>'.'</div>';
+
+    }
+
 }
-    /*Llamadas de BD*/
 /*
     $preguntas = [
         "001" => [
@@ -69,10 +86,23 @@ function leerPreguntas($dbh)
 }
 
 */
-function leerUsuarios(){
+function leerUsuarios()
+{
+    $dbh = iniciarConexion();
+    //Preparamos la sentencia
+    $stmt = $dbh->prepare("SELECT * FROM Usuarios");
+    //Devuelve objetos anónimos que tendrán como propiedades las columnas obtenidas.
+    //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_OBJ);
+    $usuarios = [];
+    while ($row = $stmt->fecth()){
+        array_push($usuarios,$row);
+    }
 
-    /*Llamadas de BD*/
-
+    return $usuarios;
+}
+/*
     $usuarios = [
         "001" => [
             "tipoUsuario" => 1,
@@ -112,7 +142,11 @@ function leerUsuarios(){
     ];
 
 
-    return $usuarios;
+    return $usuarios;*/
+
+
+function leerUsuariosPorId($id){
+
 }
 
 
