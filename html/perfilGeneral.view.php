@@ -3,7 +3,7 @@
 <head>
     <title>AERGIBIDE SL</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../html/css/perfil.css">
+    <link rel="stylesheet" href="../html/css/perfilGeneral.css">
     <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 
