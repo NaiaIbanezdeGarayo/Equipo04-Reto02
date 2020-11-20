@@ -1,3 +1,6 @@
+
+<?php include 'header.view.php';?>
+
 <head>
     <title>AERGIBIDE SL</title>
     <meta charset="utf-8">
@@ -80,3 +83,4 @@
 
     </div>
 </body>
+<?php include "footer.view.php"?>
