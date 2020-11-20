@@ -26,8 +26,8 @@
         <div id="divEnlaces">
             <!--Botones que enlazarán con otras páginas.-->
             <button class="btEnlace btNoSeleccionado"><a href="../php/preguntas.php">Preguntas</a></button>
-            <button class="btEnlace btNoSeleccionado"><a href="/html/usuarios.view.php">Usuarios</a></button>
-            <button class="btEnlace btSeleccionado"><a href="/html/temas.view.php">Temas</a></button>
+            <button class="btEnlace btNoSeleccionado"><a href="../php/usuarios.php">Usuarios</a></button>
+            <button class="btEnlace btSeleccionado"><a href="../php/temas.php">Temas</a></button>
         </div>
 
         <div id="divInformacion">

@@ -12,4 +12,5 @@ $db = iniciarConexion();
 //Cerramos la conexión
 finalizarConexion();
 
-require "../html/usuarios.view.php";
+require "../index.view.php";
+
