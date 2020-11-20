@@ -3,7 +3,7 @@
 <head>
     <title>AERGIBIDE SL</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../html/css/perfil.css">
+    <link rel="stylesheet" href="../html/css/perfilGeneral.css">
     <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 
@@ -12,7 +12,7 @@
         <section id="sectionGeneral">
             <article id="articleDatosUsuario">
                 <img src="../img/default-user-image.png">
-                <a href="editarpefil.view.php">Editar perfil <i class="fas fa-pencil-alt"></i></a>
+                <a href="../php/editarPerfil.php">Editar perfil <i class="fas fa-pencil-alt"></i></a>
                 <p>Nombre Apellido</p>
                 <p>Usuario</p>
                 <p>Descripción</p>
