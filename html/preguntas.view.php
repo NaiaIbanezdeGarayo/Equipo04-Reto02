@@ -24,9 +24,9 @@
 
         <div id="divEnlaces">
             <!--Botones que enlazarán con otras páginas.-->
-            <button class="btEnlace btSeleccionado"><a href="/html/preguntas.view.php">Preguntas</a></button>
-            <button class="btEnlace btNoSeleccionado"><a href="/html/usuarios.view.php">Usuarios</a></button>
-            <button class="btEnlace btNoSeleccionado"><a href="/html/temas.view.php">Temas</a></button>
+            <button class="btEnlace btSeleccionado"><a href="../php/preguntas.php">Preguntas</a></button>
+            <button class="btEnlace btNoSeleccionado"><a href="../php/usuarios.php">Usuarios</a></button>
+            <button class="btEnlace btNoSeleccionado"><a href="../php/temas.php">Temas</a></button>
         </div>
 
         <div id="divInformacion">
@@ -68,25 +68,7 @@
             <div id="divPreguntas">
                 <!--Aquí se generarán las preguntas.-->
 
-                <?php foreach ($preguntasConUsuarios as $pregunta) { ?>
-                    <div class="divPregunta">
-                        <div class="divPregIzq">
-                            <label class="labPregNickname"> <?php echo $pregunta["nickname"]; ?> </label>
-                            <a href="http://www.google.es">
-                                <img class="imgPregPerfil" src="<?php echo $pregunta["urlImg"]; ?>">
-                            </a>
-                        </div>
-
-                        <div class="divPregDer">
-                            <a class="tituloPreg" href="http://www.google.es">
-                                <?php echo $pregunta["titulo"] ?>
-                            </a>
-                            <div class="divSeparadorpregunta"></div>
-                            <label class="lbDescripcion"><?php echo $pregunta["descripcion"] ?></label>
-                        </div>
-
-                    </div>
-                <?php } ?>
+                <?= cargarDatosPreguntas()?>
 
               
 
