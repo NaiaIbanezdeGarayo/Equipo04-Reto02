@@ -24,7 +24,38 @@ function finalizarConexion(){
     //Aquí cerramos la conexión con MySQL.
     $dbh = null;
 }
+function cargarDatosPreguntas(){
+   $stmt = leerPreguntas();
+   $stmtu = leerUsuarios();
+    while ($row = $stmtu->fetch()){
+        echo '<div class="divPregunta">';
+        echo '<div class="divPregIzq">';
+        echo '<label class="labPregNickname">'. $row["nickname"]. '</label>';
+        echo '<a href="http://www.google.es">';
+        echo '<img class="imgPregPerfil" src="'. $row["imagen"]. '">';
+        echo '</a>';
+        echo '</div>';
+        echo '<div class="divPregDer">';
 
+    }
+    while($row = $stmt-> fetch()){
+        echo '<a class="tituloPreg" href="http://www.google.es">'.$row["titulo"].'</a>';
+        echo '<div class="divSeparadorpregunta"></div>';
+        echo '<label class="lbDescripcion">'. $row["descripcion"].'</label>';
+        echo '</div>'.'</div>';
+    }
+}
+function cargarDatosUsuarios(){
+    $stmt = leerUsuarios();
+    while ($row = $stmt->fetch()){
+        echo '<div class="divUsuario">';
+        echo '<label class="labUsuNickname">'.$row[nickname].'</label>';
+        echo '<a href="../php/perfil.php">';
+        echo '<img class="imgPregPerfil" src="../img/default-user-image.png">'
+        echo '</a>';
+        echo '</div>';
+    }
+}
 
 function leerPreguntas()
 {
@@ -36,23 +67,8 @@ function leerPreguntas()
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $preguntas = [];
-    while ($row = $stmt->fetch()){
-       /*<?php foreach ($preguntasConUsuarios as $pregunta) { ?>*/
-                    echo '<div class="divPregunta">';
-                    echo '<div class="divPregIzq">';
-                    //echo '<label class="labPregNickname">'. $row["nickname"]. '</label>';
-                    echo '<a href="http://www.google.es">';
-                    //echo '<img class="imgPregPerfil" src='. $row["urlImg"]. '>';
-                    echo '</a>';
-                    echo '</div>';
-                    echo '<div class="divPregDer">';
-                    echo '<a class="tituloPreg" href="http://www.google.es">'.$row["titulo"].'</a>';
-                    echo '<div class="divSeparadorpregunta"></div>';
-                    echo '<label class="lbDescripcion">'. $row["descripcion"].'</label>';
-                    echo '</div>'.'</div>';
 
-    }
-
+    return $stmt;
 }
 /*
     $preguntas = [
@@ -94,13 +110,10 @@ function leerUsuarios()
     //Devuelve objetos anónimos que tendrán como propiedades las columnas obtenidas.
     //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
     $stmt->execute();
-    $stmt->setFetchMode(PDO::FETCH_OBJ);
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $usuarios = [];
-    while ($row = $stmt->fecth()){
-        array_push($usuarios,$row);
-    }
 
-    return $usuarios;
+    return $stmt;
 }
 /*
     $usuarios = [

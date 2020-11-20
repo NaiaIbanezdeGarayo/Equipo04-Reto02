@@ -68,7 +68,7 @@
             <div id="divPreguntas">
                 <!--Aquí se generarán las preguntas.-->
 
-                <?= leerPreguntas()?>
+                <?= cargarDatosPreguntas()?>
 
               
 
