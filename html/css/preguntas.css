@@ -1,3 +1,7 @@
+#divPrincipal *{
+    font-family: Arial;
+}
+
 #divPrincipal{
     display: flex;
     flex-direction: column;
@@ -184,11 +188,9 @@ label{
     margin-left: 5px;
     height: 30px;
     width: auto;
-    font-family: 'Montserrat', sans-serif;
     border-radius: 5px;
 }
 #divTag select{
-    font-family: 'Montserrat', sans-serif;
     border: none;
     border-bottom: 1px solid black;
 }
@@ -196,9 +198,19 @@ label{
 .ipBuscador{
     border: none;
     border-bottom: 1px solid black;
-    font-family: 'Montserrat';
 }
 
+@media only screen and (min-width: 800px){
+    body{
+        background-color: gainsboro;
+    }
+
+    #divPrincipal{
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px;
+    }
+}
 
 @media only screen and (max-width: 700px){
 
