@@ -12,7 +12,7 @@
         <section id="sectionGeneral">
             <article id="articleDatosUsuario">
                 <img src="../img/default-user-image.png">
-                <a href="editarpefil.view.php">Editar perfil <i class="fas fa-pencil-alt"></i></a>
+                <a href="editarpefil.html">Editar perfil <i class="fas fa-pencil-alt"></i></a>
                 <p>Nombre Apellido</p>
                 <p>Usuario</p>
                 <p>Descripción</p>
