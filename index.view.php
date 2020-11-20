@@ -16,12 +16,14 @@
             <div class="textbox">
                 <i class="fas fa-user"></i>
                 <input type="text" name="user" id="user" placeholder="Usuario"><br>
+                <?= $user = $_POST['user'] ?>
             </div>
             <div class="textbox">
                 <i class="fas fa-lock"></i>
                 <input type="password" name="pass" id="pass" placeholder="Contraseña"><br>
+                <?= $pass = $_POST['pass'] ?>
             </div>
-            <input type="submit" name="enviar" id="btn">
+            <input type="submit" name="accederLogin" id="btn">
         </form>
         <a href="">¿Has olvidado la contraseña?</a><br>
         <a href="html/signup.view.php" id="botom">No tengo cuenta. Crear Cuenta</a
