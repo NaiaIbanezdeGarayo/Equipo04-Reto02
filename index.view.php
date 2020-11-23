@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="html/css/login.css">
     <link rel="stylesheet" href="html/css/preguntas.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="js/login.js"></script>
 </head>
 <body>
     <div id="divgeneral">
