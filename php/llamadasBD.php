@@ -3,6 +3,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
+if (isset($_POST["username"]) && isset($_POST["password"])){
+    crearUsuario($_POST["name"], $_POST["apellido1"], $_POST["apellido2"], $_POST["birt"], $_POST["descripcion"], $_POST["email"], $_POST["username"], $_POST["password"]);
+}
+if (isset($_POST["user"]) && isset($_POST["pass"])){
+    comprobarInicioSesion();
+}
+
 /*TEMPORAL HASTA TENER UNA BASE DE DATOS*/
 
 function iniciarConexion(){
@@ -92,6 +99,19 @@ function leerRespuestas(){
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt;
+}
+
+function crearUsuario( $nickname, $password, $nombre, $apellido1, $apellido2, $email, $descripcion, $edad){
+    $dbh = iniciarConexion();
+    $password = password_hash($_POST['$password'],PASSWORD_BCRYPT);
+    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :edad)");
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt;
+}
+
+function comprobarInicioSesion(){
+
 }
 
 
