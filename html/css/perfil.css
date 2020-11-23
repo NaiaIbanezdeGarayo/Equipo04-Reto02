@@ -1,65 +1,66 @@
+#divPrincipal{
+    display: flex;
+    height: 100%;
+}
 
-#sectionGeneral{
-    margin-top: 50px;
+#divIzq{
     display: flex;
     flex-direction: column;
+    flex: 3;
 }
-#articleDatosUsuario{
+
+#divBotones{
+    display: flex;
+    margin: 20px;
+    justify-content: left;
+}
+
+#divBotones button{
+    color: #735D78;
+    height: 40px;
+    width: 80px;
+    margin: 5px;
+}
+
+.divPregunta{
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-#sectionGeneral article{
-    margin-bottom: 5%;
-}
-#articleDatosUsuario a{
-    text-decoration: none;
-    padding: 5%;
-}
-#articleMenu{
-    padding: 0 5%;
-}
-#articleDatosUsuario img{
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 50%;
-}
-.item1 a{
-    padding: 5%;
-    text-decoration: none;
-}
-.item2 a{
-    padding: 23%;
- }
-
-#articleMenu a{
-    border-bottom: 2px solid #C0B9DD;
+    margin: 10px;
+    padding: 5px;
+    border: #c0b9dd 1px solid;
+    border-radius: 10px;
 }
 
-.items{
+
+
+#divDer{
+    padding: 10px;
+    margin: 10px;
     display: flex;
-}
-.item{
-    padding: 2%;
-}
-button.item{
-    border: none;
-}
-.sectionIzq article{
-    padding: 5%;
-}
-.tituloPreg{
-    border-bottom: 2px solid #C0B9DD;
-    text-decoration: none;
-}
-
-
-
-a{
+    flex-direction: column;
+    border-left: #c0b9dd 2px solid;
+    flex: 2;
 }
 
 #lbNickname{
-    font-size: 25px;
+    font-size: 30px;
+    align-self: center;
+}
+
+#imgPerfil{
+    border-radius: 100%;
+    width: 70%;
+    height: auto;
+    align-self: center;
+}
+
+#lbNombre{
+    font-size: 20px;
+    align-self: center;
+}
+
+#lbDescripcion{
+    margin-top: 20px;
 }
 
 @media only screen and (min-width: 800px){
@@ -67,27 +68,9 @@ a{
         background-color: gainsboro;
     }
 
-    #divGeneral{
+    #divPrincipal{
         background-color: white;
         border-radius: 20px;
         margin: 10px;
-    }
-}
-
-@media only screen and (min-width: 800px){
-    #divGeneral{
-        display: flex;
-        flex-direction: row;
-    }
-    .sectionIzq{
-        flex: 2;
-        margin-top: 150px;
-    }
-    #sectionGeneral{
-        flex: 1;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        order: 2;
-        border-left: 2px solid #c0b9dd;
     }
 }
