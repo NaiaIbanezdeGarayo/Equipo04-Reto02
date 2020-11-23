@@ -20,10 +20,7 @@ while ($pregunta = $preguntas->fetch()){
     while ($usuario = $usuarios->fetch()){
         if ($pregunta["usuarioid"] == $usuario["id"]){
             $nickname = $usuario["nickname"];
-        }
-
-        if ($pregunta["usuarioid"] == $usuario["id"]){
-            $id = $usuario["imagen"];
+            $urlImg = $usuario["imagen"];
         }
     }
 
