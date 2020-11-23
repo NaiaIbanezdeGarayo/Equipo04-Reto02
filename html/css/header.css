@@ -3,89 +3,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-*{
-    margin: 0 ;
-}
-h1{
-    font-family: 'Poppins', sans-serif;
-}
-body{
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-}
 header{
     display: flex;
-    width: 100vw;
-    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    box-shadow: 5px 10px;
     box-shadow: 0 0 7px 1px #00000057;
-    color: black;
     background-color: white;
 
-}
 
-nav #parrafo{
-    width: 60%;
-    padding: 1.5%;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 900;
-    align-self: center;
-}
-ul.menu{
-    flex-direction: column;
-    justify-content: center;
-    height: 0;
-    display: none;
-    transition: height 0.4s ease-in-out 0s, background-color 0.9s ease 0s;
+    position: sticky;
+    top: 0px;
+
 
 }
-.menu li:hover{
-    background-color: #F5F5F5;
+
+body {
+    margin: 0px;
 }
 
-#navigation{
-    display: flex;
-    transition: 0s;
-    width: 100%;
-    box-shadow: -20px -15px 6px 5px #00000038;
-    padding: 2% 0;
-    justify-content: space-around;
+#tituloAergibide{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }
 
-.menu {
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    list-style-type: none;
-    margin-top: 60px;
-}
-
-.opthome a{
+#iconHome, #iconUser{
+    font-size: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     color: black;
-    text-decoration: none;
-    display: block;
-    font-size: 50px;
 }
-.dropbtn {
-    color: black;
-    cursor: pointer;
-    font-size: 3em;
-    text-align: center;
-    background: none;
-    border: none;
-    height:40px;
-}
-i{
-    vertical-align: middle;
-}
+
+
+
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
+}
+
+.dropbtn{
+    border: none;
+    background-color: transparent;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -117,29 +78,35 @@ i{
     right: 0;
     top: 60px;
 }
-@media only screen and (min-width: 1000px){
-    #navigation{
-        padding: 1% 0;
+
+@media only screen and (max-width: 700px){
+    header{
+        height: 50px;
+    }
+
+    #iconHome, #iconUser{
+        font-size: 30px;
+    }
+
+    #tituloAergibide{
+        font-size: 15px;
     }
 }
 
-@media only screen and (min-width: 1500px){
-    #navigation{
-        padding: 0;
+@media only screen and (max-width: 500px){
+    header{
+        height: 30px;
     }
-    .opthome{
-        padding-top: 10px;
+
+    #iconHome, #iconUser{
+        font-size: 20px;
     }
-    .dropdown{
-        padding-top: 10px;
-    }
-}
-@media only screen and (min-width: 2000px) {
-    .opthome{
-        padding-top: 20px;
-    }
-    .dropdown{
-        padding-top: 20px;
+
+    #tituloAergibide{
+        font-size: 15px;
     }
 }
+
+
+
 

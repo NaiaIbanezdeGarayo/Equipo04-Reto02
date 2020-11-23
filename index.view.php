@@ -12,7 +12,7 @@
     <div id="divgeneral">
         <h1>¡BIENVENIDO A AERGIBIDE SL!</h1>
         <h2>Inicio de sesión</h2>
-        <form action="">
+        <form action="/php/login.php" method="post">
             <div class="textbox">
                 <i class="fas fa-user"></i>
                 <input type="text" name="user" id="user" placeholder="Usuario"><br>

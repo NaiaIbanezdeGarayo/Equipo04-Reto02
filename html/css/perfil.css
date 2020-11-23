@@ -1,6 +1,4 @@
-main{
-    width: 100vw;
-}
+
 #sectionGeneral{
     margin-top: 30%;
     display: flex;
@@ -53,8 +51,23 @@ button.item{
     border-bottom: 2px solid #C0B9DD;
 }
 
+a{
+}
+
 @media only screen and (min-width: 800px){
-    main{
+    body{
+        background-color: gainsboro;
+    }
+
+    #divGeneral{
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    #divGeneral{
         display: flex;
         flex-direction: row;
     }
@@ -64,7 +77,8 @@ button.item{
     }
     #sectionGeneral{
         flex: 1;
-        margin-top: 150px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         order: 2;
         border-left: 2px solid #c0b9dd;
     }

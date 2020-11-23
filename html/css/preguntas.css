@@ -1,7 +1,10 @@
+#divPrincipal *{
+    font-family: Arial;
+}
+
 #divPrincipal{
     display: flex;
     flex-direction: column;
-    margin-top: 7%;
 }
 
 #divSuperior{
@@ -32,6 +35,7 @@
 
     padding: 5px;
     max-width: 300px;
+    height: 100vh;
 
     /* DESCARTADO
     position: sticky;
@@ -184,11 +188,9 @@ label{
     margin-left: 5px;
     height: 30px;
     width: auto;
-    font-family: 'Montserrat', sans-serif;
     border-radius: 5px;
 }
 #divTag select{
-    font-family: 'Montserrat', sans-serif;
     border: none;
     border-bottom: 1px solid black;
 }
@@ -196,25 +198,22 @@ label{
 .ipBuscador{
     border: none;
     border-bottom: 1px solid black;
-    font-family: 'Montserrat';
 }
 
-#divTag select option:hover,
-option:focus,
-option:checked{
-    background-color: #C0B9DD;
-}
+@media only screen and (min-width: 800px){
+    body{
+        background-color: gainsboro;
+    }
 
-@media only screen and (max-width: 1300px){
     #divPrincipal{
-        margin-top: 12%;
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px;
     }
 }
 
 @media only screen and (max-width: 700px){
-    #divPrincipal{
-        margin-top: 17%;
-    }
+
 
     #divInferior{
         flex-direction: column;
@@ -257,9 +256,6 @@ option:checked{
 
 @media only screen and (max-width: 500px){
 
-    #divPrincipal{
-        margin-top: 20%;
-    }
     h1{
         font-size: 25px;
     }
