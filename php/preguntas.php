@@ -6,24 +6,39 @@ require_once '../php/llamadasBD.php';
 
 
 //Solicitamos todos los datos que necesitemos (Preguntas y usuarios)
-$usuarios = leerUsuarios();
 $preguntas = leerPreguntas();
 $preguntasConUsuarios = array();
 
-//Para aplicar un orden habría que realizar distintas consultas MySQL ordenando
-//el array de preguntas.
-
 //Tratamos la información para crear objetos con lo necesario en la interfaz.
-foreach($preguntas as $pregunta){
+while ($pregunta = $preguntas->fetch()){
 
-    /*array_push($preguntasConUsuarios, [
-        titulo => $pregunta["titulo"],
-        descripcion => $pregunta["descripcion"],
-        fecha => $pregunta["fecha"],
-        nickname => $usuarios[$pregunta[idUsuario]]["nickname"],
-        urlImg => $usuarios[$pregunta[idUsuario]]["urlImg"]
-    ]);*/
+    $nickname = "";
+    $urlImg = "";
+
+    $usuarios = leerUsuarios();
+
+    while ($usuario = $usuarios->fetch()){
+        if ($pregunta["usuarioid"] == $usuario["id"]){
+            $nickname = $usuario["nickname"];
+        }
+
+        if ($pregunta["usuarioid"] == $usuario["id"]){
+            $id = $usuario["imagen"];
+        }
+    }
+
+    array_push($preguntasConUsuarios, [
+        "titulo" => $pregunta["titulo"],
+        "descripcion" => $pregunta["descripcion"],
+        "fecha" => $pregunta["fecha"],
+        "nickname" => $nickname,
+        "urlImg" => $urlImg
+    ]);
 }
+
+
+
+
 
 
 
