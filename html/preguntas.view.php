@@ -70,8 +70,8 @@
                 <?php foreach ($preguntasConUsuarios as $pregunta) { ?>
                     <div class="divPregunta">
                         <div class="divPregIzq">
-                            <label class="labPregNickname"> <?php echo $pregunta["nickname"]; ?> </label>
-                            <a href="http://www.google.es">
+                            <label class="labPregNickname"> <?php echo $pregunta ["nickname"]; ?> </label>
+                            <a href="../php/perfil.php?nickname=<?php echo $pregunta["nickname"]?>">
                                 <img class="imgPregPerfil" src="<?php echo $pregunta["urlImg"]; ?>">
                             </a>
                         </div>
