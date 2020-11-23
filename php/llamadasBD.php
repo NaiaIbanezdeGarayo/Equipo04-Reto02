@@ -34,9 +34,31 @@ function leerPreguntas()
     //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    $preguntas = [];
 
     return $stmt;
+
+    //NUEVO
+
+    $arrayPreguntas = [];
+
+    while ($row = $stmtu->fetch()){
+
+        array_push($arrayPreguntas, [
+            id => $pregunta["id"],
+            tipoUsuario => $pregunta["tipoUsuario"],
+            nickname => $pregunta["nickname"],
+            password => $pregunta["password"],
+            nombre => $pregunta["nombre"],
+            apellido1 => $pregunta["apellido1"],
+            apellido2 => $pregunta["apellido2"],
+            email => $pregunta["email"],
+            descripcion => $pregunta["descripcion"],
+            edad => $pregunta["edad"],
+        ]);
+    }
+
+    return $arrayPreguntas;
+
 }
 
 function leerUsuarios()
@@ -73,6 +95,8 @@ function cargarDatosPreguntas(){
         echo '</div>'.'</div>';
     }
 }
+
+
 //INTERFAZ USUARIOS
 function cargarDatosUsuarios(){
     $stmt = leerUsuarios();
@@ -85,6 +109,8 @@ function cargarDatosUsuarios(){
         echo '</div>';
     }
 }
+
+
 function leerRespuestas(){
     $dbh = iniciarConexion();
     $stmt = $dbh->prepare("SELECT * FROM Respuestas");

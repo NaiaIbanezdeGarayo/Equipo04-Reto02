@@ -67,8 +67,12 @@
 
             <div id="divPreguntas">
                 <!--Aquí se generarán las preguntas.-->
+                <?php foreach ($usuarios as $usuario) { ?>
+                    <div class="divPregunta">
+                        <?php echo $usuario["id"]; ?>
+                    </div>
+                <?php } ?>
 
-                <?= cargarDatosPreguntas()?>
 
               
 
