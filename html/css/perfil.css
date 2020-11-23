@@ -1,6 +1,6 @@
 
 #sectionGeneral{
-    margin-top: 30%;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
 }
@@ -35,6 +35,7 @@
 #articleMenu a{
     border-bottom: 2px solid #C0B9DD;
 }
+
 .items{
     display: flex;
 }
@@ -44,14 +45,21 @@
 button.item{
     border: none;
 }
-.sectionPreg article{
+.sectionIzq article{
     padding: 5%;
 }
 .tituloPreg{
     border-bottom: 2px solid #C0B9DD;
+    text-decoration: none;
 }
 
+
+
 a{
+}
+
+#lbNickname{
+    font-size: 25px;
 }
 
 @media only screen and (min-width: 800px){
@@ -71,7 +79,7 @@ a{
         display: flex;
         flex-direction: row;
     }
-    .sectionPreg{
+    .sectionIzq{
         flex: 2;
         margin-top: 150px;
     }
