@@ -18,36 +18,23 @@
             </div>
 
             <div id="divPreguntas">
-
+                <?php foreach ($preguntasUsuario as $pregunta) { ?>
                 <div class="divPregunta">
-                    <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
+                    <a href="../php/pregunta.php?idPregunta=<?php echo $pregunta["id"]?>" class="tituloPreg"><?php echo $pregunta["titulo"];?></a>
                     <div class="divDescripcion">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p><?php echo $pregunta["descripcion"]; ?></p>
                     </div>
                 </div>
 
-                <div class="divPregunta">
-                    <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                    <div class="divDescripcion">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-
-                <div class="divPregunta">
-                    <a href="http://www.google.es" class="tituloPreg">¿Título de una pregunta?</a>
-                    <div class="divDescripcion">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-
+                <?php } ?>
             </div>
         </div>
 
         <div id="divDer">
-            <label id="lbNickname">Jaimito78</label>
+            <label id="lbNickname"><?php echo $usuarioPerfil[0]["nickname"] ?></label>
             <img id="imgPerfil" src="../img/default-user-image.png">
-            <label id="lbNombre">Jaimito Pérez</label>
-            <label id="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+            <label id="lbNombre"><?php echo $usuarioPerfil[0]["nombre"];echo " "; echo $usuarioPerfil[0]["apellido1"]?></label>
+            <label id="lbDescripcion"><?php echo $usuarioPerfil[0]["descripcion"] ?></label>
         </div>
     </div>
 
