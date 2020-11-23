@@ -1,27 +1,25 @@
-$('.item1').on('click',function(){
-    cargarDatosPerfilGeneral();
+$(document).ready(function (){
+    comprobarValidacionesNickname();
+    comprobarValidacionesEmail();
 })
-$('.item2').on('click',function()
-{
-    cargarDatosFavoritos();
-})
-function cargarDatosPerfilGeneral(){
-    $.ajax({
-        method: "GET",
-        url: "../perfilGeneral.view.php",
-    })
-    .done(function ( php ){
-        $("#contenedorPreguntas").append(php);
-    })
-}
-function cargarDatosFavoritos(){
-    $.ajax({
-        method: "GET",
-        url: "../perfilFavoritos.view.php",
-    })
-    .done(function ( php ){
-        $("#contenedorFavoritos").append(php);
-    })
-}
+function comprobarValidacionesNickname(){
+    user = validarNombreUsuario($('#username').val());
+    if (user === true){
 
-/*Mal hecho*/
+    }
+}
+function comprobarValidacionesEmail(){
+   email = validarEmail($('#email').val());
+    if (email === true){
+        $.ajax({
+            type: "post",
+            url: "../php/ajax.php",
+            data: {action: "comprobarEmail"},
+            success: function (respuesta){
+                if (respuesta === 1){
+                    $('#email').appendChild("<p>Ya hay una cuenta con ese mismo email</p>");
+                }
+            }
+        })
+    }
+}

@@ -50,7 +50,7 @@
                 <label for="pass2">Repite la contraseña:</label><br>
                 <input type="password" id="pass2" maxlength="30" name="password" placeholder="Contraseña" required><br>
             </div>
-            <input type="submit" name="accederSignUp" id="btn">
+            <input type="submit" name="accederSignUp" id="btn" onclick="return validarDatosRegistro()">
         </form>
         <a href="../index.view.php">Volver a inicio de sesión</a>
     </div>

@@ -110,8 +110,13 @@ function crearUsuario( $nickname, $password, $nombre, $apellido1, $apellido2, $e
     return $stmt;
 }
 
-function comprobarInicioSesion(){
-
+function comprobarUsuarioPorNickname(){
+    $dbh = iniciarConexion();
+    $data = array("email"=>$_POST["valor"]);
+    $stmt = $dbh->prepare("SELECT nickname FROM Usuarios WHERE nickname= :nickname");
+    $stmt->execute($data);
+    $respuesta = $stmt->fetchColumn();
+    echo $respuesta;
 }
 
 
