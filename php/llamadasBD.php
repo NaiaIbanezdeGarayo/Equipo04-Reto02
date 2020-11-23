@@ -36,45 +36,6 @@ function leerPreguntas()
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     return $stmt;
-
-
-    //NUEVO
-    /*
-    $arrayPreguntas = array();
-
-
-    $id = 0;
-    $tipoUsuario = 0;
-    $nickname = "";
-    $password = "";
-    $nombre = "";
-    $apellido1 = "";
-    $apellido2 = "";
-    $email = "";
-    $descripcion = "";
-    $edad = 0;
-
-    while ($pregunta = $stmt->fetch()){
-
-        array_push($arrayPreguntas, [
-            $id => $pregunta["id"],
-            $tipoUsuario => $pregunta["tipoUsuario"],
-            $nickname => $pregunta["nickname"],
-            $password => $pregunta["password"],
-            $nombre => $pregunta["nombre"],
-            $apellido1 => $pregunta["apellido1"],
-            $apellido2 => $pregunta["apellido2"],
-            $email => $pregunta["email"],
-            $descripcion => $pregunta["descripcion"],
-            $edad => $pregunta["edad"],
-        ]);
-    }
-
-
-    return $arrayPreguntas;
-
-*/
-
 }
 
 function leerUsuarios()
@@ -89,10 +50,6 @@ function leerUsuarios()
 
     return $stmt;
 }
-
-
-
-
 
 function leerRespuestas(){
     $dbh = iniciarConexion();

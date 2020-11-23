@@ -4,12 +4,11 @@ ini_set('display_errors', '1');
 require_once '../php/llamadasBD.php';
 
 
-
-//Solicitamos todos los datos que necesitemos (Preguntas y usuarios)
+//Genero el array principal y el array vacío que pasará a tener la información de las dos tablas.
 $preguntas = leerPreguntas();
 $preguntasConUsuarios = array();
 
-//Tratamos la información para crear objetos con lo necesario en la interfaz.
+//Bucle que recorre todas las preguntas y busca el nickname y la imagen del usuario en cuestión.
 while ($pregunta = $preguntas->fetch()){
 
     $nickname = "";
@@ -18,10 +17,12 @@ while ($pregunta = $preguntas->fetch()){
     $usuarios = leerUsuarios();
 
     while ($usuario = $usuarios->fetch()){
+
         if ($pregunta["usuarioid"] == $usuario["id"]){
             $nickname = $usuario["nickname"];
             $urlImg = $usuario["imagen"];
         }
+
     }
 
     array_push($preguntasConUsuarios, [
@@ -32,10 +33,6 @@ while ($pregunta = $preguntas->fetch()){
         "urlImg" => $urlImg
     ]);
 }
-
-
-
-
 
 
 

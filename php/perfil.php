@@ -12,4 +12,4 @@ $db = iniciarConexion();
 //Cerramos la conexión
 finalizarConexion();
 
-require "../html/usuarios.view.php";
+require "../html/perfil.view.php";
