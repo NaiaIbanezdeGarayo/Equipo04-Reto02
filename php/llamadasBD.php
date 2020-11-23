@@ -34,9 +34,47 @@ function leerPreguntas()
     //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    $preguntas = [];
 
     return $stmt;
+
+
+    //NUEVO
+    /*
+    $arrayPreguntas = array();
+
+
+    $id = 0;
+    $tipoUsuario = 0;
+    $nickname = "";
+    $password = "";
+    $nombre = "";
+    $apellido1 = "";
+    $apellido2 = "";
+    $email = "";
+    $descripcion = "";
+    $edad = 0;
+
+    while ($pregunta = $stmt->fetch()){
+
+        array_push($arrayPreguntas, [
+            $id => $pregunta["id"],
+            $tipoUsuario => $pregunta["tipoUsuario"],
+            $nickname => $pregunta["nickname"],
+            $password => $pregunta["password"],
+            $nombre => $pregunta["nombre"],
+            $apellido1 => $pregunta["apellido1"],
+            $apellido2 => $pregunta["apellido2"],
+            $email => $pregunta["email"],
+            $descripcion => $pregunta["descripcion"],
+            $edad => $pregunta["edad"],
+        ]);
+    }
+
+
+    return $arrayPreguntas;
+
+*/
+
 }
 
 function leerUsuarios()
@@ -52,39 +90,10 @@ function leerUsuarios()
     return $stmt;
 }
 
-function cargarDatosPreguntas(){
-    $stmt = leerPreguntas();
-    $stmtu = leerUsuarios();
-    while ($row = $stmtu->fetch()){
-        echo '<div class="divPregunta">';
-        echo '<div class="divPregIzq">';
-        echo '<label class="labPregNickname">'. $row["nickname"]. '</label>';
-        echo '<a href="http://www.google.es">';
-        echo '<img class="imgPregPerfil" src="'. $row["imagen"]. '">';
-        echo '</a>';
-        echo '</div>';
-        echo '<div class="divPregDer">';
 
-    }
-    while($row = $stmt-> fetch()){
-        echo '<a class="tituloPreg" href="http://www.google.es">'.$row["titulo"].'</a>';
-        echo '<div class="divSeparadorpregunta"></div>';
-        echo '<label class="lbDescripcion">'. $row["descripcion"].'</label>';
-        echo '</div>'.'</div>';
-    }
-}
-//INTERFAZ USUARIOS
-function cargarDatosUsuarios(){
-    $stmt = leerUsuarios();
-    while ($row = $stmt->fetch()){
-        echo '<div class="divUsuario">';
-        echo '<p class="labUsuNickname">'.$row["nickname"].'</p>';
-        echo '<a href="../php/perfil.php">';
-        echo '<img class="imgPregPerfil" src="../img/default-user-image.png">';
-        echo '</a>';
-        echo '</div>';
-    }
-}
+
+
+
 function leerRespuestas(){
     $dbh = iniciarConexion();
     $stmt = $dbh->prepare("SELECT * FROM Respuestas");
