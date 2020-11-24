@@ -42,7 +42,18 @@
             </div>
 
             <div id="divUsuarios">
-                <?= cargarDatosUsuarios() ?>
+
+                <?php foreach ($usuarios as $usuario) { ?>
+
+                <div class="divUsuario">
+                    <label class="labUsuNickname"><?php echo $usuario["nickname"];?></label>
+                    <a href="https://www.w3schools.com">
+                        <img class="imgPregPerfil" src="<?php echo $usuario["imagen"]; ?>">
+                    </a>
+                </div>
+
+                <?php } ?>
+
             </div>
 
         </div>
