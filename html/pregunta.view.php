@@ -36,45 +36,21 @@
 
             <div id="divRespuestas">
 
-            
+                <?php foreach ($respuestasConUsuarios as $respuesta) { ?>
                 <div class="divRespuesta">
                     <div class="divDatosUsuarioRespuesta">
-                        <label class="nickUsuarioRespuesta">Jaimito</label>
-                        <a><img class="imgPerfilRespuesta" src="../img/default-user-image.png"></a>
+                        <label class="nickUsuarioRespuesta"><?php echo $respuesta["nickname"]; ?></label>
+                        <a href="../php/perfil.php?nickname=<?php echo $respuesta["nickname"]?>"><img class="imgPerfilRespuesta" src="<?php echo $respuesta["urlImg"];?>"></a>
                     </div>
         
                     <div class="divDatosRespuesta">
-                        <label class="detallesRespuesta">Fecha: 22/11/2020</label>
-                        <p class="descripcionRespuesta">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+                        <label class="detallesRespuesta">Fecha: <?php echo $respuesta["fecha"]; ?></label>
+                        <p class="descripcionRespuesta"><?php echo $respuesta["comentario"]; ?></p>
                         <button class="botonResponder">Responder</button>
                     </div>
                 </div>
+                <?php } ?>
 
-                <div class="divRespuesta">
-                    <div class="divDatosUsuarioRespuesta">
-                        <label class="nickUsuarioRespuesta">Jaimito</label>
-                        <a><img class="imgPerfilRespuesta" src="../img/default-user-image.png"></a>
-                    </div>
-        
-                    <div class="divDatosRespuesta">
-                        <label class="detallesRespuesta">Fecha: 22/11/2020</label>
-                        <p class="descripcionRespuesta">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
-                        <button class="botonResponder">Responder</button>
-                    </div>
-                </div>
-
-                <div class="divRespuesta">
-                    <div class="divDatosUsuarioRespuesta">
-                        <label class="nickUsuarioRespuesta">Jaimito</label>
-                        <a><img class="imgPerfilRespuesta" src="../img/default-user-image.png"></a>
-                    </div>
-        
-                    <div class="divDatosRespuesta">
-                        <label class="detallesRespuesta">Fecha: 22/11/2020</label>
-                        <p class="descripcionRespuesta">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
-                        <button class="botonResponder">Responder</button>
-                    </div>
-                </div>
 
 
             </div>

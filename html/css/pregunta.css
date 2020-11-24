@@ -120,6 +120,7 @@ resize: none;
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 5px 1px #00000057;
+    width: 100%;
 }
 
 .divDatosUsuarioRespuesta{
@@ -145,7 +146,6 @@ resize: none;
 .divDatosRespuesta{
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 10px;
 
     flex: 5;
