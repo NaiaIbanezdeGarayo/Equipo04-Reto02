@@ -4,21 +4,37 @@ ini_set('display_errors', '1');
 require_once '../php/llamadasBD.php';
 
 
-
-//Abrimos la conexión con la base de datos.
-$db = iniciarConexion();
-//Solicitamos todos los datos que necesitemos (Preguntas y usuarios)
-//$usuarios = leerUsuarios($db);
-
+//Genero el array principal y el array vacío que pasará a tener la información de las dos tablas.
+$preguntas = leerPreguntas();
 $preguntasConUsuarios = array();
 
-//Para aplicar un orden habría que realizar distintas consultas MySQL ordenando
-//el array de preguntas.
+//Bucle que recorre todas las preguntas y busca el nickname y la imagen del usuario en cuestión.
+while ($pregunta = $preguntas->fetch()){
 
-//Tratamos la información para crear objetos con lo necesario en la interfaz.
+    $nickname = "";
+    $urlImg = "";
+
+    $usuarios = leerUsuarios();
+
+    while ($usuario = $usuarios->fetch()){
+
+        if ($pregunta["usuarioid"] == $usuario["id"]){
+            $nickname = $usuario["nickname"];
+            $urlImg = $usuario["imagen"];
+        }
+
+    }
+
+    array_push($preguntasConUsuarios, [
+        "id" => $pregunta["id"],
+        "titulo" => $pregunta["titulo"],
+        "descripcion" => $pregunta["descripcion"],
+        "fecha" => $pregunta["fecha"],
+        "nickname" => $nickname,
+        "urlImg" => $urlImg
+    ]);
+}
 
 
-//Cerramos la conexión
-finalizarConexion();
 
 require "../html/preguntas.view.php";

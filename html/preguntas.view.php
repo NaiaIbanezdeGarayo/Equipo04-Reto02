@@ -67,8 +67,26 @@
 
             <div id="divPreguntas">
                 <!--Aquí se generarán las preguntas.-->
+                <?php foreach ($preguntasConUsuarios as $pregunta) { ?>
+                    <div class="divPregunta">
+                        <div class="divPregIzq">
+                            <label class="labPregNickname"> <?php echo $pregunta ["nickname"]; ?> </label>
+                            <a href="../php/perfil.php?nickname=<?php echo $pregunta["nickname"]?>">
+                                <img class="imgPregPerfil" src="<?php echo $pregunta["urlImg"]; ?>">
+                            </a>
+                        </div>
 
-                <?= cargarDatosPreguntas()?>
+                        <div class="divPregDer">
+                            <a class="tituloPreg" href="../php/pregunta.php?pregunta=<?php echo $pregunta["id"]?>">
+                                <?php echo $pregunta["titulo"] ?>
+                            </a>
+                            <div class="divSeparadorpregunta"></div>
+                            <label class="lbDescripcion"><?php echo $pregunta["descripcion"] ?></label>
+                        </div>
+
+                    </div>
+                <?php } ?>
+
 
               
 

@@ -32,6 +32,8 @@ function finalizarConexion(){
     $dbh = null;
 }
 
+//SELECT ALL
+
 function leerPreguntas()
 {
     $dbh = iniciarConexion();
@@ -41,7 +43,6 @@ function leerPreguntas()
     //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    $preguntas = [];
 
     return $stmt;
 }
@@ -59,45 +60,36 @@ function leerUsuarios()
     return $stmt;
 }
 
-function cargarDatosPreguntas(){
-    $stmt = leerPreguntas();
-    $stmtu = leerUsuarios();
-    while ($row = $stmtu->fetch()){
-        echo '<div class="divPregunta">';
-        echo '<div class="divPregIzq">';
-        echo '<label class="labPregNickname">'. $row["nickname"]. '</label>';
-        echo '<a href="http://www.google.es">';
-        echo '<img class="imgPregPerfil" src="'. $row["imagen"]. '">';
-        echo '</a>';
-        echo '</div>';
-        echo '<div class="divPregDer">';
-
-    }
-    while($row = $stmt-> fetch()){
-        echo '<a class="tituloPreg" href="http://www.google.es">'.$row["titulo"].'</a>';
-        echo '<div class="divSeparadorpregunta"></div>';
-        echo '<label class="lbDescripcion">'. $row["descripcion"].'</label>';
-        echo '</div>'.'</div>';
-    }
-}
-//INTERFAZ USUARIOS
-function cargarDatosUsuarios(){
-    $stmt = leerUsuarios();
-    while ($row = $stmt->fetch()){
-        echo '<div class="divUsuario">';
-        echo '<p class="labUsuNickname">'.$row["nickname"].'</p>';
-        echo '<a href="../php/perfil.php">';
-        echo '<img class="imgPregPerfil" src="../img/default-user-image.png">';
-        echo '</a>';
-        echo '</div>';
-    }
-
-}
 function leerRespuestas(){
     $dbh = iniciarConexion();
     $stmt = $dbh->prepare("SELECT * FROM Respuestas");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt;
+}
+
+
+//SELECT WHERE
+
+function leerPreguntaConcreta($id){
+    $dbh = iniciarConexion();
+
+    $stmt = $dbh->prepare("SELECT * FROM Preguntas WHERE ID = $id");
+
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt;
+}
+
+function leerUsuarioConcreto($id){
+    $dbh = iniciarConexion();
+
+    $stmt = $dbh->prepare("SELECT * FROM Usuarios WHERE ID = $id");
+
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
     return $stmt;
 }
 
@@ -134,6 +126,7 @@ function consultarLogin(){
     $respuesta = $stmt->fetchColumn();
     return $respuesta;
 }
+
 
 
 

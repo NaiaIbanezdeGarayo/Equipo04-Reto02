@@ -1,28 +1,44 @@
 <?php include 'header.view.php';?>
-    <main>
-        <section id="sectionGeneral">
-            <article id="articleDatosUsuario">
-                <img src="../img/default-user-image.png">
-                <a href="editarpefil.view.php">Editar perfil <i class="fas fa-pencil-alt"></i></a>
-                <p>Nombre Apellido</p>
-                <p>Usuario</p>
-                <p>Descripción</p>
-            </article>
-        </section>
-        <section class="sectionPreg">
-            <article id="articleMenu">
-                <div class="items">
-                    <input type="button" class="item item1" value="GENERAL">
-                    <input type="button" class="item item2" value="">
+
+<head>
+    <title>AERGIBIDE SL</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../html/css/perfil.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+
+    <div id="divPrincipal">
+
+        <div id="divIzq">
+            <div id="divBotones">
+                <button>General</button>
+                <button>Favoritos</button>
+            </div>
+
+            <div id="divPreguntas">
+                <?php foreach ($preguntasUsuario as $pregunta) { ?>
+                <div class="divPregunta">
+                    <a href="../php/pregunta.php?pregunta=<?php echo $pregunta["id"]?>" class="tituloPreg"><?php echo $pregunta["titulo"];?></a>
+                    <div class="divDescripcion">
+                        <p><?php echo $pregunta["descripcion"]; ?></p>
+                    </div>
                 </div>
-            </article>
-            <div id="contenedorPreguntas">
-            <!--Carga datos-->
+
+                <?php } ?>
             </div>
-            <div id="contenedorFavoritos">
-                <!--Carga datos-->
-            </div>
-        </section>
-    </main>
-<script src="../js/ajaxQueries.js"></script>
+        </div>
+
+        <div id="divDer">
+            <label id="lbNickname"><?php echo $usuarioPerfil[0]["nickname"] ?></label>
+            <img id="imgPerfil" src="<?php echo $usuarioPerfil[0]["imagen"];?>">
+            <label id="lbNombre"><?php echo $usuarioPerfil[0]["nombre"];echo " "; echo $usuarioPerfil[0]["apellido1"]?></label>
+            <label id="lbDescripcion"><?php echo $usuarioPerfil[0]["descripcion"] ?></label>
+        </div>
+    </div>
+
+</body>
+
 <?php include 'footer.view.php';?>
+
