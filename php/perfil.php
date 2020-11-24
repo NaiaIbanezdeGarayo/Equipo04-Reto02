@@ -25,7 +25,8 @@ while ($usuario = $usuarios->fetch()){
             "apellido2" => $usuario["apellido2"],
             "email" => $usuario["email"],
             "descripcion" => $usuario["descripcion"],
-            "edad" => $usuario["edad"]
+            "edad" => $usuario["edad"],
+            "imagen" => $usuario["imagen"]
         ]);
     }
 
