@@ -110,15 +110,30 @@ function crearUsuario( $nickname, $password, $nombre, $apellido1, $apellido2, $e
     return $stmt;
 }
 
-function comprobarUsuarioPorNickname(){
+function comprobarUsuarioPorNickname($nickname){
     $dbh = iniciarConexion();
-    $data = array("email"=>$_POST["valor"]);
-    $stmt = $dbh->prepare("SELECT nickname FROM Usuarios WHERE nickname= :nickname");
+    $data = array("nickname"=>$nickname);
+    $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE nickname= :nickname");
     $stmt->execute($data);
     $respuesta = $stmt->fetchColumn();
     echo $respuesta;
 }
-
+function comprobarEmail($email){
+    $dbh = iniciarConexion();
+    $data = array("email"=>$email);
+    $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE email = :email");
+    $stmt->execute($data);
+    $respuesta =  $stmt->fetchColumn();
+    echo $respuesta;
+}
+function consultarLogin(){
+    $dbh = iniciarConexion();
+    $data = array("user"=>$_POST["valor"]);
+    $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE nickname = :user AND password = :pass");
+    $stmt->execute($data);
+    $respuesta = $stmt->fetchColumn();
+    return $respuesta;
+}
 
 
 

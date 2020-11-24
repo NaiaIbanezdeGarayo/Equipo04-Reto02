@@ -1,4 +1,4 @@
-import "../js/validaciones.js"
+//import "../js/validaciones.js"
 $(document).ready(function(){
     $('#btn').on('click',function(){
         try{

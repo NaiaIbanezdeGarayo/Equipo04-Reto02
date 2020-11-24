@@ -4,14 +4,13 @@ ini_set('display_errors', '1');
 require_once '../php/llamadasBD.php';
 
 session_start();
-$_SESSION["user"] = $_POST["user"];
 
 //Abrimos la conexión con la base de datos.
 $db = iniciarConexion();
-
-
-//Cerramos la conexión
-finalizarConexion();
+if (consultarLogin() === 1){
+    $user = $_SESSION['username'];
+    header("location: ../php/preguntas.php");
+}
 
 require "../index.view.php";
-
+finalizarConexion();

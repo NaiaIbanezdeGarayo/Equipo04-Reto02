@@ -1,6 +1,7 @@
 $(document).ready(function (){
-    comprobarValidacionesNickname();
-    comprobarValidacionesEmail();
+
+    $('#email').on('focusout', comprobarValidacionesEmail);
+    //$('#username').on('focusout', comprobarValidacionesNickname());
 })
 function comprobarValidacionesNickname(){
     user = validarNombreUsuario($('#username').val());
@@ -9,17 +10,19 @@ function comprobarValidacionesNickname(){
     }
 }
 function comprobarValidacionesEmail(){
-   email = validarEmail($('#email').val());
-    if (email === true){
+   //email = validarEmail();
+    var a = $('#email').val();
+    //if (email === true){
         $.ajax({
             type: "post",
             url: "../php/ajax.php",
-            data: {action: "comprobarEmail"},
+            data: {action: "comprobarEmail", value: a },
             success: function (respuesta){
+                alert(respuesta)
                 if (respuesta === 1){
                     $('#email').appendChild("<p>Ya hay una cuenta con ese mismo email</p>");
                 }
             }
         })
-    }
+   // }
 }

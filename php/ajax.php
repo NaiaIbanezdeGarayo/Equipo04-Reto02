@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 if (isset($_POST["action"])){
     $action = $_POST["action"];
     switch ($action){
@@ -6,13 +9,15 @@ if (isset($_POST["action"])){
             comprobarNickname();
             break;
         case "comprobarEmail":
-            comprobarEmail();
+            comprobarEmailx();
             break;
     }
 }
 function comprobarNickname(){
+    require "llamadasBD.php";
     comprobarUsuarioPorNickname($_POST["nickname"]);
 }
-function comprobarEmail(){
-    comprobarEmail($_POST["email"]);//Falta la BD
+function comprobarEmailx(){
+    require "llamadasBD.php";
+    comprobarEmail($_POST["email"]);
 }
