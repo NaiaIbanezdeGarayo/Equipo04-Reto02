@@ -9,12 +9,12 @@
 </head>
 
 <body>
-    <div id="divPrincipal">
+    <form id="divPrincipal" method="post" action="../php/cambiarFoto.php" enctype="multipart/form-data">
 
         <div id="divGrid">
             <div id="divImg">
                 <img id="userImage" src="../img/default-user-image.png">
-                <button id="btEditarImagen" value="">Seleccionar imagen</button>
+                <input type="file" id="btEditarImagen" value="" name="imagen">
             </div>
             
             <div id="divNick">
@@ -55,6 +55,6 @@
 
         </div>
 
-    </div>
+    </form>
 </body>
 <?php include "footer.view.php"?>
