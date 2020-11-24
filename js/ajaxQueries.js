@@ -1,28 +1,45 @@
 $(document).ready(function (){
 
     $('#email').on('focusout', comprobarValidacionesEmail);
-    //$('#username').on('focusout', comprobarValidacionesNickname());
+    $('#username').on('focusout', comprobarValidacionesNickname);
 })
 function comprobarValidacionesNickname(){
-    user = validarNombreUsuario($('#username').val());
-    if (user === true){
-
-    }
+    var a = $('#username').val();
+    $.ajax({
+        type: "post",
+        url: "../php/ajax.php",
+        data: {
+            action: "comprobarNickname",
+            value: a
+        },
+        success: function (respuesta){
+            if (respuesta == 1){
+                $('#mensajeUsuario').css("display", "block");
+                $('#username').val("");
+            }else{
+                $('#mensajeUsuario').css("display", "none");
+            }
+        }
+    })
 }
 function comprobarValidacionesEmail(){
-   //email = validarEmail();
-    var a = $('#email').val();
-    //if (email === true){
+    var b = $('#email').val();
         $.ajax({
             type: "post",
             url: "../php/ajax.php",
-            data: {action: "comprobarEmail", value: a },
+            data: {
+                action: "comprobarEmail",
+                value: b
+            },
             success: function (respuesta){
-                alert(respuesta)
-                if (respuesta === 1){
-                    $('#email').appendChild("<p>Ya hay una cuenta con ese mismo email</p>");
+                if (respuesta == 1){
+                    $('#mensajeEmail').css("display", "block");
+                    $('#email').val("");
+                }else{
+                    $('#mensajeEmail').css("display", "none");
                 }
+
+
             }
         })
-   // }
 }

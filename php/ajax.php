@@ -11,13 +11,27 @@ if (isset($_POST["action"])){
         case "comprobarEmail":
             comprobarEmailx();
             break;
+        default: "Error";
     }
 }
 function comprobarNickname(){
     require "llamadasBD.php";
-    comprobarUsuarioPorNickname($_POST["nickname"]);
+    $dbh = iniciarConexion();
+    $data = array("nickname"=>$_POST["value"]);
+    $stmt = $dbh->prepare("SELECT * FROM Usuarios WHERE nickname = :nickname");
+    $stmt->execute($data);
+    $respuesta = $stmt->rowCount();
+    echo $respuesta;
+    $dbh = finalizarConexion();
 }
 function comprobarEmailx(){
     require "llamadasBD.php";
-    comprobarEmail($_POST["email"]);
+
+    $dbh = iniciarConexion();
+    $data = array("email"=>$_POST["value"]);
+    $stmt = $dbh->prepare("SELECT * FROM Usuarios WHERE email = :email");
+    $stmt->execute($data);
+    $respuesta = $stmt->rowCount();
+    echo $respuesta;
+    $dbh = finalizarConexion();
 }

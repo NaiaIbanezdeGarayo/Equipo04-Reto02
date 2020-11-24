@@ -45,6 +45,7 @@ function leerPreguntas()
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     return $stmt;
+    $dbh = finalizarConexion();
 }
 
 function leerUsuarios()
@@ -58,6 +59,7 @@ function leerUsuarios()
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     return $stmt;
+    $dbh = finalizarConexion();
 }
 
 function leerRespuestas(){
@@ -66,6 +68,7 @@ function leerRespuestas(){
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt;
+    $dbh = finalizarConexion();
 }
 
 
@@ -80,6 +83,7 @@ function leerPreguntaConcreta($id){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     return $stmt;
+    $dbh = finalizarConexion();
 }
 
 function leerUsuarioConcreto($id){
@@ -91,6 +95,7 @@ function leerUsuarioConcreto($id){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     return $stmt;
+    $dbh = finalizarConexion();
 }
 
 function crearUsuario( $nickname, $password, $nombre, $apellido1, $apellido2, $email, $descripcion, $edad){
@@ -100,6 +105,7 @@ function crearUsuario( $nickname, $password, $nombre, $apellido1, $apellido2, $e
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt;
+    $dbh = finalizarConexion();
 }
 
 function comprobarUsuarioPorNickname($nickname){
@@ -109,6 +115,7 @@ function comprobarUsuarioPorNickname($nickname){
     $stmt->execute($data);
     $respuesta = $stmt->fetchColumn();
     echo $respuesta;
+    $dbh = finalizarConexion();
 }
 function comprobarEmail($email){
     $dbh = iniciarConexion();
@@ -117,6 +124,7 @@ function comprobarEmail($email){
     $stmt->execute($data);
     $respuesta =  $stmt->fetchColumn();
     echo $respuesta;
+    $dbh = finalizarConexion();
 }
 function consultarLogin(){
     $dbh = iniciarConexion();
@@ -125,6 +133,7 @@ function consultarLogin(){
     $stmt->execute($data);
     $respuesta = $stmt->fetchColumn();
     return $respuesta;
+    $dbh = finalizarConexion();
 }
 
 
