@@ -47,7 +47,7 @@
 
                 <div class="divUsuario">
                     <label class="labUsuNickname"><?php echo $usuario["nickname"];?></label>
-                    <a href="https://www.w3schools.com">
+                    <a href="../php/perfil.php?nickname=<?php echo $usuario["nickname"]?>">
                         <img class="imgPregPerfil" src="<?php echo $usuario["imagen"]; ?>">
                     </a>
                 </div>

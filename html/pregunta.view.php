@@ -15,7 +15,9 @@
 
             <div id="divDatosUsuarioPregunta">
                 <label id="nickUsuarioPregunta"><?php echo $usuario["nickname"];?></label>
-                <a><img id="imgPerfilPregunta" src="<?php echo $usuario["imagen"];?>"></a>
+                <a href="../php/perfil.php?nickname=<?php echo $usuario["nickname"]?>">
+                    <img id="imgPerfilPregunta" src="<?php echo $usuario["imagen"];?>">
+                </a>
             </div>
 
             <div id="divDatosPregunta">

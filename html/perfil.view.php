@@ -20,7 +20,7 @@
             <div id="divPreguntas">
                 <?php foreach ($preguntasUsuario as $pregunta) { ?>
                 <div class="divPregunta">
-                    <a href="../php/pregunta.php?idPregunta=<?php echo $pregunta["id"]?>" class="tituloPreg"><?php echo $pregunta["titulo"];?></a>
+                    <a href="../php/pregunta.php?pregunta=<?php echo $pregunta["id"]?>" class="tituloPreg"><?php echo $pregunta["titulo"];?></a>
                     <div class="divDescripcion">
                         <p><?php echo $pregunta["descripcion"]; ?></p>
                     </div>
