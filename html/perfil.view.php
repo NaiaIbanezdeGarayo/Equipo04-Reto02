@@ -32,7 +32,7 @@
 
         <div id="divDer">
             <label id="lbNickname"><?php echo $usuarioPerfil[0]["nickname"] ?></label>
-            <img id="imgPerfil" src="../img/default-user-image.png">
+            <img id="imgPerfil" src="<?php echo $usuarioPerfil[0]["imagen"];?>">
             <label id="lbNombre"><?php echo $usuarioPerfil[0]["nombre"];echo " "; echo $usuarioPerfil[0]["apellido1"]?></label>
             <label id="lbDescripcion"><?php echo $usuarioPerfil[0]["descripcion"] ?></label>
         </div>

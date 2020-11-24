@@ -77,7 +77,7 @@
                         </div>
 
                         <div class="divPregDer">
-                            <a class="tituloPreg" href="http://www.google.es">
+                            <a class="tituloPreg" href="../php/pregunta.php?pregunta=<?php echo $pregunta["id"]?>">
                                 <?php echo $pregunta["titulo"] ?>
                             </a>
                             <div class="divSeparadorpregunta"></div>

@@ -14,14 +14,14 @@
         <div id="divSuperior">
 
             <div id="divDatosUsuarioPregunta">
-                <label id="nickUsuarioPregunta">Jaimito</label>
-                <a><img id="imgPerfilPregunta" src="../img/default-user-image.png"></a>
+                <label id="nickUsuarioPregunta"><?php echo $usuario["nickname"];?></label>
+                <a><img id="imgPerfilPregunta" src="<?php echo $usuario["imagen"];?>"></a>
             </div>
 
             <div id="divDatosPregunta">
-                <label id="tituloPregunta">¿Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?</label>
-                <label id="detallesPregunta">Fecha: 22/11/2020</label>
-                <p id="descripcionPregunta">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                <label id="tituloPregunta"><?php echo $pregunta["titulo"];?></label>
+                <label id="detallesPregunta"> Fecha: <?php echo $pregunta["fecha"];?></label>
+                <p id="descripcionPregunta"><?php echo $pregunta["descripcion"];?></p>
             </div>
 
         </div>

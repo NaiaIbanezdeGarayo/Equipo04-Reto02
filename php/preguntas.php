@@ -26,6 +26,7 @@ while ($pregunta = $preguntas->fetch()){
     }
 
     array_push($preguntasConUsuarios, [
+        "id" => $pregunta["id"],
         "titulo" => $pregunta["titulo"],
         "descripcion" => $pregunta["descripcion"],
         "fecha" => $pregunta["fecha"],

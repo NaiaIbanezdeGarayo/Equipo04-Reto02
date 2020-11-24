@@ -25,6 +25,8 @@ function finalizarConexion(){
     $dbh = null;
 }
 
+//SELECT ALL
+
 function leerPreguntas()
 {
     $dbh = iniciarConexion();
@@ -56,6 +58,30 @@ function leerRespuestas(){
     $stmt = $dbh->prepare("SELECT * FROM Respuestas");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt;
+}
+
+//SELECT WHERE
+
+function leerPreguntaConcreta($id){
+    $dbh = iniciarConexion();
+
+    $stmt = $dbh->prepare("SELECT * FROM Preguntas WHERE ID = $id");
+
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt;
+}
+
+function leerUsuarioConcreto($id){
+    $dbh = iniciarConexion();
+
+    $stmt = $dbh->prepare("SELECT * FROM Usuarios WHERE ID = $id");
+
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
     return $stmt;
 }
 
