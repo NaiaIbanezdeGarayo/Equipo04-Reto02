@@ -1,11 +1,15 @@
+<?php include 'header.view.php';?>
+
 <head>
     <title>AERGIBIDE SL</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../html/css/crearPregunta.css">
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="../js/jquery-3.5.1.js"></script>
 </head>
 
 <body>
+
 
     <div id="divPrincipal">
         <label id="lbSuperior">NUEVA PREGUNTA</label>
@@ -33,9 +37,12 @@
 
         <div id="divBotones">
             <button>- Cancelar -</button>
-            <button>- Publicar -</button>
+            <button id="btPublicar">- Publicar -</button>
         </div>
+
+        <script src="../js/crearPregunta.js"></script>
         
     </div>
 
 </body>
+<?php include "footer.view.php"?>
