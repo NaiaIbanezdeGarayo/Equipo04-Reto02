@@ -3,6 +3,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
+if (isset($_POST["username"]) && isset($_POST["password"])){
+    crearUsuario($_POST["name"], $_POST["apellido1"], $_POST["apellido2"], $_POST["birt"], $_POST["descripcion"], $_POST["email"], $_POST["username"], $_POST["password"]);
+}
+if (isset($_POST["user"]) && isset($_POST["pass"])){
+    comprobarInicioSesion();
+}
+
 /*TEMPORAL HASTA TENER UNA BASE DE DATOS*/
 
 function iniciarConexion(){
@@ -61,6 +68,7 @@ function leerRespuestas(){
     return $stmt;
 }
 
+
 //SELECT WHERE
 
 function leerPreguntaConcreta($id){
@@ -83,6 +91,40 @@ function leerUsuarioConcreto($id){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     return $stmt;
+}
+
+function crearUsuario( $nickname, $password, $nombre, $apellido1, $apellido2, $email, $descripcion, $edad){
+    $dbh = iniciarConexion();
+    $password = password_hash($_POST['$password'],PASSWORD_BCRYPT);
+    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :edad)");
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt;
+}
+
+function comprobarUsuarioPorNickname($nickname){
+    $dbh = iniciarConexion();
+    $data = array("nickname"=>$nickname);
+    $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE nickname= :nickname");
+    $stmt->execute($data);
+    $respuesta = $stmt->fetchColumn();
+    echo $respuesta;
+}
+function comprobarEmail($email){
+    $dbh = iniciarConexion();
+    $data = array("email"=>$email);
+    $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE email = :email");
+    $stmt->execute($data);
+    $respuesta =  $stmt->fetchColumn();
+    echo $respuesta;
+}
+function consultarLogin(){
+    $dbh = iniciarConexion();
+    $data = array("user"=>$_POST["valor"]);
+    $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE nickname = :user AND password = :pass");
+    $stmt->execute($data);
+    $respuesta = $stmt->fetchColumn();
+    return $respuesta;
 }
 
 

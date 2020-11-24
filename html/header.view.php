@@ -28,8 +28,7 @@
                 <a href="#">Formular pregunta</a>
                 <a href="../php/perfil.php">Perfil (NECESITAMOS SESIONES)</a>
                 <a href="#">Notificaciones</a>
-                <a href="#">Configuración</a>
-                <a href="../index.view.php"><i class="fas fa-sign-out-alt"></i></a>
+                <a href="../index.view.php" id="logout"><i class="fas fa-sign-out-alt"></i></a>
 
             </div>
         </div>
