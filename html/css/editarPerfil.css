@@ -1,14 +1,9 @@
-#divPrincipal * {
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
-
 #divPrincipal{
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 0;
     padding: 10px;
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -23,7 +18,7 @@
 
 #divImg{
     grid-column: 1 / 2;
-    grid-row: 1 / 10;
+    grid-row: 5 / 10;
 }
 
 #divNick{
@@ -42,7 +37,7 @@
 }
 
 #divButtonGuardar{
-    grid-column: 1 / 3;
+    grid-column: 2 / 3;
     grid-row: 10 / 11;
 }
 
@@ -54,27 +49,29 @@ max-width: 200px;
 }
 
 #divButtonGuardar{
-display: flex;
+    display: flex;
 }
 
 #btGuardar{
-    width: 100%;
+    margin-left: 45px;
+    width: 90%;
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
 }
 
 #divGrid{
     padding: 20px;
-    border-bottom: black 2px solid;
+    border-bottom: #00000008 1px solid;
 }
 
 #divImg{
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: flex-end;
     justify-content: center;
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-right: black 1px solid;
+    border-right: #00000008 1px solid;
 }
 
 #userImage{
@@ -84,8 +81,13 @@ display: flex;
     height: auto;
 }
 
-#btEditarImagen{
+#btEditarImagen {
     margin-top: 20px;
+}
+#btEditarImagen input#file-upload-button{
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
 }
 
 #divGrid div label{
@@ -130,15 +132,13 @@ display: flex;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-
     align-items: center;
-
     align-self: center;
     padding: 20px;
-    background-color: rgb(255, 73, 73);
-    border-radius: 20px;
-    border: black 1px solid;
-    box-shadow: 0 0 7px 1px #00000057;
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
+    box-shadow: 0px 4px 5px 0px #00000021;
     
 }
 
@@ -153,6 +153,12 @@ display: flex;
     justify-content: center;
     margin: 5px;
 }
+#cambioPass{
+    color: white;
+    background-color: #735D78;
+    border: 1px solid #735D78;
+    padding: 20px;
+}
 
 input[type='password']{
     margin-left: 5px;
@@ -160,15 +166,10 @@ input[type='password']{
 
 
 @media only screen and (min-width: 800px){
-    body{
-        background-color: gainsboro;
-    }
-
-    #divPrincipal{
+   #divPrincipal{
         background-color: white;
-        border-radius: 20px;
-        margin: 10px;
-    }
+        margin: 0px;
+   }
 }
 
 @media only screen and (max-width: 700px){
