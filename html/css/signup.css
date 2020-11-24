@@ -82,6 +82,10 @@ label{
 .btn:active{
     background-color: #99829E;
 }
+#mensajeEmail, #mensajeUsuario{
+    display: none;
+    color: #DD3A75;
+}
 @media only screen and (min-width: 400px) and (max-width: 670px) {
     #divgeneral{
         background-color: #C0B9DD;

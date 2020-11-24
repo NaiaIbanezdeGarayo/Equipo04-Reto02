@@ -39,9 +39,15 @@
                 <label for="email">Email:</label><br>
                 <input id="email" type="text" maxlength="64" name="email" placeholder="Email" required><br>
             </div>
+            <div class="mensajes" id="mensajeEmail">
+                <p>El email introducido se está utilizando con otra cuenta</p>
+            </div>
             <div class="textbox">
                 <label for="username">Nombre usuario:</label><br>
                 <input id="username" type="text" maxlength="40" name="username" placeholder="Usuario" required><br>
+            </div>
+            <div class="mensajes" id="mensajeUsuario">
+                <p>El nombre de usuario introducido se está utilizando con otra cuenta</p>
             </div>
             <div class="textbox">
                 <label for="pass1">Introduce una contraseña:</label><br>

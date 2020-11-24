@@ -13,11 +13,11 @@ function comprobarValidacionesNickname(){
             value: a
         },
         success: function (respuesta){
-            alert(respuesta)
-            if (respuesta === 1){
-                $('#username').append("<p>Ya hay una cuenta con ese mismo nombre de usuario</p>");
-
-                //Tengo que poner un display none y cuando se repita el nickname que se displaye
+            if (respuesta == 1){
+                $('#mensajeUsuario').css("display", "block");
+                $('#username').val("");
+            }else{
+                $('#mensajeUsuario').css("display", "none");
             }
         }
     })
@@ -32,10 +32,14 @@ function comprobarValidacionesEmail(){
                 value: b
             },
             success: function (respuesta){
-                alert(respuesta)
-                if (respuesta === 1){
-                    $('#email').append("<p>Ya hay una cuenta con ese mismo email</p>");
+                if (respuesta == 1){
+                    $('#mensajeEmail').css("display", "block");
+                    $('#email').val("");
+                }else{
+                    $('#mensajeEmail').css("display", "none");
                 }
+
+
             }
         })
 }
