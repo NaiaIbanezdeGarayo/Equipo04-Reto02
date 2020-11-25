@@ -1,11 +1,13 @@
 #divPrincipal{
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 0;
     padding: 10px;
-    height: 100vh;
+    height: 100%;
 }
-
+textarea{
+    font-family: 'Montserrat', sans-serif;
+}
 
 /*GRIDS*/
 #divGrid{
@@ -18,7 +20,7 @@
 
 #divImg{
     grid-column: 1 / 2;
-    grid-row: 1 / 10;
+    grid-row: 5 / 10;
 }
 
 #divNick{
@@ -37,7 +39,7 @@
 }
 
 #divButtonGuardar{
-    grid-column: 1 / 3;
+    grid-column: 2 / 3;
     grid-row: 10 / 11;
 }
 
@@ -49,12 +51,12 @@ max-width: 200px;
 }
 
 #divButtonGuardar{
-
+    display: flex;
 }
 
 #btGuardar{
-    width: 100%;
-
+    margin-left: 45px;
+    width: 90%;
     background-color: #c0b9dd;
     color: white;
     border: 1px solid #c0b9dd;
@@ -69,9 +71,8 @@ max-width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: flex-end;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
     border-right: #00000008 1px solid;
 }
 
@@ -85,7 +86,6 @@ max-width: 200px;
 #btEditarImagen {
     margin-top: 20px;
 }
-
 #btEditarImagen input#file-upload-button{
     background-color: #c0b9dd;
     color: white;
@@ -167,6 +167,13 @@ input[type='password']{
 }
 
 
+@media only screen and (min-width: 800px){
+   #divPrincipal{
+        background-color: white;
+        margin: 0px;
+   }
+}
+
 @media only screen and (max-width: 700px){
     /*GRIDS*/
     #divGrid{
@@ -206,7 +213,6 @@ input[type='password']{
 
 
 /*NORMAL*/
-
 
 #divGrid div{
  justify-content: center;
