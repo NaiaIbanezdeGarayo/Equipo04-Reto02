@@ -42,7 +42,7 @@ function leerPreguntas()
 {
     $dbh = iniciarConexion();
     //Preparamos la sentencia
-    $stmt = $dbh->prepare("SELECT * FROM Preguntas");
+    $stmt = $dbh->prepare("SELECT * FROM Preguntas ORDER BY fecha DESC");
     //Devuelve objetos anónimos que tendrán como propiedades las columnas obtenidas.
     //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
     $stmt->execute();
