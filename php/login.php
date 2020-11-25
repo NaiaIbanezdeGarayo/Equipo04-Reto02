@@ -13,6 +13,9 @@ if (isset($_POST['accederLogin'])){
     $pass = hash('sha512',$pass);
     require_once '../php/llamadasBD.php';
     if (comprobarInicioSesion($user,$pass)){
+
+        $_SESSION[$user];
+        $_SESSION[$pass];
         header('Location: ../php/preguntas.php');
         die();
     }
