@@ -1,7 +1,3 @@
-#divPrincipal *{
-    font-family: Arial;
-}
-
 #divPrincipal{
     display: flex;
     flex-direction: column;
@@ -13,14 +9,12 @@
 
 .divSeparador{
     height: 5px;
-    border-bottom:  
-    black 2px solid;
+    border-bottom: #00000005 1px solid;
 }
 
 .divSeparadorpregunta{
     height: 5px;
-    border-bottom:  
-    black 1px solid;
+    border-bottom: #0000000f 1px solid;
     margin-bottom: 4px;
 }
 
@@ -55,12 +49,13 @@ button{
     margin-bottom: 5px;
     height: 40px;
     border-radius: 5px;
+    border: 1px solid #c0b9dd;
 }
 
 .btSeleccionado{
-    background-color: black;
+    background-color: #c0b9dd;
     color: white;
-    border: 1px solid  black;
+    border: 1px solid #c0b9dd;
 }
 
 
@@ -68,19 +63,14 @@ button{
 #divInformacion{
     display: flex;
     flex-direction: column;
-
     flex: 3;
-
-    
     border-left: black 1px solid;
 }
 
 #divFiltrador{
     display: flex;
-
     justify-content: space-around;
     padding: 10px;
-    border-bottom:  black 2px solid;
 
 }
 
@@ -96,7 +86,6 @@ button{
 #divTag{
     display: flex;
     align-items: center;
-    
 }
 
 #divPreguntas{
@@ -107,16 +96,12 @@ button{
 .divPregunta{
     display: flex;
     align-items: center;
-
     padding: 4px;
-
-    border-radius: 10px;
     margin:10px;
-
-
     background-color: white;
     color: black;
-    border: 1px solid  black;
+    border-top: 1px solid #80808030;
+    border-bottom: 1px solid #80808030;
 }
 
 .divPregIzq{
@@ -145,7 +130,7 @@ button{
 .tituloPreg{
     text-decoration: none;
     font-weight: bold;
-
+    color: #c0b9dd;
     font-size: 20px;
 }
 
@@ -189,10 +174,14 @@ label{
     height: 30px;
     width: auto;
     border-radius: 5px;
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
 }
 #divTag select{
     border: none;
     border-bottom: 1px solid black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .ipBuscador{
@@ -207,8 +196,6 @@ label{
 
     #divPrincipal{
         background-color: white;
-        border-radius: 20px;
-        margin: 10px;
     }
 }
 
