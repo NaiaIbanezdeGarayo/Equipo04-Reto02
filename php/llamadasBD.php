@@ -42,7 +42,7 @@ function leerPreguntas()
 {
     $dbh = iniciarConexion();
     //Preparamos la sentencia
-    $stmt = $dbh->prepare("SELECT * FROM Preguntas");
+    $stmt = $dbh->prepare("SELECT * FROM Preguntas ORDER BY fecha DESC");
     //Devuelve objetos anónimos que tendrán como propiedades las columnas obtenidas.
     //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
     $stmt->execute();
@@ -68,7 +68,7 @@ function leerUsuarios()
 
 function leerRespuestas(){
     $dbh = iniciarConexion();
-    $stmt = $dbh->prepare("SELECT * FROM Respuestas");
+    $stmt = $dbh->prepare("SELECT * FROM Respuestas ORDER BY fecha DESC");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt;
@@ -143,6 +143,30 @@ function consultarLogin(){
     $respuesta = $stmt->fetchColumn();
     return $respuesta;
     $dbhf = finalizarConexion();
+}
+
+
+//INSERTS
+
+function insertarUsuario($tipoUsuario, $nickname, $password, $nombre, $apellido1, $apellido2, $email, $descripcion, $edad, $imagen){
+    $dbh = iniciarConexion();
+    $stmt = $dbh->prepare("INSERT INTO Usuarios (tipousuarios, nickname, password, nombre, apellido1, apellido2, email, descripcion, edad, imagen)
+    VALUES ('$tipoUsuario', '$nickname', '$password', '$nombre', '$apellido1', '$apellido2', '$email', '$descripcion', '$edad', '$imagen')");
+    $stmt->execute();
+}
+
+function insertarPregunta($titulo, $descripcion, $fecha, $tema, $idUsuario){
+    $dbh = iniciarConexion();
+    $stmt = $dbh->prepare("INSERT INTO Preguntas (titulo, descripcion, fecha, tema, usuarioid)
+    VALUES ('$titulo', '$descripcion', '$fecha', '$tema', '$idUsuario')");
+    $stmt->execute();
+}
+
+function insertarComentario($comentario, $fecha, $idPregunta, $idUsuario, $replica){
+    $dbh = iniciarConexion();
+    $stmt = $dbh->prepare("INSERT INTO Respuestas (comentario, fecha, preguntaid, usuarioid, replica)
+    VALUES ('$comentario', '$fecha', '$idPregunta', '$idUsuario', null)");
+    $stmt->execute();
 }
 
 

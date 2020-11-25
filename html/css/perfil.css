@@ -41,6 +41,8 @@
     flex-direction: column;
     border-left: #eee 2px solid;
     flex: 2;
+
+    height: 100vh;
 }
 
 #lbNickname{
@@ -50,7 +52,7 @@
 
 #imgPerfil{
     border-radius: 100%;
-    width: 70%;
+    width: 60%;
     height: auto;
     align-self: center;
 }
