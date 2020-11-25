@@ -156,33 +156,13 @@ function insertarUsuario($tipoUsuario, $nickname, $password, $nombre, $apellido1
     $stmt->execute();
 }
 
-function insertarPregunta($titulo, $descripcion, $tema){
+function insertarPregunta($titulo, $descripcion, $tema, $fecha){
 
+    $dbh = iniciarConexion();
+    $stmt = $dbh->prepare("INSERT INTO Preguntas (titulo, descripcion, fecha, tema, usuarioid)
+    VALUES ('$titulo', '$descripcion', '$fecha', 1, 1)");
+    $stmt->execute();
 
-    $servername = "localhost";
-    $username = "admin";
-    $password = "12345";
-    $dbname = "db_reto2";
-
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO Preguntas (titulo, descripcion, fecha, tema, usuarioid)
-        VALUES ('John', 'Doe', '2020-11-20', 1, 1)";
-        // use exec() because no results are returned
-        $conn->exec($sql);
-        echo "New record created successfully";
-    } catch(PDOException $e) {
-        echo $sql . "<br>" . $e->getMessage();
-    }
-
-    $conn = null;
-
-
-    /*$dbh = iniciarConexion();
-    $stmt = $dbh->prepare("INSERT INTO Preguntas ('titulo', 'descripcion', 'tema') VALUES ('aaa', 'bbb', 'ccc')");
-    $stmt->execute();*/
 }
 
 

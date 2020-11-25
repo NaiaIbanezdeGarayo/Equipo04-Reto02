@@ -7,29 +7,6 @@ function cargarDatos(){
     let titulo = document.getElementById("txtTitulo").value;
     let descripcion= document.getElementById("textAreaDesc").value;
     let tema = 0;
-    /*
-        $.ajax({
-
-            type: "POST",
-            url: "../php/ajaxPHP/crearPreguntaAJAX.php",
-
-            data: {"titulo": titulo,
-                    "descripcion": descripcion,
-                    "tema" : tema},
-
-            //data: {"titulo": titulo},
-
-            success: function (response) {
-                alert(response);
-            },
-            error: function () {
-                alert("Error")
-            }
-
-
-        })
-
-        */
 
     var parametros = {
         "titulo" : titulo,
