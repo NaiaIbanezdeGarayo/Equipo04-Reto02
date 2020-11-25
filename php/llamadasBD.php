@@ -156,11 +156,11 @@ function insertarUsuario($tipoUsuario, $nickname, $password, $nombre, $apellido1
     $stmt->execute();
 }
 
-function insertarPregunta($titulo, $descripcion, $tema, $fecha){
+function insertarPregunta($titulo, $descripcion, $fecha, $tema, $idUsuario){
 
     $dbh = iniciarConexion();
     $stmt = $dbh->prepare("INSERT INTO Preguntas (titulo, descripcion, fecha, tema, usuarioid)
-    VALUES ('$titulo', '$descripcion', '$fecha', 1, 1)");
+    VALUES ('$titulo', '$descripcion', '$fecha', '$tema', '$idUsuario')");
     $stmt->execute();
 
 }

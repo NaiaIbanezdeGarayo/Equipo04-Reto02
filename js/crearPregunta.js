@@ -6,7 +6,7 @@ function cargarDatos(){
 
     let titulo = document.getElementById("txtTitulo").value;
     let descripcion= document.getElementById("textAreaDesc").value;
-    let tema = 0;
+    let tema = parseInt(document.getElementById("selectTema").value);
 
     var parametros = {
         "titulo" : titulo,
@@ -23,7 +23,7 @@ function cargarDatos(){
             alert("Éxito:" + response);
         },
         error: function (response) {
-            alert("Error: " + response)
+            alert("Ha ocurrido un error")
         }
 
     });
