@@ -10,51 +10,53 @@
 
 <body>
     <div id="divPrincipal">
+        <form method="post" action="../php/cambiarFoto.php" enctype="multipart/form-data">
 
-        <div id="divGrid">
-            <div id="divImg">
-                <img id="userImage" src="../img/default-user-image.png">
-                <button id="btEditarImagen" value="">Seleccionar imagen</button>
-            </div>
-            
-            <div id="divNick">
-                <label id="lbNick"> Nickname: </label>
-                <input id="ipNick" type="text">
-            </div>
+            <div id="divGrid">
+                <div id="divImg">
+                    <img id="userImage" src="../img/default-user-image.png">
+                    <input type="file" id="btEditarImagen" name="imagen">
+                </div>
 
-            <div id="divCorreo">
-                <label id="lbCorreo"> Correo: </label>
-                <input id="ipCorreo" type="text">
-            </div>
+                <div id="divNick">
+                    <label id="lbNick"> Nickname: </label>
+                    <input id="ipNick" type="text">
+                </div>
 
-            
-            <div id="divDesc">
-                <label id="lbDesc"> Descripción: </label>
-                <textarea id="textAreaDesc"></textarea>
-            </div>
+                <div id="divCorreo">
+                    <label id="lbCorreo"> Correo: </label>
+                    <input id="ipCorreo" type="text">
+                </div>
 
-            <div id="divButtonGuardar">
-                <button id="btGuardar">Guardar cambios</button>
-            </div>
-            
-        </div>
 
-        <div id="divPassword">
+                <div id="divDesc">
+                    <label id="lbDesc"> Descripción: </label>
+                    <textarea id="textAreaDesc"></textarea>
+                </div>
 
-            <div id="divPassIn">
-                <label>Contraseña: </label>
-                <input type="password">
+                <div id="divButtonGuardar">
+                    <button id="btGuardar">Guardar cambios</button>
+                </div>
+
             </div>
 
-            <div id="divPassIn">
-                <label>Repite la contraseña: </label>
-                <input type="password">
+            <div id="divPassword">
+
+                <div id="divPassIn">
+                    <label>Contraseña: </label>
+                    <input type="password">
+                </div>
+
+                <div id="divPassIn">
+                    <label>Repite la contraseña: </label>
+                    <input type="password">
+                </div>
+
+                <button id="cambioPass">Cambiar contraseña</button>
+
             </div>
 
-            <button>Cambiar contraseña</button>
-
-        </div>
-
+        </form>
     </div>
 </body>
 <?php include "footer.view.php"?>

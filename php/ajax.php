@@ -15,7 +15,7 @@ if (isset($_POST["action"])){
     }
 }
 function comprobarNickname(){
-    require "llamadasBD.php";
+    require "../php/llamadasBD.php";
     $dbh = iniciarConexion();
     $data = array("nickname"=>$_POST["value"]);
     $stmt = $dbh->prepare("SELECT * FROM Usuarios WHERE nickname = :nickname");
@@ -25,7 +25,7 @@ function comprobarNickname(){
     $dbh = finalizarConexion();
 }
 function comprobarEmailx(){
-    require "llamadasBD.php";
+    require "../php/llamadasBD.php";
 
     $dbh = iniciarConexion();
     $data = array("email"=>$_POST["value"]);

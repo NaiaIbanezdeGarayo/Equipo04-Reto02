@@ -28,7 +28,8 @@
             <input type="submit" name="accederLogin" id="btn">
         </form>
         <a href="">¿Has olvidado la contraseña?</a><br>
-        <a href="php/signup.php" id="botom">No tengo cuenta. Crear Cuenta</a
+        <a href="php/signup.php" id="botom">No tengo cuenta. Crear Cuenta</a>
+        <p id="mensajeUsuarioPass">El usuario o contraseña introducida es incorrecta</p>
     </div>
 </body>
 </html>
