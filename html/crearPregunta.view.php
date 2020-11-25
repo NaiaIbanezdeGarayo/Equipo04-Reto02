@@ -27,10 +27,12 @@
         <div id="divTema">
             <label id="lbTema">Tema: </label>
             <select id="selectTema">
-                <option value="1">JavaScript</option>
-                <option value="2">PHP</option>
-                <option value="3">CSS</option>
-                <option value="4">Mantenimiento</option>
+                <option value="1">General</option>
+                <option value="2">Programación</option>
+                <option value="3">Producción</option>
+                <option value="4">Montaje</option>
+                <option value="5">Recursos humanos</option>
+                <option value="6">Mantenimiento</option>
             </select>
         </div>
 
