@@ -21,14 +21,12 @@ function cargarDatos(){
 
         success: function (response) {
             alert("Éxito:" + response);
+            document.location.href = "../php/preguntas.php";
         },
         error: function (response) {
             alert("Ha ocurrido un error")
         }
 
     });
-
-
-
 
 }
