@@ -1,4 +1,4 @@
-<?php session_start();?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,10 +23,10 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" name="pass" id="pass" placeholder="Contraseña"><br>
             </div>
-            <input type="submit" name="accederLogin" id="btn" onclick="enviarDatosLogin()">
+            <input type="submit" name="accederLogin" value="accederLogin" id="btn">
         </form>
         <a href="">¿Has olvidado la contraseña?</a><br>
-        <a href="php/signup.php" id="botom">No tengo cuenta. Crear Cuenta</a>
+        <a href="/php/signup.php" id="botom">No tengo cuenta. Crear Cuenta</a>
         <p id="mensajeUsuarioPass">El usuario o contraseña introducida es incorrecta</p>
     </div>
 </body>

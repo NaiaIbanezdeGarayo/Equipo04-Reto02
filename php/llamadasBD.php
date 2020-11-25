@@ -3,18 +3,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-if (isset($_POST["username"]) && isset($_POST["password"])){
-    crearUsuario($_POST["name"], $_POST["apellido1"], $_POST["apellido2"], $_POST["birth"], $_POST["descripcion"], $_POST["email"], $_POST["username"], $_POST["password"]);
-}
-if (isset($_POST["user"]) && isset($_POST["pass"])){
-    if (comprobarInicioSesion($_POST["user"],$_POST["password"]) == 1){
-        require "../php/preguntas.php";
-    }else{
-        header("location: ../js/login.js");
-    }
-}
-
-/*TEMPORAL HASTA TENER UNA BASE DE DATOS*/
 
 function iniciarConexion(){
     //Aquí abrimos la conexión con MySQL.
@@ -123,8 +111,17 @@ function crearUsuario($name,$ape1,$ape2,$birth,$desc,$email,$nickname,$pass1){
 }
 function comprobarInicioSesion($user,$pass){
     $dbh = iniciarConexion();
-    $data = array("usuario"=>$user, "pass"=>$pass);
+    $data = array(
+                "usuario"=>$user,
+                "pass"=>$pass
+    );
     $stmt = $dbh->prepare("SELECT * FROM Usuarios WHERE nickname= :usuario AND password = :pass");
+    $stmt-> execute($data);
+    if ($stmt-> rowCount() > 0){
+        return true;
+    }
+    return false;
+
 }
 
 function comprobarUsuarioPorNickname($nickname){
