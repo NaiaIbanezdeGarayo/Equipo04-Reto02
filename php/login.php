@@ -7,10 +7,11 @@ session_start();
 
 //Abrimos la conexión con la base de datos.
 $db = iniciarConexion();
-if (consultarLogin() === 1){
+
+/*if (consultarLogin() === 1){
     $user = $_SESSION['username'];
     header("location: ../php/preguntas.php");
 }
-
+*/
 require "../index.view.php";
 finalizarConexion();

@@ -102,13 +102,22 @@ function leerUsuarioConcreto($id){
     $dbhf = finalizarConexion();
 }
 
-function crearUsuario( $nickname, $password, $nombre, $apellido1, $apellido2, $email, $descripcion, $edad){
+function crearUsuario($name,$ape1,$ape2,$birth,$desc,$email,$nickname,$pass1){
     $dbh = iniciarConexion();
-    $password = password_hash($_POST['$password'],PASSWORD_BCRYPT);
+
     $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :edad)");
-    $stmt->execute();
+
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    return $stmt;
+    $data = array(':name' => $name,
+                  ':apellido1' => $ape1,
+                  ':apellido2' => $ape2,
+                  ':birth'=> $birth,
+                  ':descripcion' => $desc,
+                  ':email' => $email,
+                  ':nickname' => $nickname,
+                  ':password' => $pass1
+    );
+    $stmt->execute($data);
     $dbhf = finalizarConexion();
 }
 function comprobarInicioSesion($user,$pass){
@@ -125,7 +134,7 @@ function comprobarUsuarioPorNickname($nickname){
     $respuesta = $stmt->fetchColumn();
     echo $respuesta;
     $dbhf = finalizarConexion();
-}
+}/*
 function comprobarEmail($email){
     $dbh = iniciarConexion();
     $data = array("email"=>$email);
@@ -134,11 +143,11 @@ function comprobarEmail($email){
     $respuesta =  $stmt->fetchColumn();
     echo $respuesta;
     $dbhf = finalizarConexion();
-}
+}*/
 function consultarLogin(){
     $dbh = iniciarConexion();
     $data = array("user"=>$_POST["valor"]);
-    $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE nickname = :user AND password = :pass");
+    $stmt = $dbh->prepare("SELECT * FROM Usuarios WHERE nickname = :user AND password = :pass");
     $stmt->execute($data);
     $respuesta = $stmt->fetchColumn();
     return $respuesta;

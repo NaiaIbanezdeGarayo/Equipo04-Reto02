@@ -51,11 +51,11 @@
             </div>
             <div class="textbox">
                 <label for="pass1">Introduce una contraseña:</label><br>
-                <input type="password" id="pass1" maxlength="30" name="password" placeholder="Contraseña" required><br>
+                <input type="password" id="pass1" maxlength="30" name="password1" placeholder="Contraseña" required><br>
             </div>
             <div class="textbox">
                 <label for="pass2">Repite la contraseña:</label><br>
-                <input type="password" id="pass2" maxlength="30" name="password" placeholder="Contraseña" required><br>
+                <input type="password" id="pass2" maxlength="30" name="password2" placeholder="Contraseña" required><br>
             </div>
             <input type="submit" name="accederSignUp" id="btn" onclick="return validarDatosRegistro()">
         </form>

@@ -5,7 +5,9 @@
     padding: 10px;
     height: 100%;
 }
-
+textarea{
+    font-family: 'Montserrat', sans-serif;
+}
 
 /*GRIDS*/
 #divGrid{
