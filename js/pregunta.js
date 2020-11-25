@@ -27,7 +27,7 @@ function cargarDatos(){
         type: "post",
 
         success: function (response) {
-            alert("Éxito:" + response);
+           // alert("Éxito:" + response);
             location.reload();
         },
         error: function (response) {

@@ -68,7 +68,7 @@ function leerUsuarios()
 
 function leerRespuestas(){
     $dbh = iniciarConexion();
-    $stmt = $dbh->prepare("SELECT * FROM Respuestas ORDER BY fecha ASC");
+    $stmt = $dbh->prepare("SELECT * FROM Respuestas ORDER BY fecha DESC");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt;
