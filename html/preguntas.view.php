@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../html/css/preguntas.css">
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="../js/jquery-3.5.1.js"></script>
 </head>
 
 <body>
@@ -53,10 +54,9 @@
 
                 <div id="divTag">
                     <label class="lbFiltrado">Ordenar: </label>
-                    <select>
-                        <option>--Filtrar por ...--</option>
-                        <option>Fecha ↑</option>
-                        <option>Fecha ↓</option>
+                    <select id="slOrden">
+                        <option selected value="fechaDesc">Fecha ↑</option>
+                        <option value="fechaAsc">Fecha ↓</option>
                         <option>Respuestas</option>
                         <option>Favoritos</option>
                     </select>
@@ -81,6 +81,7 @@
                                 <?php echo $pregunta["titulo"] ?>
                             </a>
                             <div class="divSeparadorpregunta"></div>
+                            <label style="font-size: 15px"> <?php echo $pregunta["fecha"]; ?> </label>
                             <label class="lbDescripcion"><?php echo $pregunta["descripcion"] ?></label>
                         </div>
 
@@ -95,6 +96,8 @@
         </div>
 
     </div>
+
+    <script src="../js/preguntas.js"></script>
 </div>
 
 </body>
