@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 if (isset($_POST["username"]) && isset($_POST["password"])){
-    crearUsuario($_POST["name"], $_POST["apellido1"], $_POST["apellido2"], $_POST["birt"], $_POST["descripcion"], $_POST["email"], $_POST["username"], $_POST["password"]);
+    crearUsuario($_POST["name"], $_POST["apellido1"], $_POST["apellido2"], $_POST["birth"], $_POST["descripcion"], $_POST["email"], $_POST["username"], $_POST["password"]);
 }
 if (isset($_POST["user"]) && isset($_POST["pass"])){
     if (comprobarInicioSesion($_POST["user"],$_POST["password"]) == 1){
@@ -104,26 +104,27 @@ function leerUsuarioConcreto($id){
 
 function crearUsuario($name,$ape1,$ape2,$birth,$desc,$email,$nickname,$pass1){
     $dbh = iniciarConexion();
-
-    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :edad)");
-
-    $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    $data = array(':name' => $name,
-                  ':apellido1' => $ape1,
-                  ':apellido2' => $ape2,
-                  ':birth'=> $birth,
-                  ':descripcion' => $desc,
-                  ':email' => $email,
-                  ':nickname' => $nickname,
-                  ':password' => $pass1
+    $data = array(
+        'nombre' => $name,
+        'apellido1' => $ape1,
+        'apellido2' => $ape2,
+        'birth'=> 15,
+        'descripcion' => $desc,
+        'email' => $email,
+        'nickname' => $nickname,
+        'password' => $pass1
     );
+    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :birth)");
+
+    //$stmt->setFetchMode(PDO::FETCH_ASSOC);
+
     $stmt->execute($data);
-    $dbhf = finalizarConexion();
+    finalizarConexion();
 }
 function comprobarInicioSesion($user,$pass){
     $dbh = iniciarConexion();
     $data = array("usuario"=>$user, "pass"=>$pass);
-    $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE nickname= :usuario AND password = :pass");
+    $stmt = $dbh->prepare("SELECT * FROM Usuarios WHERE nickname= :usuario AND password = :pass");
 }
 
 function comprobarUsuarioPorNickname($nickname){

@@ -13,7 +13,7 @@
     <body>
     <div id="divgeneral">
         <h1>¡BIENVENIDO A AERGIBIDE SL!</h1>
-        <form action="">
+        <form action="../php/signup.php" method="post">
             <h2>Crear cuenta</h2>
             <div class="textbox">
                 <label for="name">Nombre:</label><br>
