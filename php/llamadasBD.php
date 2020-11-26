@@ -119,6 +119,8 @@ function comprobarInicioSesion($user,$pass){
     $stmt-> execute($data);
     if ($stmt-> rowCount() > 0){
         return true;
+        $_SESSION['nickname'] = $user;
+
     }
     return false;
 
@@ -131,7 +133,7 @@ function comprobarUsuarioPorNickname($nickname){
     $stmt->execute($data);
     $respuesta = $stmt->fetchColumn();
     echo $respuesta;
-    $dbhf = finalizarConexion();
+    finalizarConexion();
 }/*
 function comprobarEmail($email){
     $dbh = iniciarConexion();

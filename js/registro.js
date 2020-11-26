@@ -18,7 +18,7 @@ $(document).ready(function(){
                 throw "La contraseña no es válida";
             }
         }catch (e){
-            alert(e);
+            //alert(e);
         }
     })
 })
