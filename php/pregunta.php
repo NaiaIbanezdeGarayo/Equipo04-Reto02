@@ -5,7 +5,7 @@ require_once '../php/llamadasBD.php';
 if (isset($_POST['comentario'])) { //SOLO SI HAY DATOS EN EL POST
 
     //SUSTITUIR POR SESIÓN REAL
-    $_SESSION["idUsuario"] = 6;
+    $_SESSION["idUsuario"] = 1;
 
     $fecha = date('Y-m-d h:i:s', time());
 
