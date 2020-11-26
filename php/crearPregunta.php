@@ -4,7 +4,7 @@ require '../php/llamadasBD.php';
 if (isset($_POST['titulo'])) { //SOLO SI HAY DATOS EN EL POST
 
     //SUSTITUIR POR SESIÓN REAL
-    $_SESSION["idUsuario"] = 2;
+    $_SESSION["idUsuario"] = 6;
 
     $fecha = date('Y-m-d h:i:s', time());
 
