@@ -108,6 +108,9 @@ resize: none;
     flex-direction: column;
     align-items: center;
 }
+.iconFavoritos{
+    color: grey;
+}
 
 .divRespuesta{
     display: flex;
