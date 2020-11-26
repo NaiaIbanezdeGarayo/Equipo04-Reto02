@@ -3,10 +3,6 @@
     flex-direction: column;
 }
 
-#divPrincipal *{
-    font-weight: normal;
-}
-
 #divSuperior{
     margin-left: 1%;
 }
