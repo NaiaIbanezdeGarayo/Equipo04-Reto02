@@ -2,17 +2,7 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-
-if (isset($_POST["username"]) && isset($_POST["password"])){
-    crearUsuario($_POST["name"], $_POST["apellido1"], $_POST["apellido2"], $_POST["birt"], $_POST["descripcion"], $_POST["email"], $_POST["username"], $_POST["password"]);
-}
-if (isset($_POST["user"]) && isset($_POST["pass"])){
-    if (comprobarInicioSesion($_POST["user"],$_POST["password"]) == 1){
-        require "../php/preguntas.php";
-    }else{
-        header("location: ../js/login.js");
-    }
-}
+session_start();
 
 /*TEMPORAL HASTA TENER UNA BASE DE DATOS*/
 
@@ -102,14 +92,25 @@ function leerUsuarioConcreto($id){
     $dbhf = finalizarConexion();
 }
 
-function crearUsuario( $nickname, $password, $nombre, $apellido1, $apellido2, $email, $descripcion, $edad){
+function crearUsuario( $name,$ape1,$ape2,$birth,$desc,$email,$nickname,$pass1)
+{
     $dbh = iniciarConexion();
-    $password = password_hash($_POST['$password'],PASSWORD_BCRYPT);
-    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :edad)");
-    $stmt->execute();
-    $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    return $stmt;
-    $dbhf = finalizarConexion();
+    $data = array(
+        'nombre' => $name,
+        'apellido1' => $ape1,
+        'apellido2' => $ape2,
+        'birth' => 15,
+        'descripcion' => $desc,
+        'email' => $email,
+        'nickname' => $nickname,
+        'password' => $pass1
+    );
+    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :birth)");
+
+    //$stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    $stmt->execute($data);
+    finalizarConexion();
 }
 function comprobarInicioSesion($user,$pass){
     $dbh = iniciarConexion();
