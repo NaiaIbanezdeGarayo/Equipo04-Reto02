@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once '../php/llamadasBD.php';
 
-session_start();
+
 //Genero el array principal y el array vacío que pasará a tener la información de las dos tablas.
 $preguntas = leerPreguntas();
 $preguntasConUsuarios = array();
