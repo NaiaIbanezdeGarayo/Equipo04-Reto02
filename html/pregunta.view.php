@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../html/css/pregunta.css">
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="../js/jquery-3.5.1.js"></script>
+
 </head>
 
 <body>
@@ -58,6 +60,8 @@
             </div>
             
         </div>
+
+        <script src="../js/pregunta.js"></script>
 
     </div>
 </body>

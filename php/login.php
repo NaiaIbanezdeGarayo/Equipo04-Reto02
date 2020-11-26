@@ -5,24 +5,12 @@ require_once '../php/llamadasBD.php';
 
 session_start();
 
-
-
-if (isset($_POST['accederLogin'])){
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
-    $pass = hash('sha512',$pass);
-    require_once '../php/llamadasBD.php';
-    if (comprobarInicioSesion($user,$pass)){
-
-        $_SESSION[$user];
-        $_SESSION[$pass];
-        header('Location: ../php/preguntas.php');
-        die();
-    }
-
+//Abrimos la conexión con la base de datos.
+$db = iniciarConexion();
+if (consultarLogin() === 1){
+    $user = $_SESSION['username'];
+    header("location: ../php/preguntas.php");
 }
 
 require "../index.view.php";
-
-
 finalizarConexion();

@@ -1,6 +1,5 @@
 <?php
 require_once '../php/llamadasBD.php';
-session_start();
 $db = iniciarConexion();
 
 $usuarios = leerUsuarios();
