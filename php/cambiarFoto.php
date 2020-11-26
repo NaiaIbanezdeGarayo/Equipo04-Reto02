@@ -15,25 +15,20 @@ if (($_FILES["imagen"]["type"] == "image/gif")
 {
     $directorio = $_SERVER['DOCUMENT_ROOT'].'../img/imgusers/';
 
-    move_uploaded_file($_FILES['imagen']['tmp_name'],$directorio.$_SESSION["username"].".".$extension);
-    llamadaAFotos($nombre_img);
+    move_uploaded_file($_FILES['imagen']['tmp_name'],$directorio.$_SESSION["username"].$extension);
+    require "../php/llamadasBD.php";
+    $dbh = iniciarConexion();
+    $stmt = $dbh->prepare("UPDATE Usuarios SET imagen = '$nombre_img'");
+    $stmt->execute();
+    $dbhf = finalizarConexion();
+    header("location: ../php/editarPerfil.php");
+    $stmts = $dbh->prepare("SELECT * FROM Usuarios");
+    while ($row = $stmts->fetch()){
+        $ruta_img = $row["imagen"];
+    }
 
 }else{
     echo "No se puede subir una imagen con este formato";
 }
 
 
-function llamadaAFotos($nombre_img)
-{
-    require "../php/llamadasBD.php";
-    $dbh = iniciarConexion();
-    $stmt = $dbh->prepare("UPDATE Usuarios SET imagen = '$nombre_img'");
-    $stmt->execute();
-
-    header("location: ../php/editarPerfil.php");
-    $stmts = $dbh->prepare("SELECT * FROM Usuarios");
-    while ($row = $stmts->fetch()) {
-        $ruta_img = $row["imagen"];
-    }
-
-}

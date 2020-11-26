@@ -1,8 +1,27 @@
 <?php
 require_once '../php/llamadasBD.php';
 
+
+if (isset($_POST['comentario'])) { //SOLO SI HAY DATOS EN EL POST
+
+    //SUSTITUIR POR SESIÓN REAL
+    $_SESSION["idUsuario"] = 2;
+
+
+
+    $fecha = date('Y-m-d h:i:s', time());
+
+    echo $fecha;
+
+    insertarComentario($_POST["comentario"], $fecha, $_GET["pregunta"], $_SESSION["idUsuario"], "");
+}
+
+
+
 $respuestas = leerRespuestas();
 $respuestasConUsuarios = array();
+
+$_SESSION["idPregunta"] = "aaaaa";
 
 $preguntaBD = leerPreguntaConcreta($_GET["pregunta"]);
 $pregunta = $preguntaBD->fetch();

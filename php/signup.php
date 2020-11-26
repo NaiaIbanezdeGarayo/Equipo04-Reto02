@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
+
 require_once '../php/llamadasBD.php';
 //Comprobamos si ya hay una sesión iniciada con ese mismo usuario
 /*if (isset($_SESSION['username'])){
@@ -40,6 +41,3 @@ if (isset($_POST['accederSignUp'])){
     }
 }else
     require '../html/signup.view.php';
-
-
-
