@@ -137,8 +137,8 @@ function comprobarUsuarioPorNickname($nickname){
     echo $respuesta;
 
     finalizarConexion();
-}/*
-
+}
+/*
 function comprobarEmail($email){
     $dbh = iniciarConexion();
     $data = array("email"=>$email);
@@ -157,7 +157,7 @@ function consultarLogin(){
     return $respuesta;
     $dbhf = finalizarConexion();
 }
-
+*/
 
 //INSERTS
 
