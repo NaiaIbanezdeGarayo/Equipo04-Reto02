@@ -113,8 +113,19 @@ function crearUsuario( $nickname, $password, $nombre, $apellido1, $apellido2, $e
 }
 function comprobarInicioSesion($user,$pass){
     $dbh = iniciarConexion();
-    $data = array("usuario"=>$user, "pass"=>$pass);
-    $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE nickname= :usuario AND password = :pass");
+    $data = array(
+                "usuario"=>$user,
+                "pass"=>$pass
+    );
+    $stmt = $dbh->prepare("SELECT * FROM Usuarios WHERE nickname= :usuario AND password = :pass");
+    $stmt-> execute($data);
+    if ($stmt-> rowCount() > 0){
+        return true;
+        $_SESSION['nickname'] = $user;
+
+    }
+    return false;
+
 }
 
 function comprobarUsuarioPorNickname($nickname){
@@ -124,8 +135,10 @@ function comprobarUsuarioPorNickname($nickname){
     $stmt->execute($data);
     $respuesta = $stmt->fetchColumn();
     echo $respuesta;
-    $dbhf = finalizarConexion();
-}
+
+    finalizarConexion();
+}/*
+
 function comprobarEmail($email){
     $dbh = iniciarConexion();
     $data = array("email"=>$email);

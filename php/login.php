@@ -3,14 +3,17 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once '../php/llamadasBD.php';
 
-session_start();
 
-//Abrimos la conexión con la base de datos.
-$db = iniciarConexion();
-if (consultarLogin() === 1){
-    $user = $_SESSION['username'];
-    header("location: ../php/preguntas.php");
-}
+if (isset($_POST['accederLogin'])){
+    $user = $_POST['user'];
+    $id = $_POST['id'];
+    $pass = $_POST['pass'];
+    $pass = hash('sha512',$pass);
+    require_once '../php/llamadasBD.php';
+    if (comprobarInicioSesion($user,$pass)){
+        header('Location: ../php/preguntas.php');
+        die();
+    }
 
 require "../index.view.php";
 finalizarConexion();

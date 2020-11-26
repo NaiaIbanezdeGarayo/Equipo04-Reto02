@@ -1,6 +1,7 @@
 <?php
 require_once '../php/llamadasBD.php';
 
+
 if (isset($_POST['comentario'])) { //SOLO SI HAY DATOS EN EL POST
 
     //SUSTITUIR POR SESIÓN REAL
@@ -14,6 +15,7 @@ if (isset($_POST['comentario'])) { //SOLO SI HAY DATOS EN EL POST
 
     insertarComentario($_POST["comentario"], $fecha, $_GET["pregunta"], $_SESSION["idUsuario"], "");
 }
+
 
 
 $respuestas = leerRespuestas();
