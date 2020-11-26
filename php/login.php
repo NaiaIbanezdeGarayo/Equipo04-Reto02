@@ -6,7 +6,6 @@ require_once '../php/llamadasBD.php';
 
 if (isset($_POST['accederLogin'])) {
     $user = $_POST['user'];
-    $id = $_POST['id'];
     $pass = $_POST['pass'];
     $pass = hash('sha512', $pass);
     require_once '../php/llamadasBD.php';
