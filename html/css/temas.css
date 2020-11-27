@@ -124,8 +124,8 @@ a{
 
 h1{
     color: black;
-    font-weight: bold;
     font-size: 50px;
+    font-weight: normal;
 }
 
 p{
