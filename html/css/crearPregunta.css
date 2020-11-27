@@ -1,0 +1,109 @@
+
+#divPrincipal{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100vh;
+}
+
+#lbSuperior{
+    border-bottom: black 1px solid;
+    align-self: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+#divPrincipal div, #lbSuperior{
+    margin: 10px;
+}
+
+#divPrincipal label{
+    margin-right: 10px;
+}
+
+#divTitulo{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+#txtTitulo{
+    width: 90%;
+    height: 100%;
+    font-size: 25px;
+}
+
+#divDescripcion{
+    display: flex;
+    flex-direction: column;
+}
+
+#divBotones{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    border-top: black 1px solid;
+    padding: 20px;
+}
+
+#divBotones button{
+    width: 170px;
+    font-size: 20px;
+    background-color: #c0b9dd;
+    color: white;
+    border-color: #c0b9dd;
+}
+
+#textAreaDesc{
+    resize: none;
+    min-height: 400px;
+    height: 100%;
+}
+
+#lbDesc{
+    margin-bottom: 10px;
+}
+
+#lbDesc, #lbTema, #lbTitulo{
+    font-size: 20px;
+}
+
+#textAreaDesc, #selectTema{
+    font-size: 17px;
+    border: black 1px solid;
+}
+#selectTema{
+    font-family: 'Montserrat', sans-serif;
+}
+@media only screen and (min-width: 800px){
+    body{
+        background-color: gainsboro;
+    }
+
+    #divPrincipal{
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 700px){
+
+}
+
+
+@media only screen and (max-width: 500px){
+
+    #divBotones button{
+        width: 100px;
+        font-size: 15px;
+    }
+
+
+    #lbSuperior{
+        font-size: 20px;
+        padding: 0px;
+    }
+
+
+}

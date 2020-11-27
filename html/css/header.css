@@ -1,113 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-*{
-    margin: 0 auto;
-}
-h1{
-    font-family: 'Poppins', sans-serif;
-}
-body{
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
+
 header{
     display: flex;
-    width: 100%;
-    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    box-shadow: 5px 10px;
     box-shadow: 0 0 7px 1px #00000057;
-    color: white;
-    background-color: #735D78;
+    background-color: white;
+    position: sticky;
+    top: 0px;
 }
 
-nav ul {
-    display: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+body {
+    margin: 0px;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+select option,button,input{
+    font-family: 'Montserrat', sans-serif;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: white;
+#tituloAergibide{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }
 
-nav ul li {
-    padding: 2% 6%;
-    margin: 0;
-    font-size: 1em;
-    background-color: #735D78;
+#iconHome, #iconUser{
+    font-size: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
 }
-nav p{
-    width: 60%;
-    padding: 1.5%;
-    text-align: center;
-    font-weight: 900;
-}
-ul.menu{
-    flex-direction: column;
-    justify-content: center;
-    height: 0;
-    display: none;
-    transition: height 0.4s ease-in-out 0s, background-color 0.9s ease 0s;
-
-}
-.menu li:hover{
-    background-color: #886D8E;
-}
-
-#navigation{
-    display: flex;
-    transition: 0s;
-    width: 100%;
-    box-shadow: -6px -5px 6px 5px #00000038;
-}
-
-.menu {
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    list-style-type: none;
-    margin-top: 40px;
-}
-#check{
-    display: none;
-}
-
-.checkbtn{
-    font-size: 2em;
-    width: 10%;
-    text-align: center;
-    cursor: pointer;
-}
-
-.close{
-    display: none;
-}
-#check:checked~.menu{
-    visibility: visible;
-    display: block;
-}
-#check:checked~.open{
-    display: none;
-}
-#check:checked~.close{
-    display: block;
-}
-
-.dropbtn {
-    color: white;
-    cursor: pointer;
-    font-size: 2em;
-    text-align: center;
-    background: none;
-    border: none;
-    height:40px;
-}
-
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -115,21 +42,27 @@ ul.menu{
     display: inline-block;
 }
 
+.dropbtn{
+    border: none;
+    background-color: transparent;
+}
+
 /* Dropdown Content (Hidden by Default) */
 .optperfil-content {
     display: none;
     position: absolute;
     background-color: #fdfdff;
-    min-width: 180px;
+    min-width: 280px;
     box-shadow: 0px 1px 6px 0px #6a6e6f;
 }
 
 /* Links inside the dropdown */
 .optperfil-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 15px;
     text-decoration: none;
     display: block;
+    font-size: 20px;
 }
 
 /* Change color of dropdown links on hover */
@@ -141,5 +74,37 @@ ul.menu{
 .show{
     display: block;
     right: 0;
-    top: 40px;
+    top: 60px;
 }
+
+@media only screen and (max-width: 700px){
+    header{
+        height: 50px;
+    }
+
+    #iconHome, #iconUser{
+        font-size: 30px;
+    }
+
+    #tituloAergibide{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    header{
+        height: 30px;
+    }
+
+    #iconHome, #iconUser{
+        font-size: 20px;
+    }
+
+    #tituloAergibide{
+        font-size: 15px;
+    }
+}
+
+
+
+
