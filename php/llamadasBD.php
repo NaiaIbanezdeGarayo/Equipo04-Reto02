@@ -41,6 +41,20 @@ function leerPreguntas()
     $dbhf = finalizarConexion();
 }
 
+function leerPreguntasPorTema($tema)
+{
+    $dbh = iniciarConexion();
+    //Preparamos la sentencia
+    $stmt = $dbh->prepare("SELECT * FROM Preguntas WHERE tema = $tema ORDER BY fecha DESC");
+    //Devuelve objetos anónimos que tendrán como propiedades las columnas obtenidas.
+    //Después de indicar como queremos los datos utilizamos el método fetch() para acceder a la infomación
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt;
+    $dbhf = finalizarConexion();
+}
+
 function leerUsuarios()
 {
     $dbh = iniciarConexion();

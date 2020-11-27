@@ -5,7 +5,14 @@ require_once '../php/llamadasBD.php';
 
 
 //Genero el array principal y el array vacío que pasará a tener la información de las dos tablas.
-$preguntas = leerPreguntas();
+$preguntas = array();
+
+if(isset($_GET['tema'])) {
+    $preguntas = leerPreguntasPorTema($_GET['tema']);
+
+}else{
+    $preguntas = leerPreguntas();
+}
 $preguntasConUsuarios = array();
 
 //Bucle que recorre todas las preguntas y busca el nickname y la imagen del usuario en cuestión.
