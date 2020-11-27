@@ -13,14 +13,16 @@ if (isset($_POST['accederLogin'])) {
     $pass = hash('sha512', $pass);
     if (comprobarInicioSesion($user, $pass)) {
 
-        setcookie("nickname" ,$user);
+
+
+        setcookie("nickname" ,$user, strtotime("2021-09-09"));
 
         $usuarios = leerUsuarios();
 
         while ($usuario = $usuarios->fetch()){
 
             if($usuario["nickname"] == $user){
-                setcookie("idUsuario" ,$usuario["id"]);
+                setcookie("idUsuario", $usuario["id"], strtotime("2021-09-09"));
             }
 
         }

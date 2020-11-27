@@ -24,7 +24,7 @@ function cargarDatos(){
             document.location.href = "../php/preguntas.php";
         },
         error: function (response) {
-            alert("Ha ocurrido un error")
+            //alert("Ha ocurrido un error")
         }
 
     });
