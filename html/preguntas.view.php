@@ -82,7 +82,7 @@
                                 <?php echo $pregunta["titulo"] ?>
                             </a>
                             <div class="divSeparadorpregunta"></div>
-                            <label style="font-size: 15px"> <?php echo $pregunta["fecha"]; ?> </label>
+                            <label style="font-size: 15px"> <?php echo $pregunta["fecha"]; echo " - Tema: "; echo $pregunta["tema"]?> </label>
                             <label class="lbDescripcion"><?php echo $pregunta["descripcion"] ?></label>
                         </div>
 

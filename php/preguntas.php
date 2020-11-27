@@ -33,11 +33,35 @@ while ($pregunta = $preguntas->fetch()){
 
     }
 
+
+    $tema = "";
+    switch ($pregunta["tema"]){
+        case 1:
+            $tema = "General";
+            break;
+        case 2:
+            $tema = "Programación";
+            break;
+        case 3:
+            $tema = "Producción";
+            break;
+        case 4:
+            $tema = "Montaje";
+            break;
+        case 5:
+            $tema = "Recursos humanos";
+            break;
+        case 6:
+            $tema = "Mantenimiento";
+            break;
+    }
+
     array_push($preguntasConUsuarios, [
         "id" => $pregunta["id"],
         "titulo" => $pregunta["titulo"],
         "descripcion" => $pregunta["descripcion"],
         "fecha" => $pregunta["fecha"],
+        "tema" => $tema,
         "nickname" => $nickname,
         "urlImg" => $urlImg
     ]);
