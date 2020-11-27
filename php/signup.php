@@ -42,9 +42,9 @@ if (isset($_POST['accederSignUp'])){
     }catch (PDOException $pdo){
 
     }
-}else{
+}else {
     require '../html/signup.view.php';
-
+}
 
 function calcularEdad($birth){
     $tiempo = strtotime($birth);

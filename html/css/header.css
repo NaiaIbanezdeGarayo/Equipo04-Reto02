@@ -17,6 +17,7 @@ header{
 
 body {
     margin: 0px;
+    height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
 select option,button,input{
