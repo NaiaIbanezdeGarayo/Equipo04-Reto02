@@ -1,0 +1,249 @@
+#divPrincipal{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    height: 100vh;
+}
+
+
+/*GRIDS*/
+#divGrid{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(10, 10%);
+
+    height: 80%;
+}
+
+#divImg{
+    grid-column: 1 / 2;
+    grid-row: 1 / 10;
+}
+
+#divNick{
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+}
+
+#divCorreo{
+    grid-column: 2 / 3;
+    grid-row: 2 / 2;
+}
+
+#divDesc{
+    grid-column: 2 / 3;
+    grid-row: 3 / 10;
+}
+
+#divButtonGuardar{
+    grid-column: 1 / 3;
+    grid-row: 10 / 11;
+}
+
+/*CSS NORMAL*/
+
+#divGrid div input[type='text']{
+width: 100%;
+max-width: 200px;
+}
+
+#divButtonGuardar{
+
+}
+
+#btGuardar{
+    width: 100%;
+
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
+}
+
+#divGrid{
+    padding: 20px;
+    border-bottom: #00000008 1px solid;
+}
+
+#divImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-right: #00000008 1px solid;
+}
+
+#userImage{
+    border-radius: 100%;
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+}
+
+#btEditarImagen {
+    margin-top: 20px;
+}
+
+#btEditarImagen input#file-upload-button{
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
+}
+
+#divGrid div label{
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+#textAreaDesc{
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+#divNick{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#divCorreo{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#lbDesc{
+    align-self: center;
+}
+
+#divDesc{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#textAreaDesc{
+    height: 100%;
+    resize: none;
+}
+
+
+#divPassword{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+    align-self: center;
+    padding: 20px;
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
+    box-shadow: 0px 4px 5px 0px #00000021;
+    
+}
+
+#divPassword label{
+    font-weight: bold;
+    color: white;
+}
+
+#divPassIn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+}
+#cambioPass{
+    color: white;
+    background-color: #735D78;
+    border: 1px solid #735D78;
+    padding: 20px;
+}
+
+input[type='password']{
+    margin-left: 5px;
+}
+
+
+@media only screen and (max-width: 700px){
+    /*GRIDS*/
+    #divGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10, 10%);
+
+        border-bottom: none;
+    
+        height: 80%;
+    }
+    
+    #divImg{
+        grid-column: 1 / 1;
+        grid-row: 1 / 4;
+    }
+    
+    #divNick{
+        grid-column: 1 / 1;
+        grid-row: 5 / 6;
+    }
+    
+    #divCorreo{
+        grid-column: 1 / 1;
+        grid-row: 6 / 7;
+    }
+    
+    #divDesc{
+        grid-column: 1 / 1;
+        grid-row: 7 / 10;
+    }
+    
+    #btGuardar{
+        grid-column: 1 / 1;
+        grid-row: 10 / 11;
+    }
+
+
+/*NORMAL*/
+
+
+#divGrid div{
+ justify-content: center;
+}
+
+#divImg{
+    border: none;
+    margin: 0px;
+}
+
+#userImage{
+    height: 100%;
+    width: auto;
+}
+
+
+#divPassword{
+    margin-top: 30px;
+}
+
+
+}
+
+@media only screen and (max-width: 700px){
+
+    #divPassword div{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #divPassword label{
+        font-size: 13px;
+    }
+
+    input[type='password']{
+        font-size: 13px;
+        width: 100%;
+    }
+
+}

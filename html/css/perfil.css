@@ -1,0 +1,96 @@
+#divPrincipal{
+    display: flex;
+}
+
+#divIzq{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+#divBotones{
+    display: flex;
+    margin: 20px;
+    justify-content: left;
+}
+
+#divBotones button{
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
+    height: 40px;
+    width: 80px;
+    margin: 5px;
+}
+
+.divPregunta{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+    border: #c0b9dd 1px solid;
+    border-radius: 10px;
+}
+
+
+
+#divDer{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border-left: #eee 2px solid;
+    flex: 2;
+
+    height: 100vh;
+}
+
+#lbNickname{
+    font-size: 30px;
+    align-self: center;
+}
+
+#imgPerfil{
+    border-radius: 100%;
+    width: 60%;
+    height: auto;
+    align-self: center;
+}
+
+#lbNombre{
+    font-size: 20px;
+    align-self: center;
+}
+
+#lbDescripcion{
+    margin-top: 20px;
+}
+
+a:visited, a{
+    color: black;
+}
+
+@media only screen and (min-width: 800px){
+
+    #divPrincipal{
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #divPrincipal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #divDer {
+        order: -1;
+        border: none;
+        padding: 30px;
+    }
+
+    #imgPerfil{
+        width: 60%;
+    }
+
+}
