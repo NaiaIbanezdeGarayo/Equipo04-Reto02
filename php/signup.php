@@ -15,6 +15,8 @@ if (isset($_POST['accederSignUp'])){
     $ape1 = $_POST['apellido1'];
     $ape2 = $_POST['apellido2'];
     $birth = $_POST['birth'];
+    $edad = calcularEdad($birth);
+
     $desc = $_POST['descripcion'];
     $email = $_POST['email'];
     $username = $_POST['username'];
@@ -32,11 +34,20 @@ if (isset($_POST['accederSignUp'])){
         if ($pass1 != $pass2){
             echo "Las contraseñas no coinciden";
         }else{
-            crearUsuario($name,$ape1,$ape2,$birth,$desc,$email,$username,$pass1);
-            require "../php/login.php";
+            crearUsuario($name,$ape1,$ape2,$edad,$desc,$email,$username,$pass1);
+            require "../index.view.php";
         }
     }catch (PDOException $pdo){
 
     }
 }else
     require '../html/signup.view.php';
+
+function calcularEdad($birth){
+    $tiempo = strtotime($birth);
+    $ahora = time();
+    $edad = ($ahora-$tiempo)/(60*60*24*365.25);
+    $edad = floor($edad);
+    return $edad;
+}
+

@@ -92,21 +92,21 @@ function leerUsuarioConcreto($id){
 }
 
 
-function crearUsuario( $name,$ape1,$ape2,$birth,$desc,$email,$nickname,$pass1)
+function crearUsuario( $name,$ape1,$ape2,$edad,$desc,$email,$nickname,$pass1)
 {
     $dbh = iniciarConexion();
     $data = array(
         'nombre' => $name,
         'apellido1' => $ape1,
         'apellido2' => $ape2,
-        'birth' => 15,
+        'edad' => $edad,
         'descripcion' => $desc,
         'email' => $email,
         'nickname' => $nickname,
         'password' => $pass1,
         'imagen' => "../img/default-user-image.png"
     );
-    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad, imagen) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :birth, :imagen)");
+    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad, imagen) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :edad, :imagen)");
 
     //$stmt->setFetchMode(PDO::FETCH_ASSOC);
 
