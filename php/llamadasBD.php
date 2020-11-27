@@ -102,7 +102,7 @@ function leerUsuarioConcreto($id){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     return $stmt;
-    $dbhf = finalizarConexion();
+    finalizarConexion();
 }
 
 

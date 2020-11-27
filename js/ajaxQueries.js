@@ -2,7 +2,11 @@ $(document).ready(function (){
 
     $('#email').on('focusout', comprobarValidacionesEmail);
     $('#username').on('focusout', comprobarValidacionesNickname);
-    $('#favorito').on('click', ponerFavorito);
+    var favoritos = $('.fa-star');
+    for (x = 0; x < favoritos.length; x ++){
+        favoritos[x].addEventListener("click",ponerFavorito);
+    }
+
     //filtrar();
 })
 function comprobarValidacionesNickname(){

@@ -61,13 +61,12 @@ function marcarFavorito(){
     $dbh = iniciarConexion();
     $idpregunta = $_GET["pregunta"];
     $idrespuesta = $_POST["respuesta"];
+    $idusuario = $_COOKIE["idusuario"];
     $data = array(
         'preguntaid'=>$idpregunta,
-        'respuestaid'=>$idrespuesta
+        'respuestaid'=>$idrespuesta,
+        'usuarioid'=>$idusuario
     );
-
-
-
-    $stmt = $dbh->prepare("INSERT INTO Favoritos(preguntaid,respuestaid) VALUES ('$idpregunta', '$idrespuesta') ");
-    $stmt->execute();
+    $stmt = $dbh->prepare("INSERT INTO Favoritos(preguntaid,respuestaid,usuarioid) VALUES (:preguntaid,:respuestaid,:usuarioid)");
+    $stmt->execute($data);
 }
