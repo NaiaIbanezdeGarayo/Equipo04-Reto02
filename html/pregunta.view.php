@@ -45,7 +45,7 @@
                 <div class="divRespuesta">
                     <div class="divDatosUsuarioRespuesta">
                         <div class="iconFavoritos">
-                            <i class="fas fa-star" id="favorito"><?php $pregunta["id"]."-".$respuesta["id"]?></i>
+                            <i class="fas fa-star" id="<?=$respuesta["id"]?>"></i>
                         </div>
 
                         <label class="nickUsuarioRespuesta"><?php echo $respuesta["nickname"]; ?></label>

@@ -110,6 +110,7 @@ resize: none;
 }
 .iconFavoritos{
     color: grey;
+    cursor: pointer;
 }
 
 .divRespuesta{

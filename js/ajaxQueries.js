@@ -2,8 +2,7 @@ $(document).ready(function (){
 
     $('#email').on('focusout', comprobarValidacionesEmail);
     $('#username').on('focusout', comprobarValidacionesNickname);
-    $('#favorito').on('click', quitarFavorito);
-    $('#noFavorito').on('click', ponerFavorito);
+    $('#favorito').on('click', ponerFavorito);
     //filtrar();
 })
 function comprobarValidacionesNickname(){
@@ -47,7 +46,23 @@ function comprobarValidacionesEmail(){
         })
 }
 function ponerFavorito(){
-    var fav = $('#favorito')
+    var fav = $('.fa-star').val();
+    $.ajax({
+        type: "post",
+        url: "../php/ajax.php",
+        data: {
+            action: "marcarFavorito",
+            value: fav
+        },
+        success: function(respuesta){
+            if (respuesta == 1){
+                $('.iconFavoritos').css("color","pink");
+            }else{
+                $('.iconFavoritos').css("color","grey");
+            }
+
+        }
+    })
 }
 function quitarFavorito(){
 

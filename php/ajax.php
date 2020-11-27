@@ -15,7 +15,10 @@ if (isset($_POST["action"])){
             filtrarFechaDesc();
             break;
         case "filtrarFechaAsc":
-            filtraFechaAsc();
+            filtrarFechaAsc();
+            break;
+        case "marcarFavorito":
+            marcarFavorito();
             break;
         default: "Error";
     }
@@ -51,5 +54,20 @@ function filtrarFechaDesc(){
     require "../php/llamadasBD.php";
     $dbh = iniciarConexion();
     $stmt = $dbh->prepare("SELECT * FROM Preguntas ORDER BY fecha DESC");
+    $stmt->execute();
+}
+function marcarFavorito(){
+    require "../php/llamadasBD.php";
+    $dbh = iniciarConexion();
+    $idpregunta = $_GET["pregunta"];
+    $idrespuesta = $_POST["respuesta"];
+    $data = array(
+        'preguntaid'=>$idpregunta,
+        'respuestaid'=>$idrespuesta
+    );
+
+
+
+    $stmt = $dbh->prepare("INSERT INTO Favoritos(preguntaid,respuestaid) VALUES ('$idpregunta', '$idrespuesta') ");
     $stmt->execute();
 }
