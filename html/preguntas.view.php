@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../html/css/preguntas.css">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/ajaxQueries.js"></script>
 </head>
 
 <body>
@@ -55,8 +56,8 @@
                 <div id="divTag">
                     <label class="lbFiltrado">Ordenar: </label>
                     <select id="slOrden">
-                        <option selected value="fechaDesc">Fecha ↑</option>
-                        <option value="fechaAsc">Fecha ↓</option>
+                        <option id="fechaDesc" selected value="fechaDesc">Fecha ↑</option>
+                        <option id="fechaAsc" value="fechaAsc">Fecha ↓</option>
                         <option>Respuestas</option>
                         <option>Favoritos</option>
                     </select>

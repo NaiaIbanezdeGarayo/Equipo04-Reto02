@@ -33,7 +33,6 @@ if (isset($_POST['accederSignUp'])){
             echo "Las contraseñas no coinciden";
         }else{
             crearUsuario($name,$ape1,$ape2,$birth,$desc,$email,$username,$pass1);
-
             require "../php/login.php";
         }
     }catch (PDOException $pdo){

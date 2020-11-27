@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../html/css/pregunta.css">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/ajaxQueries.js"></script>
 
 </head>
 
@@ -43,6 +44,10 @@
                 <?php foreach ($respuestasConUsuarios as $respuesta) { ?>
                 <div class="divRespuesta">
                     <div class="divDatosUsuarioRespuesta">
+                        <div class="iconFavoritos">
+                            <i class="fas fa-star" id="favorito"><?php $pregunta["id"]."-".$respuesta["id"]?></i>
+                        </div>
+
                         <label class="nickUsuarioRespuesta"><?php echo $respuesta["nickname"]; ?></label>
                         <a href="../php/perfil.php?nickname=<?php echo $respuesta["nickname"]?>"><img class="imgPerfilRespuesta" src="<?php echo $respuesta["urlImg"];?>"></a>
                     </div>
