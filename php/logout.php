@@ -1,3 +1,4 @@
 <?php
+session_start();
 session_destroy();
-header("location: index.view.php");
+require "../php/login.php";

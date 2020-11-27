@@ -2,7 +2,6 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-session_start();
 
 /*TEMPORAL HASTA TENER UNA BASE DE DATOS*/
 
@@ -92,6 +91,7 @@ function leerUsuarioConcreto($id){
     $dbhf = finalizarConexion();
 }
 
+
 function crearUsuario( $name,$ape1,$ape2,$birth,$desc,$email,$nickname,$pass1)
 {
     $dbh = iniciarConexion();
@@ -103,9 +103,10 @@ function crearUsuario( $name,$ape1,$ape2,$birth,$desc,$email,$nickname,$pass1)
         'descripcion' => $desc,
         'email' => $email,
         'nickname' => $nickname,
-        'password' => $pass1
+        'password' => $pass1,
+        'imagen' => "../img/default-user-image.png"
     );
-    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :birth)");
+    $stmt = $dbh->prepare("INSERT INTO Usuarios( nickname, password, nombre, apellido1, apellido2, email, descripcion, edad, imagen) values ( :nickname, :password, :nombre, :apellido1, :apellido2, :email, :descripcion, :birth, :imagen)");
 
     //$stmt->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -114,6 +115,9 @@ function crearUsuario( $name,$ape1,$ape2,$birth,$desc,$email,$nickname,$pass1)
 }
 function comprobarInicioSesion($user,$pass){
     $dbh = iniciarConexion();
+    session_start();
+
+
     $data = array(
                 "usuario"=>$user,
                 "pass"=>$pass
@@ -122,10 +126,9 @@ function comprobarInicioSesion($user,$pass){
     $stmt-> execute($data);
     if ($stmt-> rowCount() > 0){
         return true;
-        $_SESSION['nickname'] = $user;
-
+    }else{
+        return false;
     }
-    return false;
 
 }
 
@@ -135,7 +138,6 @@ function comprobarUsuarioPorNickname($nickname){
     $stmt = $dbh->prepare("SELECT COUNT(*) FROM Usuarios WHERE nickname= :nickname");
     $stmt->execute($data);
     $respuesta = $stmt->fetchColumn();
-    echo $respuesta;
 
     finalizarConexion();
 }

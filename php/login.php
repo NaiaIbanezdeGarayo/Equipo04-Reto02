@@ -7,13 +7,29 @@ require_once '../php/llamadasBD.php';
 if (isset($_POST['accederLogin'])) {
     $user = $_POST['user'];
     $pass = $_POST['pass'];
+
+
+
     $pass = hash('sha512', $pass);
-    require_once '../php/llamadasBD.php';
     if (comprobarInicioSesion($user, $pass)) {
-        header('Location: ../php/preguntas.php');
+
+        setcookie("nickname" ,$user);
+
+        $usuarios = leerUsuarios();
+
+        while ($usuario = $usuarios->fetch()){
+
+            if($usuario["nickname"] == $user){
+                setcookie("idUsuario" ,$usuario["id"]);
+            }
+
+        }
+
+        require "../php/preguntas.php";
         die();
+    }else{
+        require "../index.view.php";
     }
 }
 
-require "../index.view.php";
 finalizarConexion();
