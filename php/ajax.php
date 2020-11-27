@@ -11,6 +11,12 @@ if (isset($_POST["action"])){
         case "comprobarEmail":
             comprobarEmailx();
             break;
+        case "filtrarFechaDesc":
+            filtrarFechaDesc();
+            break;
+        case "filtrarFechaAsc":
+            filtraFechaAsc();
+            break;
         default: "Error";
     }
 }
@@ -22,7 +28,7 @@ function comprobarNickname(){
     $stmt->execute($data);
     $respuesta = $stmt->rowCount();
     echo $respuesta;
-    $dbh = finalizarConexion();
+    finalizarConexion();
 }
 function comprobarEmailx(){
     require "../php/llamadasBD.php";
@@ -33,5 +39,17 @@ function comprobarEmailx(){
     $stmt->execute($data);
     $respuesta = $stmt->rowCount();
     echo $respuesta;
-    $dbh = finalizarConexion();
+    finalizarConexion();
+}
+function filtrarFechaAsc(){
+    require "../php/llamadasBD.php";
+    $dbh = iniciarConexion();
+    $stmt = $dbh->prepare("SELECT * FROM Preguntas ORDER BY fecha ASC");
+    $stmt->execute();
+}
+function filtrarFechaDesc(){
+    require "../php/llamadasBD.php";
+    $dbh = iniciarConexion();
+    $stmt = $dbh->prepare("SELECT * FROM Preguntas ORDER BY fecha DESC");
+    $stmt->execute();
 }
