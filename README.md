@@ -14,7 +14,29 @@ Aergibide SL APP es una aplicación web multiplataforma basada en html, css, Jav
 
 ### Guía de usuario
 ---
-Explica los pasos básicos sobre cómo usar la herramienta digital. Es una buena sección para mostrar capturas de pantalla o gifs que ayuden a entender la herramienta digital.
+
+#### Primer Inicio de Sesión
+
+Si has descargado e integrado correctamente la app en tu servidor, se te abrirá la interfaz de inicio de sesión. (Ver imágen inferior)
+[![pic](https://i.imgur.com/RmtMNP7.png)]()
+
+###### Si es la primera vez que accedemos, debemos crearnos un cuenta primero, para ello le daremos al botón "Crear cuenta", el cual nos llevará a la siguiente imagen.
+
+[![pic](https://i.imgur.com/VNQdIW9.png)]()
+
+Una vez aquí, solamente tendremos que rellenar los datos correspondientes y posteriormente podremos acceder con la cuenta que acabamos de crear.
+
+Lo primero que nos encontramos nada más acceder a la aplicación, es lo siguiente:
+
+[![pic](https://i.imgur.com/a7tcPJ8.png)]()
+
+En la parte izquierda tendremos unos botones con los que podremos navegar entre Preguntas, Temas de las preguntas y usuarios de la aplicación. También tenemos un buscador incorporado por si es necesario buscar alguna pregunta en concreto. En la esquina superior derecha, podemos encontrar un monigote, el cual al clickarlo, nos saldrá un pequeño menú con diferentes selecciones. Podremos elegir entre "Crear una pregunta" / "Ir a nuestro perfil" / "Notificaciones" / "Cerrar sesión", si clickamos en la primera opción nos llevará al siguiente formulario para crear la pregunta:
+
+[![pic](https://i.imgur.com/QJo5q9z.png)]()
+
+En esta zona podremos especificar y extendernos tanto como queramos. Si seleccionamos la opción "Ir a nuestro perfil", nos llevará a una página donde nos muestrará nuestros datos, además de las preguntas que hemos creado. En caso de necesitar modificar la información de nuestro perfil, habrá un botón de "Editar pefil" el cual, al pulsarlo, nos llevará a la siguiente imagen:
+
+[![pic](https://i.imgur.com/6pxfMng.png)]()
  	
 ### Guía de instalación
 ---
