@@ -26,7 +26,7 @@
             <div class="optperfil-content" id="myDropdown">
 
                 <a href="../php/crearPregunta.php">Formular pregunta</a>
-                <a href="../php/perfil.php">Perfil (NECESITAMOS SESIONES)</a>
+                <a href="../php/perfil.php?nickname=<?php echo $_COOKIE["nickname"]?>">Perfil</a>
                 <a href="#">Notificaciones</a>
                 <a href="../index.view.php" id="logout"><i class="fas fa-sign-out-alt"></i></a>
 
