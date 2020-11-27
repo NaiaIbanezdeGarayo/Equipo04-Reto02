@@ -1,0 +1,254 @@
+#divPrincipal{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#divSuperior{
+    margin-left: 1%;
+}
+
+.divSeparador{
+    height: 5px;
+    border-bottom: #00000005 1px solid;
+}
+
+.divSeparadorTema{
+    height: 5px;
+    border-bottom:  
+    black 1px solid;
+    margin-bottom: 4px;
+}
+
+#divInferior{
+    display: flex;
+}
+
+#divEnlaces{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 5px;
+    max-width: 300px;
+    height: 100vh;
+
+    /* DESCARTADO
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    */
+}
+
+button{
+    background-color: white;
+    color: black;
+    border: 1px solid  black;
+}
+
+.btEnlace{
+    margin-bottom: 5px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #c0b9dd;
+}
+
+.btSeleccionado{
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
+}
+#divInformacion{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    border-left: #00000008 1px solid;
+}
+
+#divFiltrador{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom:  #00000008 1px solid;
+}
+.ipBuscador{
+    border: none;
+    border-bottom: 1px solid;
+}
+#divLupa{
+    display: flex;
+    align-items: center;
+}
+#divTag{
+    display: flex;
+    align-items: center;
+    
+}
+
+#divTemas{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+}
+
+.divTema{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 4px;
+    width: 44%;
+    margin:10px;
+    border-bottom: 1px solid #80808030;
+}
+.divTema a{
+    color: #c0b9dd;
+    font-weight: bold;
+}
+
+.tituloTema{
+    text-decoration: none;
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.btSeleccionado a{
+    color: white;
+}
+
+h1{
+    color: black;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+p{
+    font-size: 20px;
+    color: black;
+    margin: 5px;
+}
+
+label{
+    color: black;
+    font-size: 20px;
+}
+
+.lbFiltrado{
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.lbDescripcion{
+    font-size: 18px;
+    padding: 10px;
+}
+
+#btBuscar{
+    margin-left: 5px;
+    height: 30px;
+    width: auto;
+    border-radius: 5px;
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
+}
+
+@media only screen and (min-width: 800px){
+    #divPrincipal{
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 700px){
+
+
+    #divInferior{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #divEnlaces{
+        max-width: none;
+        min-width: 80%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .btSeleccionado, .btNoSeleccionado{
+        width: 100%;
+        margin: 5px;
+    }
+
+    #divFiltrador{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #divLupa{
+        order: 2;
+    }
+
+    #divTag{
+        order: 1;
+    }
+
+    #divInformacion{
+        border: none;
+    }
+
+    .divTema{
+        width: unset;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px){
+
+    h1{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .lbDescripcion{
+        font-size: 14px;
+    }
+
+    .lbFiltrado{
+        font-size: 16px;
+    }
+
+    #divFiltrador{
+        padding-right: 0px;
+    }
+
+    .ipBuscador{
+        width: 50%;
+    }
+
+    #divTag{
+        margin: 5px;
+    }
+
+    #divTemas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+}

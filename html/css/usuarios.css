@@ -1,0 +1,258 @@
+#divPrincipal{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    margin: 0px;
+}
+
+#divSuperior{
+    margin-left: 1%;
+}
+
+.divSeparador{
+    height: 5px;
+    border-bottom: #00000005 1px solid;
+}
+
+
+#divInferior{
+    display: flex;
+}
+
+#divEnlaces{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 5px;
+    max-width: 300px;
+    height: 100vh;
+
+}
+
+button{
+    background-color: white;
+    color: black;
+    border: 1px solid  black;
+}
+
+.btEnlace{
+    margin-bottom: 5px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #c0b9dd;
+}
+
+.btSeleccionado{
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
+}
+#divInformacion{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    border-left: #00000008 1px solid;
+}
+
+#divFiltrador{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom:  #00000008 1px solid;
+
+}
+.ipBuscador{
+    border: none;
+    border-bottom: 1px solid;
+}
+#divLupa{
+    display: flex;
+    align-items: center;
+}
+
+#divUsuarios{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px;
+    margin:10px;
+
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid #80808030;
+}
+
+.labUsuNickname{
+    margin-bottom: 20%;
+    font-size: 23px;
+}
+
+.imgPregPerfil{
+    height: 100px;
+    width: auto;
+    border-radius: 100%;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.btSeleccionado a{
+    color: white;
+}
+
+h1{
+    color: black;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+p{
+    font-size: 20px;
+    color: black;
+    margin: 5px;
+}
+
+label{
+    color: black;
+    font-size: 20px;
+}
+
+.lbFiltrado{
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+#btBuscar{
+    margin-left: 5px;
+    height: 30px;
+    width: auto;
+    border-radius: 5px;
+    background-color: #c0b9dd;
+    color: white;
+    border: 1px solid #c0b9dd;
+}
+
+@media only screen and (min-width: 800px){
+
+    #divPrincipal{
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 700px){
+
+
+    #divInferior{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #divEnlaces{
+        max-width: none;
+        min-width: 80%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .btSeleccionado, .btNoSeleccionado{
+        width: 100%;
+        margin: 5px;
+    }
+
+    #divFiltrador{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #divUsuarios{
+        justify-content: space-around;
+    }
+
+    #divLupa{
+        order: 2;
+    }
+
+    #divInformacion{
+        border: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px){
+
+    h1{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .lbFiltrado{
+        font-size: 16px;
+    }
+
+
+    #divFiltrador{
+        padding-right: 0px;
+    }
+
+    .ipBuscador{
+        width: 50%;
+    }
+
+    .labPregNickname{
+        margin-bottom: 0px;
+        margin-left: 20px;
+
+        order: 2;
+    }
+
+    .imgPregPerfil{
+        order: 1;
+    }
+
+    #divUsuarios{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .divUsuario{
+        flex-direction: row;
+        width: 70%;
+
+        justify-content: space-around;
+
+        align-items: center;
+    }
+
+    .labUsuNickname{
+        order: 2;
+        margin: 0px;
+        border-bottom: none;
+    }
+
+    .imgPregPerfil{
+        order: 1;
+    }
+
+    
+
+}
