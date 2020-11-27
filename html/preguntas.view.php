@@ -97,7 +97,7 @@
 
     </div>
 
-    <script src="../js/preguntas.js"></script>
+    <script src="../js/pregunta.js"></script>
 </div>
 
 </body>

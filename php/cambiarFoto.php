@@ -21,7 +21,7 @@ if (($_FILES["imagen"]["type"] == "image/gif")
     $stmt = $dbh->prepare("UPDATE Usuarios SET imagen = '$nombre_img'");
     $stmt->execute();
     $dbhf = finalizarConexion();
-    header("location: ../php/editarPerfil.php");
+    require "../php/editarPerfil.php";
     $stmts = $dbh->prepare("SELECT * FROM Usuarios");
     while ($row = $stmts->fetch()){
         $ruta_img = $row["imagen"];
