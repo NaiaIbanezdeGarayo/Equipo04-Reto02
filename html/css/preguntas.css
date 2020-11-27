@@ -1,6 +1,7 @@
 #divPrincipal{
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 
 #divPrincipal *{
@@ -191,16 +192,6 @@ label{
 .ipBuscador{
     border: none;
     border-bottom: 1px solid black;
-}
-
-@media only screen and (min-width: 800px){
-    body{
-        background-color: gainsboro;
-    }
-
-    #divPrincipal{
-        background-color: white;
-    }
 }
 
 @media only screen and (max-width: 700px){

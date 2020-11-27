@@ -45,11 +45,12 @@
                     <label class="lbFiltrado">Tema: </label>
                     <select>
                         <option>--Elige un tema--</option>
-                        <option>Tema 2</option>
-                        <option>Tema 3</option>
-                        <option>Tema 4</option>
-                        <option>Tema 5</option>
-                        <option>Tema 6</option>
+                        <option>General</option>
+                        <option>Programación</option>
+                        <option>Producción</option>
+                        <option>Montaje</option>
+                        <option>Recursos humanos</option>
+                        <option>Mantenimiento</option>
                     </select>
                 </div>
 
@@ -82,7 +83,7 @@
                                 <?php echo $pregunta["titulo"] ?>
                             </a>
                             <div class="divSeparadorpregunta"></div>
-                            <label style="font-size: 15px"> <?php echo $pregunta["fecha"]; ?> </label>
+                            <label style="font-size: 15px"> <?php echo $pregunta["fecha"]; echo " - Tema: "; echo $pregunta["tema"]?> </label>
                             <label class="lbDescripcion"><?php echo $pregunta["descripcion"] ?></label>
                         </div>
 
