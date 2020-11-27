@@ -48,49 +48,37 @@
                 
                 <!--LOS SIGUIENTES DIVS SE TENDRÁN QUE AUTOGENERAR-->
                 <div class="divTema">    
-                        <a href="http://www.google.es" class="tituloTema">Administración</a>
+                        <a href="../php/preguntas.php?tema=1" class="tituloTema">GENERAL</a>
                         <div class="divSeparadorTema"></div>
                         <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                 </div>
 
                 <div class="divTema">    
-                    <a href="http://www.google.es" class="tituloTema">Mantenimiento</a>
+                    <a href="../php/preguntas.php?tema=2" class="tituloTema">PROGRAMACIÓN</a>
                     <div class="divSeparadorTema"></div>
                     <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                 </div>
 
                 <div class="divTema">    
-                    <a href="http://www.google.es" class="tituloTema">Programación</a>
+                    <a href="../php/preguntas.php?tema=3" class="tituloTema">PRODUCCIÓN</a>
                     <div class="divSeparadorTema"></div>
                     <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                 </div>
 
                 <div class="divTema">    
-                    <a href="http://www.google.es" class="tituloTema">Servidores</a>
+                    <a href="../php/preguntas.php?tema=4" class="tituloTema">MONTAJE</a>
                     <div class="divSeparadorTema"></div>
                     <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                 </div>
 
                 <div class="divTema">    
-                    <a href="http://www.google.es" class="tituloTema">Gestión de datos</a>
+                    <a href="../php/preguntas.php?tema=5" class="tituloTema">RECURSOS HUMANOS</a>
                     <div class="divSeparadorTema"></div>
                     <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                 </div>
 
                 <div class="divTema">    
-                    <a href="http://www.google.es" class="tituloTema">Ingeniería</a>
-                    <div class="divSeparadorTema"></div>
-                    <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
-                </div>
-
-                <div class="divTema">    
-                    <a href="http://www.google.es" class="tituloTema">Recursos humanos</a>
-                    <div class="divSeparadorTema"></div>
-                    <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
-                </div>
-
-                <div class="divTema">    
-                    <a href="http://www.google.es" class="tituloTema">Almacén</a>
+                    <a href="../php/preguntas.php?tema=6" class="tituloTema">MANTENIMIENTO</a>
                     <div class="divSeparadorTema"></div>
                     <label class="lbDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
                 </div>
